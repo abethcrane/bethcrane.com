@@ -1,0 +1,21 @@
+.content {
+    display: block;
+    margin-left: 250px;
+    height: 100%;
+    width: auto;
+}
+
+.sidebar {
+    display: block;
+    float: left;
+    width: 20%;
+    min-width: 150px;
+    max-width: 250px;
+    height: 100%;
+}
+
+.sidebar li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 30px;
+}

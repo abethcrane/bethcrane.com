@@ -1,64 +1,78 @@
-<html style="background: none;">
+<!DOCTYPE html>
+<html>
     <head>
-        <title>Bethany Crane</title>
+        <title>Beth Crane - The Life Of</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-        <meta name="Author" content="Bethany Crane" />
-        <meta name="Robots" content="index,follow" />
-        <meta name="Description" content="Bethany Crane: A website" />
-        <meta name="Keywords" content="Bethany Crane, Beth Crane, Computer Science, Circles" />  
-        <script src="js/jquery-latest.js"></script>
-         <script type="text/javascript" src="js/shapelib.js"></script>
-         <script type="text/javascript" src="js/script.js"></script>         
-        <link href="css/slideboxes.css" rel="stylesheet" media="screen">
-        <link href="css/style.css" rel="stylesheet" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans">
-      <link rel="stylesheet" href="css/colorbox.css" type="text/css" />      
-      <script type="text/javascript" src="js/colorbox.js"></script>         
-      <!--[if lt IE 9]>
-     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-      <![endif]-->        
+        <!-- Bootstrap -->
+        <link href="style/bootstrap.min.css" rel="stylesheet" media="screen" />
+        <link href="style/style.css" rel="stylesheet" media="screen" />
+        <link href="style/narrow.css" rel='stylesheet' media='screen and (max-width: 700px)' />
+        <link href="style/medium.css" rel='stylesheet' media='screen and (min-width: 701px)' />
+
     </head>
-    <body>     
-        <div class="centerBox morphing-glowing">
-            <center>
-            <br/>
-            <div class="centerStripe">
-                <a id="logo" class="circle img1" href="../"></a>
-            </div>
-            <br/>
-            <div class="centerStripe">
-                <a class="box morph" style="background-color:rgb(100,255,100);" href="about">
-                    <p>About</p>
-                </a>
-                <a class="box morph" style="background-color:rgb(100,209,255);" href="projects">
-                    <p>Projects</p>
-                </a>
-                <a class="box morph" style="background-color:deeppink;" href="resume">
-                   <p>Resume</p>
-                </a>
-                <a class="box morph" style="background-color:yellow;" href="societies">
-                    <p>Societies</p>
-                </a>                
-                <div class="box fixed" style="background-color:mediumorchid; border-color: black;">
-                    <p>hello.</p>
-                </div>
-                <a class="box morph" style="background-color:darkorange;" href="photos">
-                   <p>Photos</p>
-                </a>            
-                <a class="box morph" style="background-color:lightseagreen;" href="blog">
-                   <p>Blog</p>
-                </a>
-                <a class="box morph" style="background-color:red;" href="http://wiki.bethanycrane.com">
-                   <p>Wiki</p>
-                </a>
-            </div>
-            <br/>            
-            <div class="centerStripe">
-                 <div class="circleLinks">
-                 </div>       
-            </div>
-            </center>
-         </div>
+    <body>
+        
+        <div class="main resize">
+    	<script id="sidebarTemplate" type="text/x-handlebars-template">
+			<div class="sidebar">
+				<center>
+					<div class="about">
+						<h1 class="name">Beth Crane</h1>
+						<h2 class="titles">Software Engineer & Photographer</h2>
+						<p class="description">
+							Beth, /b&epsilon;&theta;/, (n); Rational thinker, incredulous individual, literature enthusiast.
+						</p>
+					</div>
+					<ul class="nav">
+						<li><div class="circular face"></div></li>
+						{{#each this}}
+						<li><a href="{{url}}">{{text}}</a></li>
+						{{/each}}
+						<li><div class="circular crane"></div></li>
+					</ul>
+				</center>
+			</div>
+		</script>
+
+		<script id="contentTemplate" type="text/x-handlebars-template">
+			<div class="content">
+				<div style="max-height: 100%;">
+				{{#each this}}
+				<ul class="feed" id="{{this.name}}">
+					{{#each data}}
+					<li class="item" id="{{../name}}{{@index}}">
+						{{#isFlickr ../name}}
+							<div class="feedTitle">
+								<span>{{../title}}</span>
+							</div>
+							<div class="itemContent">{{{../content}}}</div>
+						{{else}}
+							<div class="feedTitle">
+								<a href="{{link}}"><img class="feedLogo" src="https://dl.dropboxusercontent.com/u/1192047/splashPage/img/{{../../name}}Logo.png" /></a>
+							</div>
+							<div class="itemContent">
+							<span class="date">{{../publishedDate}}</span> {{{../content}}}</div>
+						{{/isFlickr}}
+					</li>
+					{{/each}}
+				</ul>
+				{{/each}}
+				</div>
+			</div>
+		</script>
+		
+		
+		</div>   
+
+        <!-- Jquery -->
+        <script src="script/jquery.js"></script>
+        <!-- Bootstrap -->
+        <script src="script/bootstrap.min.js"></script>
+		<!-- Nice JS: Templating & Classes-->
+		<script src="script/handlebar.js"></script>
+		<!-- Settings -->
+        <script src="script/script.js"></script>
+        <!-- Feed Settings -->
+        <script src="script/feedScript.js"></script>
     </body>
 </html>
