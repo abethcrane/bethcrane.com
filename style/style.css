@@ -1,0 +1,130 @@
+html {
+   height: 100%;
+   width: 100%;
+}
+
+body { 
+   background: #515151 url(images/bg.gif) repeat-x;  
+   color: #999999; 
+   font: 0.8em "Trebuchet MS", Arial, Sans-Serif; 
+//   text-align: center;
+   width: 920px;
+   height: 500px;
+   position:absolute; 
+
+   top: 50%;
+   left: 50%;
+   margin-left: -460px;
+   margin-top: -250px;
+}
+
+.box1 {
+   position: absolute;
+   top: 10px;
+   left: 470px;
+}
+
+h1 {
+   text-align: center;
+}
+
+.box2 {
+   position: absolute;
+   top: 110px;
+   left: 20px;
+}
+
+.box3 {
+   position: absolute;
+   top: 30px;
+   left: 690px;
+}
+.box4 {
+   position: absolute;
+   top: 175px;
+   left: 360px;
+	background-color: #659D32;
+}
+
+.box5 {
+   position: absolute;
+   top: 12px;
+   left: 185px;
+	background-color: #FFD06B;
+}
+.box6 {
+   position: absolute;
+   top: 340px;
+   left: 260px;
+}
+.box7 {
+   position: absolute;
+   top: 250px;
+   left: 755px;
+}
+.box8 {
+   position: absolute;
+   top: 290px;
+   left: 550px;
+	background-color: #FFD06B;
+}
+
+.box9 {
+   position: absolute;
+   top: 335px;
+   left: 30px;
+	background-color: #FFD06B;
+}
+
+.box {
+	line-height:1.3em;
+	font-size:1.0em;
+   width: 150px;
+   height: 150px;
+   margin: auto;
+   float: left;
+   border-style: solid;
+   border-color: #393939;
+   border-width: 5px;
+}
+
+.yellowB {
+	color: #5A410A;
+   width: 150px;
+   height: 150px;
+   margin: auto;
+}
+
+.yellowB p {
+   vertical-align: middle;
+}
+
+.blueB {
+	background-color: #008EC5;
+	color: #C7EFFF;
+   width: 150px;
+   height: 150px;
+   margin: auto;
+}
+
+.greenB {
+	color: #3D5229;
+   width: 150px;
+   height: 150px;
+   margin: auto;
+}
+
+.redB {
+	background-color: #C40F01;
+	color: #FFD1CE;
+   width: 150px;
+   height: 150px;
+   margin: auto;
+}
+
+#content{
+-webkit-transition:height .35s ease;
+position:relative;
+padding:0;
+margin:0 auto;
+z-index:45}
