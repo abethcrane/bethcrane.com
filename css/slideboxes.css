@@ -1,0 +1,114 @@
+footer {
+    clear:both;
+    overflow:hidden;
+    font-size:16px;
+    line-height:1.3;
+}
+#footer-boxes {
+    -moz-column-count:2;
+    -moz-column-gap:10px;
+    -webkit-column-count:2;
+    -webkit-column-gap:10px;
+    column-count:4;
+    column-gap:10px;
+}
+.footer-box {
+    background-color: rgba(255,192,203, 0.85);
+    color:#b2aaa4;
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    background-position:320px 50%;
+    background-repeat:no-repeat;
+    text-decoration: none;    
+}
+.footer-box h5 {
+    font: bold 24px Sans-Serif !important;
+    text-transform:uppercase;
+    font-size:38px;
+    line-height:1;
+    padding:0 0 10px 0;
+}
+.footer-box:hover h5 {
+    text-shadow:0 0 4px rgba(0,0,0,0.4);
+    color:white;
+}
+
+.footer-box:hover {
+    background-position: 100px 50%;
+    background-color: rgba(255,105,180,1.0);
+}
+
+#uni {
+    background-image:url(../img/unsw.png);
+    background-size: 70%;
+}
+
+#uni:hover {
+    background-color: rgba(255,255,100,1.0);
+}
+
+#uni:hover p {
+    color: #A87000;
+    text-shadow: 1px 1px 1px #fff;     
+}
+
+#google {
+    background-image:url(../img/chrome.png);
+    background-size: 70%;
+}
+
+#google:hover {
+    background-color: rgba(100,255,100,1.0);
+}
+
+#google:hover p {
+    color: #254117;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+#neura {
+    background-image:url(../img/neura.png);
+    background-size: 70%;
+}
+
+#neura:hover {
+    background-color: rgba(100,209,255,1.0);
+}
+
+#neura:hover p {
+    color: #151B54;
+    text-shadow: 1px 1px 1px #fff;    
+}
+
+#cse {
+    background-image:url(../img/cse.png);
+    background-size: 70%;
+}
+
+#cse:hover {
+    background-color: rgba(255,91,91,1.0);
+}
+
+#cse:hover p {
+    color: #800517;
+    text-shadow: 1px 1px 1px #fff;     
+}
+
+
+#projects:hover {
+    background-color: lightskyblue;
+    border-color: darkblue;
+}
+
+#f-forrst {
+    background-image:url(http://css-tricks.com/images/css-tricks.png);
+    background-position:290px -2088px;
+}
+
+#f-forrst:hover {
+    background-color:#203f16;
+    background-position:186px -2088px;
+}
+#f-forrst:hover p {
+    color: #92c59c;
+}

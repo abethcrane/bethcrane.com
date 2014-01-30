@@ -1,74 +1,64 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-	   <title>Bethany Crane</title>
-   	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-	   <meta name="Author" content="Bethany Crane" />
-   	<meta name="Robots" content="index,follow" />
-	   <meta name="Description" content="Bethany Crane: A website" />
-   	<meta name="Keywords" content="Bethany Crane, Beth Crane, Computer Science, Squares" />
-	   <link rel="stylesheet" href="style/style.css" type="text/css" />
-      <script type="text/javascript" src="script/jquery.js"></script>
-   </head>
-
-   <body>
-
-      <div class="box1"><div class="box">
-         <a href="http://argonescence.wordpress.com"><img src="img/test.jpg"></a>
-      </div></div>
-      <div class="box2"><div class="box">
-         <div class="blueB"></div>
-      </div></div>
-      <div class="box3"><div class="box">
-      </div></div>
-      <div class="box4"><div class="box">
-         <div class="greenB">
-            <h1><br/>Beth<br/><br/>/be&#952/<br/><br/>(n);</h1>
+<html style="background: none;">
+    <head>
+        <title>Bethany Crane</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+        <meta name="Author" content="Bethany Crane" />
+        <meta name="Robots" content="index,follow" />
+        <meta name="Description" content="Bethany Crane: A website" />
+        <meta name="Keywords" content="Bethany Crane, Beth Crane, Computer Science, Circles" />  
+        <script src="js/jquery-latest.js"></script>
+         <script type="text/javascript" src="js/shapelib.js"></script>
+         <script type="text/javascript" src="js/script.js"></script>         
+        <link href="css/slideboxes.css" rel="stylesheet" media="screen">
+        <link href="css/style.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans">
+      <link rel="stylesheet" href="css/colorbox.css" type="text/css" />      
+      <script type="text/javascript" src="js/colorbox.js"></script>         
+      <!--[if lt IE 9]>
+     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->        
+    </head>
+    <body>     
+        <div class="centerBox morphing-glowing">
+            <center>
+            <br/>
+            <div class="centerStripe">
+                <a id="logo" class="circle img1" href="../"></a>
+            </div>
+            <br/>
+            <div class="centerStripe">
+                <a class="box morph" style="background-color:rgb(100,255,100);" href="about">
+                    <p>About</p>
+                </a>
+                <a class="box morph" style="background-color:rgb(100,209,255);" href="projects">
+                    <p>Projects</p>
+                </a>
+                <a class="box morph" style="background-color:deeppink;" href="resume">
+                   <p>Resume</p>
+                </a>
+                <a class="box morph" style="background-color:yellow;" href="societies">
+                    <p>Societies</p>
+                </a>                
+                <div class="box fixed" style="background-color:mediumorchid; border-color: black;">
+                    <p>hello.</p>
+                </div>
+                <a class="box morph" style="background-color:darkorange;" href="photos">
+                   <p>Photos</p>
+                </a>            
+                <a class="box morph" style="background-color:lightseagreen;" href="blog">
+                   <p>Blog</p>
+                </a>
+                <a class="box morph" style="background-color:red;" href="http://wiki.bethanycrane.com">
+                   <p>Wiki</p>
+                </a>
+            </div>
+            <br/>            
+            <div class="centerStripe">
+                 <div class="circleLinks">
+                 </div>       
+            </div>
+            </center>
          </div>
-      </div></div>     
-      <div class="box5"><div class="box">
-         <div class="yellowB">
-               <p>A love of pretentious adjectives and cognitive science, a never-ending interest in the methods of rationality and quite a bit of incredulousness.</p>
-         </div>
-      </div></div>
-      <div class="box6"><div class="box">
-         <div class="redB"></div>
-      </div></div>
-      <div class="box7"><div class="box">
-         <div class="redB"></div>
-      </div></div>
-      <div class="box8"><div class="box">
-         <div class="yellowB">
-            <p>A while spent philosophising about time travel, a potential fascination with computational linguistics and some obscure numbers.</p> 
-         </div>
-      </div></div>
-      <div class="box9"><div class="box">
-         <div class="yellowB">
-             <p>A keen interest in the study and improvement teaching methodologies, a knack for writing in the third person and a spoonful of sugar.</p>
-         </div>
-      </div></div>
-   </body>
-
-   <script>
-   $("img").mouseover(
-      function () {
-         var sourceI = $(this).attr("src");
-         var lengthI = sourceI.length;
-         sourceI = sourceI.substring(0, lengthI - 4);
-         sourceI = sourceI + "b.jpg";
-         $(this).attr("src", sourceI);
-      }
-   );
-
-   $("img").mouseout(
-      function () {
-         var sourceI = $(this).attr("src");
-         var lengthI = sourceI.length;
-         sourceI = sourceI.substring(0, lengthI - 5);
-         sourceI = sourceI + ".jpg";
-         $(this).attr("src", sourceI);
-      }
-   );
-  </script>
-
+    </body>
 </html>

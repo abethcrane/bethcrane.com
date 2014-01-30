@@ -1,0 +1,341 @@
+html {
+    background: #ffffff;  
+    background: url(../img/bliss.jpg);
+    background-size: cover;
+    background-height: 100%;
+    
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;    
+}
+
+body:before {
+          content: "";
+          position: fixed;
+          top: -10px;
+          left: 0;
+          width: 100%;
+          height: 10px;
+
+          -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+              -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+                         box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+
+          z-index: 100;
+}
+
+body { 
+   color: #ffffff; 
+   font: 0.4em Georgia, Verdana, Sans-Serif; 
+   height: 100%;
+   margin: auto;
+   display: table;
+   text-transform: lowercase;
+}
+
+@media screen and (max-width: 1800px) {
+   body {
+       width: 800px;  
+   }
+}
+
+@media screen and (max-width: 900px) {
+   body {
+       width: 400px;  
+   }
+}
+
+@media screen and (max-width: 450px) {
+   body {
+       width: 200px;  
+   }
+}
+
+a {
+   color: grey;
+   text-decoration: none; 
+  
+}
+
+.centerBox {
+   display: inline-block;
+   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+}
+
+.centerStripe {
+    display: inline-block;
+    display: table-cell;
+    text-align: center;
+    margin: 10px;
+}
+
+.box {
+   display: block;
+   margin: 10px;
+   position:relative; 
+   float: left;
+   width: 174px;
+   height: 174px;
+   border-style: solid;
+   border-width: 3px;
+   border-color: transparent;
+   
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;   
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.fixed {
+  -webkit-border-radius: 60em;
+  -moz-border-radius: 60em;
+  border-radius: 60em;
+}
+
+.antimorph {
+  -webkit-border-radius: 60em;
+  -moz-border-radius: 60em;
+  border-radius: 60em;
+  
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;  
+}
+
+.antimorph:hover {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;   
+    
+  -webkit-box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+  -moz-box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+  box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+}
+
+.morphing-glowing .morph {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.morphing-glowing .morph:hover {
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;   
+    
+  -webkit-box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+  -moz-box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+  box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+}
+
+p {
+   text-align: center;
+   text-valign: middle;
+   font-weight: bold;
+   color: black;
+   font-size: 38px;
+   line-height: 90px;
+}
+
+p.ampersand {
+    font-size: 100px;
+    margin-top: 80px;
+    line-height: 0px;
+    font-style: italic;
+    font-family: ‘Josefin Sans’, 'Chopin Script';
+    src: url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+}  
+
+.about .box {
+    border-color: #254117;
+    background-color: rgba(255,255,255,0.7);//rgba(100,255,100, 0.7);
+}
+
+.about p {
+    color: #254117
+}
+
+.contact .box {
+    border-color: #7a43b6;
+}
+
+.resume a.box.jobs, .projects a.box, .projects .box#label {
+    display: table;
+    border-width: 1px;
+}
+
+.resume .jobs p, .projects .box p, .projects .box#label p { 
+    display: table-cell; 
+    vertical-align: middle;
+}
+.resume .box {
+    border-color: black;
+    border-width: 3px;
+}
+
+.resume .jobs p {
+    text-transform: none;  
+    text-align: left;   
+    padding-left: 10px;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+.projects .box {
+    border-color: transparent;//#049cdb;
+    border-style: double;
+    border-width: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.projects p {
+    line-height: 40px;
+}
+
+.societies .box {
+   border-color: #ffff99;/*#ffc40d:*/
+   background-color: rgba(255,255,255,0.7);
+}
+
+/* // circle link styles*/
+
+div.circleLinks {
+   width: 105px;
+   height: 150px;
+   margin: 10px;
+}
+
+.circleLinks p {
+    margin: 0px;
+    font-size: 20px;
+    line-height: 125px;
+}
+
+a.imageCircle {
+   display: block;
+   position:absolute;
+  
+   border-width: 1px;
+   border-style: solid;
+   border-color: black;
+  
+   background-color:blue;
+   float:left;
+   height:25px;
+   width:25px;
+
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+a.imageCircle:hover {
+  -webkit-box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+  -moz-box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+  box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+
+  -webkit-border-radius: 60em;
+  -moz-border-radius: 60em;
+  border-radius: 60em;
+}
+
+.circle {
+	width: 150px;
+	height: 150px;
+	background: black;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	display: block;
+}
+
+/*// Logo Styles*/
+
+#logo {
+    margin: auto;
+}
+
+.img1 { 
+    background: url(../img/beth.jpg); 
+    background-size:100%; 
+    background-repeat: no-repeat; 
+    background-position: center;     
+}
+
+.img2 { 
+    background: url(../img/name.jpg); 
+    background-size:100%; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border: solid 1px black;
+}
+
+.img3 { 
+    background: url(../img/overlay.png); 
+    background-size: 100%; 
+    background-repeat: repeat; 
+    background-position: center; 
+    opacity: 0.8;
+}
+
+.img4 { 
+    background: url(../img/beth2.jpg); 
+    background-size:100%; 
+    background-repeat: no-repeat; 
+    background-position: center;     
+}
+
+/* Gallery Styles*/
+
+.gallery  div{
+    position: relative;
+}
+
+.gallery span {
+	width: 77px;
+	height: 27px;
+	display: block;
+	position: absolute;
+	top: -12px;
+	left: 50px;
+	background: url(../img/tape.png) no-repeat;
+}
+
+/* Pop Ups */
+.popup {
+/*    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;   */
+    padding: 10px;
+    text-align: center;
+}
+
+.popup p {
+    color: black;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: none;
+    padding-left: 20px;
+    text-align: left;
+    float: left;
+}
+
+.popup a:hover {
+    color: black;
+}
