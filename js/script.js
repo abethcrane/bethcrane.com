@@ -1,4 +1,4 @@
-var nav = [{"url": "/", "text": "Home"},
+var nav = [{"url": "/", "text": "Home"}, {"url":"/projects", "text": "Projects"},
 		   {"url": "http://linkedin.com/in/bethanycrane", "text": "LinkedIn"},
 		   {"url": "http://github.com/abethcrane", "text": "Github"}];
 
