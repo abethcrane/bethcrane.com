@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Beth Crane - Projects</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="style/bootstrap.min.css" rel="stylesheet" media="screen" />
+        <link href="../style/style.css" rel="stylesheet" media="screen" />
+        <link href="../style/narrow.css" rel='stylesheet' media='screen and (max-width: 700px)' />
+        <link href="../style/medium.css" rel='stylesheet' media='screen and (min-width: 701px)' />
+
+    </head>
+    <body>
+        
+        <div class="main resize">
+    	<script id="sidebarTemplate" type="text/x-handlebars-template">
+			<div class="sidebar">
+				<center>
+					<div class="about">
+						<h1 class="name">Beth Crane</h1>
+						<h2 class="titles">Software Engineer & Photographer</h2>
+						<p class="description">
+							Beth, /b&epsilon;&theta;/, (n); Rational thinker, incredulous individual, literature enthusiast.
+						</p>
+					</div>
+					<ul class="nav">
+						<li><div class="circular face"></div></li>
+						{{#each this}}
+						<li><a href="{{url}}">{{text}}</a></li>
+						{{/each}}
+						<li><div class="circular crane"></div></li>
+					</ul>
+				</center>
+			</div>
+		</script>
+
+		<script id="projectsTemplate" type="text/x-handlebars-template">
+			<div class="content">
+				<div style="max-height: 100%;">
+				<ul class="projects">
+					{{#each this}}
+					<li class="project" id="{{name}}">
+                        <h2 class="projectTitle"><a href="{{link}}">{{name}}</a></h2>
+                        <div class="projectInfo">
+                            <img class="projectImg" src="../img/{{imgUrl}}" alt="{{name}}" />
+                            <br/>
+                            <p class="oneliner">{{oneliner}}</p>
+                            <span class="date">{{dates}}</span><span class="languages">{{languages}}</span>
+                        </div>
+					</li>
+					{{/each}}
+				</ul>
+				</div>
+			</div>
+		</script>
+		
+		
+		</div>   
+
+        <!-- Jquery -->
+        <script src="../js/jquery.js"></script>
+        <!-- Bootstrap -->
+        <script src="../js/bootstrap.min.js"></script>
+		<!-- Nice JS: Templating & Classes-->
+		<script src="../js/handlebar.js"></script>
+		<!-- Settings -->
+        <script src="../js/script.js"></script>
+        <!-- Feed Settings -->
+        <script src="../js/projectsScript.js"></script>
+    </body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Beth Crane - The Life Of</title>
+        <title>Beth Crane</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
         <link href="style/bootstrap.min.css" rel="stylesheet" media="screen" />
@@ -34,7 +34,7 @@
 			</div>
 		</script>
 
-		<script id="contentTemplate" type="text/x-handlebars-template">
+		<script id="feedTemplate" type="text/x-handlebars-template">
 			<div class="content">
 				<div style="max-height: 100%;">
 				{{#each this}}
@@ -48,7 +48,7 @@
 							<div class="itemContent">{{{../content}}}</div>
 						{{else}}
 							<div class="feedTitle">
-								<a href="{{../link}}"><img class="feedLogo" src="https://dl.dropboxusercontent.com/u/1192047/splashPage/img/{{../../name}}Logo.png" /></a>
+								<a href="{{../link}}"><img class="feedLogo" src="img/{{../../name}}Logo.png" /></a>
 							</div>
 							<div class="itemContent">
 							<span class="date">{{../publishedDate}}</span> {{{../content}}}</div>
@@ -65,14 +65,14 @@
 		</div>   
 
         <!-- Jquery -->
-        <script src="script/jquery.js"></script>
+        <script src="js/jquery.js"></script>
         <!-- Bootstrap -->
-        <script src="script/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 		<!-- Nice JS: Templating & Classes-->
-		<script src="script/handlebar.js"></script>
+		<script src="js/handlebar.js"></script>
 		<!-- Settings -->
-        <script src="script/script.js"></script>
+        <script src="js/script.js"></script>
         <!-- Feed Settings -->
-        <script src="script/feedScript.js"></script>
+        <script src="js/feedScript.js"></script>
     </body>
 </html>

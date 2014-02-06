@@ -53,7 +53,7 @@ var handleData = function(xml, feedName, numEntries) {
 	numFeeds++;
 	if (numFeeds == totalFeeds) {
 		displayTemplate("#sidebarTemplate", nav);
-		displayTemplate("#contentTemplate", feeds);
+		displayTemplate("#feedTemplate", feeds);
 	}
 }
 

@@ -9,9 +9,10 @@
     display: block;
     float: left;
     width: 20%;
-    min-width: 150px;
+    min-width: 170px;
     max-width: 250px;
     height: 100%;
+    overflow: hidden;
 }
 
 .sidebar li {
