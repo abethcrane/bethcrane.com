@@ -30,7 +30,7 @@
 }
 
 .content {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
     color: black;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -42,12 +42,6 @@
     overflow-y: scroll;
     overflow-x: auto;
 }
-
-.spacer {
-    display: table-row;
-    height: 10px;
-}
-
 
 .nav {
     margin: 0px;
@@ -85,7 +79,7 @@ h2 {
 
 .about .name {
     color: rgba(245, 130, 32, 1);
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
     /*-webkit-text-stroke-width: 0.001px;
     -webkit-text-stroke-color: white;*/
 }
@@ -122,7 +116,7 @@ h2 {
 .feed, .projects {
     list-style: none;
     float: left;
-    margin: 10px !important;
+    margin: 0px !important;
     width: 100%;
 }
 
@@ -156,7 +150,6 @@ h2 {
     display: block;
     border: 1px;
     padding: 11px;
-    margin: 11px;
     font-size: 13px;
 }
 

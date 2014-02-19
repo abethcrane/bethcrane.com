@@ -1,6 +1,6 @@
 .content {
     display: block;
-    margin-left: 250px;
+    margin-left: 240px;
     height: 100%;
     width: auto;
 }
@@ -8,9 +8,7 @@
 .sidebar {
     display: block;
     float: left;
-    width: 20%;
-    min-width: 170px;
-    max-width: 250px;
+	width: 210px;
     height: 100%;
     overflow: hidden;
 }
