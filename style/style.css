@@ -85,6 +85,9 @@ h2 {
 
 .about .name {
     color: rgba(245, 130, 32, 1);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    /*-webkit-text-stroke-width: 0.001px;
+    -webkit-text-stroke-color: white;*/
 }
 
 .about .titles {
@@ -172,5 +175,5 @@ h2 {
 
 .projectImg {
     max-width: 200px;
-    max-height: 300px;
+    max-height: 3 00px;
 }
