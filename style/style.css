@@ -58,11 +58,6 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.feedLogo {
-    width: 25px;
-    float: left;
-}
-
 h1 {
     font-family: 'Lobster';
 }
@@ -124,7 +119,7 @@ h2 {
     padding: 11px;
 }
 
-#flickr li {
+#flickr li, #instagram li {
     text-align: center;
     padding: 0 5px;
     float: left;
@@ -137,13 +132,20 @@ h2 {
     margin: 0px;
 }
 
+.feedLogo {
+    width: 25px;
+    float: left;
+    padding-right: 5px;
+    margin-left: 11px;
+}
+
+#twitter .feedLogo, #github .feedLogo {
+    margin: 0px;
+}
+
 #flickr .feedTitle, .projects .oneliner {
     font-family: 'Josefin Slab';
     font-size: 17px;
-}
-
-#twitter img, #github img {
-    padding-right: 5px;
 }
 
 .projects li {
@@ -168,5 +170,5 @@ h2 {
 
 .projectImg {
     max-width: 200px;
-    max-height: 3 00px;
+    max-height: 300px;
 }

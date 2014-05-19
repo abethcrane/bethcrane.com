@@ -38,6 +38,9 @@
 			<div class="content">
 				<div style="max-height: 100%;">
 				{{#each this}}
+				{{#isFlickr this.name}}
+                        <img class="feedLogo" src="img/{{../name}}Logo.png" />
+				{{/isFlickr}}
 				<ul class="feed" id="{{this.name}}">
 					{{#each data}}
 					<li class="item" id="{{../name}}{{@index}}">
@@ -56,6 +59,7 @@
 					</li>
 					{{/each}}
 				</ul>
+				<br/>
 				{{/each}}
 				</div>
 			</div>

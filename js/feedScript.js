@@ -1,6 +1,6 @@
 var getFeed = function(feedName, feedUrl, numEntries) {
 	//var url = document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load'
-	var url = document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num='+numEntries+'&callback=?&q=' + encodeURIComponent(feedUrl);
+	var url = 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num='+numEntries+'&callback=?&q=' + encodeURIComponent(feedUrl);
 
 	var serverResponse = $.ajax({
 		type: "GET",
@@ -48,6 +48,13 @@ var handleData = function(xml, feedName, numEntries) {
 			feeds[numFeeds]["data"][i]["publishedDate"] = feeds[numFeeds]["data"][i]["publishedDate"].replace(/.*,/m, "");
 			feeds[numFeeds]["data"][i]["publishedDate"] = feeds[numFeeds]["data"][i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
 		}
+	} else if (feedName == "instagram") {
+	    for (i = 0; i < numEntries; i++) {
+	        feeds[numFeeds]["data"][i]["title"] = "";
+	        feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["content"].replace(/<p>.*<\/p>/m, "");
+	        //feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["content"].replace(/<\/strong(.|\s)*/m, "");
+	        feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["content"].replace(/<strong>(.|\s)*/m, "");
+	    }
 	}
 	
 	numFeeds++;
@@ -58,12 +65,13 @@ var handleData = function(xml, feedName, numEntries) {
 }
 
 var numFeeds = 0;
-var totalFeeds = 3;
+var totalFeeds = 4;
 var feeds = [];
 
 $(document).ready(function() {
-	getFeed("flickr", "http://api.flickr.com/services/feeds/photos_public.gne?id=105674507@N06", 5);
+	getFeed("flickr", "http://api.flickr.com/services/feeds/photos_public.gne?id=105674507@N06", 6);
 	getFeed("twitter", "https://script.googleusercontent.com/macros/echo?user_content_key=z9Mx6ocZ1QHGg8p36O7wQGh7TbDRgHfuLzPOnAKW52oL6f0T9c0c3rT0S_fjjyH31YizzRhFpOxKZ2y6W3Cqe4riepYn4PYJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnHiRoBgmO8xZOmNJiOHh7xiBnWSLqMTAQgQXwe4xiy2vhUK22EN0w71ZQSz5XZEBEnEsHGzMQut4&lib=MY4PUmJiFsBUGlQOwt0PZAIXnViTw_VgZ", 5);
 	getFeed("github", "https://github.com/abethcrane.atom", 5);
+	getFeed("instagram", "http://widget.stagram.com/rss/n/abethcrane", 6);
 	
 });
