@@ -54,6 +54,15 @@
     width: 100%;
 }
 
+#flickr {
+    width: 350px !important;
+}
+
+#flickr li {
+    margin: auto;
+    padding: auto;
+}
+
 #flickr p {
     margin: 0px !important;
 }
