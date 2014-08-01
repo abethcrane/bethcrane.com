@@ -19,6 +19,13 @@
   src: local('Josefin Slab'), local('JosefinSlab'), url(http://themes.googleusercontent.com/static/fonts/josefinslab/v4/46aYWdgz-1oFX11flmyEfaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
 }
 
+@font-face {
+  font-family: 'Josefin Slab Bold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Josefin Slab'), local('JosefinSlab'), url(http://themes.googleusercontent.com/static/fonts/josefinslab/v4/46aYWdgz-1oFX11flmyEfaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+
 .main {
     display: table;
     width: 100%;
@@ -148,7 +155,7 @@ h2 {
 }
 
 #flickr .feedTitle, .projects .oneliner {
-    font-family: 'Josefin Slab';
+    font-family: 'Josefin Slab Bold';
     font-size: 17px;
 }
 
