@@ -37,10 +37,10 @@ var handleData = function(xml, feedName, numEntries) {
 		}
 	} else if (feedName == "twitter") {
 		for (i = 0; i < numEntries; i++) {
-			img = feeds[numFeeds]["data"][i]["content"].match(/pic\.twitter\.com[^<]*/);
-			feeds[numFeeds]["data"][i]["publishedDate"] = feeds[numFeeds]["data"][i]["publishedDate"].replace(/.*,/m, "");
+			feeds[numFeeds]["data"][i]["publishedDate"] = feeds[numFeeds]["data"][i]["pubDate"].replace(/.*,/m, "");
 			feeds[numFeeds]["data"][i]["publishedDate"] = feeds[numFeeds]["data"][i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
-
+			feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["description"].replace(/.*<br>/m, "");
+			img = feeds[numFeeds]["data"][i]["content"].match(/pic\.twitter\.com[^<]*/);
 		}
 	} else if (feedName == "github") {
 		for (i = 0; i < numEntries; i++) {
