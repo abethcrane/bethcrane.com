@@ -18,7 +18,6 @@ var getFeed = function(feedName, feedUrl, numEntries) {
 		alert('Unable to load feed, Incorrect path or invalid feed');
 	});
 	serverResponse.done(function(data){
-		displayTemplate("#sidebarTemplate", nav);
 		handleData(data.responseData.feed.entries, feedName, numEntries);
 	});
 };
@@ -38,10 +37,10 @@ var handleData = function(xml, feedName, numEntries) {
 		}
 	} else if (feedName == "twitter") {
 		for (i = 0; i < numEntries; i++) {
-			img = feeds[numFeeds]["data"][i]["content"].match(/pic\.twitter\.com[^<]*/);
-			feeds[numFeeds]["data"][i]["publishedDate"] = feeds[numFeeds]["data"][i]["publishedDate"].replace(/.*,/m, "");
+			feeds[numFeeds]["data"][i]["publishedDate"] = feeds[numFeeds]["data"][i]["pubDate"].replace(/.*,/m, "");
 			feeds[numFeeds]["data"][i]["publishedDate"] = feeds[numFeeds]["data"][i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
-			feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["content"].replace(/.*<br>/m, "");
+			feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["description"].replace(/.*<br>/m, "");
+			img = feeds[numFeeds]["data"][i]["content"].match(/pic\.twitter\.com[^<]*/);
 		}
 	} else if (feedName == "github") {
 		for (i = 0; i < numEntries; i++) {
@@ -60,7 +59,7 @@ var handleData = function(xml, feedName, numEntries) {
 
 	numFeeds++;
 	if (numFeeds == totalFeeds) {
-		//displayTemplate("#sidebarTemplate", nav);
+		displayTemplate("#sidebarTemplate", nav);
 		displayTemplate("#feedTemplate", feeds);
 	}
 }
