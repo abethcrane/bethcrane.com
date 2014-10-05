@@ -41,7 +41,7 @@ var handleData = function(xml, feedName, numEntries) {
 			feeds[numFeeds]["data"][i]["publishedDate"] = feeds[numFeeds]["data"][i]["publishedDate"].replace(/.*,/m, "");
 			feeds[numFeeds]["data"][i]["publishedDate"] = feeds[numFeeds]["data"][i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
 			feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["content"].replace(/.*<br>/m, "");
-			feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["content"].replace(/(abs.twimg.com\/emoji.*?").*?>/m, "$1 width='20px'>");
+			feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["content"].replace(/(abs.twimg.com\/emoji.*?").*?>/mg, "$1 width='20px'>");
 		}
 	} else if (feedName == "github") {
 		for (i = 0; i < numEntries; i++) {
