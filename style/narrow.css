@@ -24,7 +24,7 @@
 
 .nav {
     height: auto !important;
-    width: 320px;
+    width: 260px;
     padding: 10px;
     margin-bottom: 30px;
 }
@@ -46,7 +46,7 @@
 .nav li:nth-child(2) {
     border-left: 0px solid;
 }
-.nav li:nth-child(6) {
+.nav li:nth-child(5) {
     border-left: 0px solid;
 }
 
