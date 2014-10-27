@@ -36,7 +36,6 @@
 }
 
 .content {
-    background-color: rgba(255, 255, 255, 0.5);
     color: black;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -140,16 +139,16 @@ h2 {
     height: 230px !important;
 }
 
-#flickr p {
+.itemContent p {
     font-style: italic;
     font-size: 11px;
     margin: 0px;
 }
 
-#flickr .itemContent img {
+.itemContent img {
     width: auto;
-    height: auto;
-    max-height: 160px;
+    height: 180px;
+    max-height: 180px;
 }
 
 .feedLogo {
@@ -172,9 +171,14 @@ h2 {
     font-size: 17px;
 }
 
-#github li, #twitter li {
+.content li {
     background-color: rgba(255,255,255,0.7);
-    padding: 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+#instagram li {
+    padding-top: 2px;
+    padding-bottom: 5px;
 }
 
 .projects li {
