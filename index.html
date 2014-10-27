@@ -41,15 +41,13 @@
 			<div class="content">
 				<div id="content-inner">
 				{{#each this}}
-				{{#isFlickr this.name}}
-                        <img class="feedLogo" src="img/{{../name}}Logo.png" />
-				{{/isFlickr}}
 				<ul class="feed" id="{{this.name}}">
 					{{#each data}}
+					<br/>
 					<li class="item" id="{{../name}}{{@index}}">
 						{{#isFlickr ../name}}
 							<div class="feedTitle">
-								<span>{{../title}}</span>
+								<img class="feedLogo" src="img/{{../../name}}Logo.png"><span>{{../title}}</span>
 							</div>
 							<div class="itemContent">{{{../content}}}</div>
 						{{else}}
@@ -62,7 +60,6 @@
 					</li>
 					{{/each}}
 				</ul>
-				<br/>
 				{{/each}}
 				</div>
 			</div>

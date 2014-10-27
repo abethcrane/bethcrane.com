@@ -51,7 +51,7 @@ var handleData = function(xml, feedName, numEntries) {
 		}
 	} else if (feedName == "instagram") {
 	    for (i = 0; i < numEntries; i++) {
-	        feeds[numFeeds]["data"][i]["title"] = "";
+	        feeds[numFeeds]["data"][i]["title"] = "Instagram - @abethcrane";
 	        feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["content"].replace(/<p>.*<\/p>/m, "");
 	        //feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["content"].replace(/<\/strong(.|\s)*/m, "");
 	        feeds[numFeeds]["data"][i]["content"] = feeds[numFeeds]["data"][i]["content"].replace(/<strong>(.|\s)*/m, "");

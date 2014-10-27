@@ -146,7 +146,7 @@ h2 {
     margin: 0px;
 }
 
-#flickr img {
+#flickr .itemContent img {
     width: auto;
     height: auto;
     max-height: 160px;
@@ -154,18 +154,27 @@ h2 {
 
 .feedLogo {
     width: 25px;
-    float: left;
     padding-right: 5px;
     margin-left: 11px;
 }
 
 #twitter .feedLogo, #github .feedLogo {
     margin: 0px;
+    float: left;
 }
 
-#flickr .feedTitle, .projects .oneliner {
+#instagram .feedLogo, #flickr .feedLogo {
+   padding-bottom: 5px; 
+}
+
+#instagram .feedTitle, #flickr .feedTitle, .projects .oneliner {
     font-family: 'Josefin Slab Bold';
     font-size: 17px;
+}
+
+#github li, #twitter li {
+    background-color: rgba(255,255,255,0.7);
+    padding: 5px;
 }
 
 .projects li {
