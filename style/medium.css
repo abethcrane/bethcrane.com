@@ -1,8 +1,16 @@
+.main {
+    background-position: right;
+}
+
 .content {
     display: block;
     margin-left: 240px;
     height: 100%;
     width: auto;
+}
+
+#content-inner {
+    width: 60%;
 }
 
 .sidebar {
@@ -19,6 +27,6 @@
     line-height: 30px;
 }
 
-#flickr li, #instagram li {
+/*#flickr li, #instagram li {
     float: left;
-}
+}*/

@@ -1,3 +1,7 @@
+.main {
+    background-position: left;
+}
+
 .sidebar {
     display: table-row;
     width: 100%;
@@ -54,11 +58,11 @@
     width: 100%;
 }
 
-#flickr {
+#flickr li, #instagram li {
     width: 350px !important;
 }
 
-#flickr li {
+#flickr li, #instagram li {
     margin: auto;
     padding: auto;
 }

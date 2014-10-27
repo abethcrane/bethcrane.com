@@ -6,8 +6,8 @@
         <!-- Bootstrap -->
         <link href="style/bootstrap.min.css" rel="stylesheet" media="screen" />
         <link href="style/style.css" rel="stylesheet" media="screen" />
-        <link href="style/narrow.css" rel='stylesheet' media='screen and (max-width: 700px)' />
-        <link href="style/medium.css" rel='stylesheet' media='screen and (min-width: 701px)' />
+        <link href="style/narrow.css" rel='stylesheet' media='screen and (max-width: 750px)' />
+        <link href="style/medium.css" rel='stylesheet' media='screen and (min-width: 751px)' />
 
     </head>
     <body>
@@ -39,7 +39,7 @@
 
 		<script id="feedTemplate" type="text/x-handlebars-template">
 			<div class="content">
-				<div style="max-height: 100%;">
+				<div id="content-inner">
 				{{#each this}}
 				{{#isFlickr this.name}}
                         <img class="feedLogo" src="img/{{../name}}Logo.png" />
