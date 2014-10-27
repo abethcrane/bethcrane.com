@@ -8,7 +8,7 @@
 .sidebar {
     display: block;
     float: left;
-	width: 210px;
+    width: 210px;
     height: 100%;
     overflow: hidden;
 }
@@ -17,4 +17,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 30px;
+}
+
+#flickr li, #instagram li {
+    float: left;
 }
