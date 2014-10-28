@@ -16,41 +16,37 @@ var getFeed = function(feedName, feedUrl, numEntries) {
 	});
 };
 
-/*function getInstagramDate(id) { 
-	var url = "https://api.instagram.com/v1/media/"+id+"?client_id=021ea53429ed426c8b5b4a492a20db96";
-	var serverResponse = $.ajax({
-		type: "GET",
-		url: url,
-		dataType: 'json',
-	});
+var handleInstagramData = function(data) {
 
-	var date = "";
-	serverResponse.done(function(data){
-		date = new Date(data["data"]["created_time"] *1000);
-		date = (date.toGMTString()).replace(/.*?, /, "");
-	});
+	data = data["data"];
+	var xml = [];
+	var i;
+	var date;
+	for (i = 0; i < numEntries; i++) {
+		xml[i] = {};
+		date = new Date(data[i]["created_time"] *1000);
+		xml[i]["publishedDate"]  = (date.toGMTString()).replace(/.*?, /, "");
+		xml[i]["link"] = data[i]["link"];
+		xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "' alt = '" + data[i]["caption"]["text"].substring(0,50) + "...'>";
+		xml[i]["title"] = "Instagram - @abethcrane";
+	}
 
-	return date;
-};*/
-
-//This will sort your array
-function SortByDate(a, b){
-	var aDate = a.publishedDate;
-	var bDate = b.publishedDate;
-	return ((aDate > bDate) ? -1 : ((aDate <= bDate) ? 1 : 0));
+	endDataHandling(data, "instagram");
 }
 
 var handleData = function(xml, feedName, numEntries) {
 
-	var re  = null;
-	var img = null;
 	var i;
 	if (feedName == "flickr") {
-		for (i = 0; i < numEntries; i++) { 
+		for (i = 0; i < numEntries; i++) {
 			// Remove first paragraph of 'abethcrane posted a photo'
 			xml[i]["content"] = xml[i]["content"].replace(/<p>.*?<\/p>/m, "");
 			xml[i]["content"] = xml[i]["content"].replace(/width.*height=".*?" /, "");
+			// Remove paragraph and link from content (we add them in explicitly in the html)
+			xml[i]["content"].replace(/.*><img/, "<img").replace(/<\/a.*/, "");
+			// Clean up published Date
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
+
 		}
 	} else if (feedName == "twitter") {
 		for (i = 0; i < numEntries; i++) {
@@ -66,20 +62,13 @@ var handleData = function(xml, feedName, numEntries) {
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
 		}
-	} else if (feedName == "instagram") {
-	    var id;
-	    for (i = 0; i < numEntries; i++) {
-	        xml[i]["title"] = "Instagram - @abethcrane";
-	        xml[i]["content"] = xml[i]["content"].replace(/<p>.*<\/p>/m, "");
-	        xml[i]["content"] = xml[i]["content"].replace(/<strong>(.|\s)*/m, "");
-		
-/*		id = xml[i]["link"].replace(/.*\//, "");
-		data = getInstagramData(id);
-		xml[i]["publishedDate"] = getInstagramDate(data);
-		xml[i]["link"] = data["data"]["link"];*/
-	    }
 	}
 
+	endDataHandling(xml, feedName);
+
+}
+
+var endDataHandling = function (xml, feedName) {
 	for (i = 0; i < numEntries; i++) {
 		xml[i]["name"] = feedName;
 		feeds.push(xml[i]);
@@ -93,15 +82,26 @@ var handleData = function(xml, feedName, numEntries) {
 	}
 }
 
+//This will sort your array
+function SortByDate(a, b){
+	var aDate = a.publishedDate;
+	var bDate = b.publishedDate;
+	return ((aDate > bDate) ? -1 : ((aDate <= bDate) ? 1 : 0));
+}
+
 var numFeeds = 0;
 var totalFeeds = 4;
 var feeds = [];
 
 $(document).ready(function() {
+	var insta = document.createElement("script");
+	insta.src = "https://api.instagram.com/v1/users/34563658/media/recent/?client_id=021ea53429ed426c8b5b4a492a20db96&callback=handleInstagramData";
+	document.body.appendChild(insta);
+
 	getFeed("flickr", "http://api.flickr.com/services/feeds/photos_public.gne?id=105674507@N06", 6);
 	getFeed("twitter", "https://script.googleusercontent.com/macros/echo?user_content_key=gOvlL1a7DdxWDC311cAcW1EH0OYToLxbKUbpC4CNob_QqVIKCcJ0uv6pxX9_6b7zwzMViBc4waWYH3Cy2-AUoDpq_xIB2AEUm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAgDXbj_tVyWQMr79LWC07Ejb66DUKzGjmLsoERNB3kg0BAiR7PDyyKrbLp64XKMJYdYUgLW9EAN1I3KF5EhPlVgRFelZprtXqd3WMz3xaUx&lib=MJ2RCt7KC2yZa3tT8V4zCPBwaZjxFQg_8", 5);
 	getFeed("github", "https://github.com/abethcrane.atom", 5);
-	getFeed("instagram", "http://widget.stagram.com/rss/n/abethcrane", 6);
+//	getFeed("instagram", "http://widget.stagram.com/rss/n/abethcrane", 6);
 //	getFeed("instagram2", "https://api.instagram.com/v1/users/34563658/media/recent/?client_id=021ea53429ed426c8b5b4a492a20db96", 6);
 	displayTemplate("#sidebarTemplate", nav);
 });
