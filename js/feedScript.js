@@ -88,6 +88,6 @@ $(document).ready(function() {
 	getFeed("twitter", "https://script.googleusercontent.com/macros/echo?user_content_key=gOvlL1a7DdxWDC311cAcW1EH0OYToLxbKUbpC4CNob_QqVIKCcJ0uv6pxX9_6b7zwzMViBc4waWYH3Cy2-AUoDpq_xIB2AEUm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAgDXbj_tVyWQMr79LWC07Ejb66DUKzGjmLsoERNB3kg0BAiR7PDyyKrbLp64XKMJYdYUgLW9EAN1I3KF5EhPlVgRFelZprtXqd3WMz3xaUx&lib=MJ2RCt7KC2yZa3tT8V4zCPBwaZjxFQg_8", 5);
 	getFeed("github", "https://github.com/abethcrane.atom", 5);
 	getFeed("instagram", "http://widget.stagram.com/rss/n/abethcrane", 6);
-	getFeed("instagram2", "https://api.instagram.com/v1/users/34563658/media/recent/?client_id=021ea53429ed426c8b5b4a492a20db96", 6);
+//	getFeed("instagram2", "https://api.instagram.com/v1/users/34563658/media/recent/?client_id=021ea53429ed426c8b5b4a492a20db96", 6);
 	displayTemplate("#sidebarTemplate", nav);
 });
