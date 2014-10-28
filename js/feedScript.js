@@ -80,7 +80,9 @@ var endDataHandling = function (xml, feedName, numEntries) {
 	if (numFeeds == totalFeeds) {
 		feeds.sort(SortByDate);
 		displayTemplate("#feedTemplate", feeds);
-    		$(".flickr img").maxSide({maxSide:"300"});
+    		$(".flickr img").load(function() {
+			$(this).maxSide({maxSide:"300"});
+		});
 	}
 }
 
