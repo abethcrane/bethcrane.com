@@ -88,8 +88,8 @@ var endDataHandling = function (xml, feedName, numEntries) {
 
 //This will sort your array
 function SortByDate(a, b){
-	var aDate = a.publishedDate;
-	var bDate = b.publishedDate;
+	var aDate = new Date(a.publishedDate);
+	var bDate = new Date(b.publishedDate);
 	return ((aDate > bDate) ? -1 : ((aDate <= bDate) ? 1 : 0));
 }
 
