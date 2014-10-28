@@ -58,15 +58,13 @@
     width: 100%;
 }
 
-#flickr li, #instagram li {
-    width: 350px !important;
-}
 
-#flickr li, #instagram li {
+li.flickr, li.instagram {
+    width: 350px !important;
     margin: auto;
     padding: auto;
 }
 
-#flickr p {
+.flickr p {
     margin: 0px !important;
 }

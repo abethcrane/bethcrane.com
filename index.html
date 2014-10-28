@@ -40,27 +40,26 @@
 		<script id="feedTemplate" type="text/x-handlebars-template">
 			<div class="content">
 				<div id="content-inner">
-				{{#each this}}
-				<ul class="feed" id="{{this.name}}">
-					{{#each data}}
-					<br/>
-					<li class="item" id="{{../name}}{{@index}}">
-						{{#isFlickr ../name}}
+				<ul class="feed">
+					<center>
+					{{#each this}}
+					<li class="item {{name}}" id="{{name}}{{@index}}">
+						{{#isFlickr name}}
 							<div class="feedTitle">
-								<img class="feedLogo" src="img/{{../../name}}Logo.png"><span>{{../title}}</span>
+								<img class="feedLogo" src="img/{{../name}}Logo.png"><span>{{../title}}</span>
 							</div>
 							<div class="itemContent">{{{../content}}}</div>
 						{{else}}
 							<div class="feedTitle">
-								<a href="{{../link}}"><img class="feedLogo" src="img/{{../../name}}Logo.png" /></a>
+								<a href="{{../link}}"><img class="feedLogo" src="img/{{../name}}Logo.png" /></a>
 							</div>
 							<div class="itemContent">
 							<span class="date">{{../publishedDate}}</span> {{{../content}}}</div>
 						{{/isFlickr}}
 					</li>
-					{{/each}}
+					<br/>{{/each}}
+					</center>
 				</ul>
-				{{/each}}
 				</div>
 			</div>
 		</script>
