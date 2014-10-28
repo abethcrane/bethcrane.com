@@ -22,5 +22,6 @@ $(document).ready(function() {
         $('.content').css('height', "100%");
     });
 
+
 });
 

@@ -174,11 +174,9 @@ li.flickr, li.instagram {
 }
 
 .flickr .itemContent img {
-    width: auto;
-    min-height: 200px;
-    min-width: 200px;
+/*    width: auto;
     max-height: 300px;
-    max-width: 300px;
+    max-width: 300px;*/
 }
 
 .instagram .itemContent img {

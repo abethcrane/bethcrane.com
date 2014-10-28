@@ -22,16 +22,17 @@ var handleInstagramData = function(data) {
 	var xml = [];
 	var i;
 	var date;
+	var numEntries = 10;
 	for (i = 0; i < numEntries; i++) {
 		xml[i] = {};
 		date = new Date(data[i]["created_time"] *1000);
-		xml[i]["publishedDate"]  = (date.toGMTString()).replace(/.*?, /, "");
+		xml[i]["publishedDate"]  = (date.toGMTString()).replace(/.*?, /, " ");
 		xml[i]["link"] = data[i]["link"];
 		xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "' alt = '" + data[i]["caption"]["text"].substring(0,50) + "...'>";
 		xml[i]["title"] = "Instagram - @abethcrane";
 	}
 
-	endDataHandling(data, "instagram");
+	endDataHandling(xml, "instagram", numEntries);
 }
 
 var handleData = function(xml, feedName, numEntries) {
@@ -64,11 +65,11 @@ var handleData = function(xml, feedName, numEntries) {
 		}
 	}
 
-	endDataHandling(xml, feedName);
+	endDataHandling(xml, feedName, numEntries);
 
 }
 
-var endDataHandling = function (xml, feedName) {
+var endDataHandling = function (xml, feedName, numEntries) {
 	for (i = 0; i < numEntries; i++) {
 		xml[i]["name"] = feedName;
 		feeds.push(xml[i]);
@@ -79,6 +80,7 @@ var endDataHandling = function (xml, feedName) {
 	if (numFeeds == totalFeeds) {
 		feeds.sort(SortByDate);
 		displayTemplate("#feedTemplate", feeds);
+    		$(".flickr img").maxSide({maxSide:"300"});
 	}
 }
 
@@ -98,10 +100,8 @@ $(document).ready(function() {
 	insta.src = "https://api.instagram.com/v1/users/34563658/media/recent/?client_id=021ea53429ed426c8b5b4a492a20db96&callback=handleInstagramData";
 	document.body.appendChild(insta);
 
-	getFeed("flickr", "http://api.flickr.com/services/feeds/photos_public.gne?id=105674507@N06", 6);
-	getFeed("twitter", "https://script.googleusercontent.com/macros/echo?user_content_key=gOvlL1a7DdxWDC311cAcW1EH0OYToLxbKUbpC4CNob_QqVIKCcJ0uv6pxX9_6b7zwzMViBc4waWYH3Cy2-AUoDpq_xIB2AEUm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAgDXbj_tVyWQMr79LWC07Ejb66DUKzGjmLsoERNB3kg0BAiR7PDyyKrbLp64XKMJYdYUgLW9EAN1I3KF5EhPlVgRFelZprtXqd3WMz3xaUx&lib=MJ2RCt7KC2yZa3tT8V4zCPBwaZjxFQg_8", 5);
-	getFeed("github", "https://github.com/abethcrane.atom", 5);
-//	getFeed("instagram", "http://widget.stagram.com/rss/n/abethcrane", 6);
-//	getFeed("instagram2", "https://api.instagram.com/v1/users/34563658/media/recent/?client_id=021ea53429ed426c8b5b4a492a20db96", 6);
+	getFeed("flickr", "http://api.flickr.com/services/feeds/photos_public.gne?id=105674507@N06", 10);
+	getFeed("twitter", "https://script.googleusercontent.com/macros/echo?user_content_key=gOvlL1a7DdxWDC311cAcW1EH0OYToLxbKUbpC4CNob_QqVIKCcJ0uv6pxX9_6b7zwzMViBc4waWYH3Cy2-AUoDpq_xIB2AEUm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAgDXbj_tVyWQMr79LWC07Ejb66DUKzGjmLsoERNB3kg0BAiR7PDyyKrbLp64XKMJYdYUgLW9EAN1I3KF5EhPlVgRFelZprtXqd3WMz3xaUx&lib=MJ2RCt7KC2yZa3tT8V4zCPBwaZjxFQg_8", 10);
+	getFeed("github", "https://github.com/abethcrane.atom", 10);
 	displayTemplate("#sidebarTemplate", nav);
 });
