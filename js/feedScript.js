@@ -5,12 +5,6 @@ var getFeed = function(feedName, feedUrl, numEntries) {
 	var serverResponse = $.ajax({
 		type: "GET",
 		url: url,
-		/*data: {
-			'v': 1.0,
-			'num': numEntries,
-			'callback': '',
-			'q': encodeURIComponent(feedUrl),
-		},*/
 		dataType: 'json',
 	});
 
@@ -21,6 +15,23 @@ var getFeed = function(feedName, feedUrl, numEntries) {
 		handleData(data.responseData.feed.entries, feedName, numEntries);
 	});
 };
+
+/*function getInstagramDate(id) { 
+	var url = "https://api.instagram.com/v1/media/"+id+"?client_id=021ea53429ed426c8b5b4a492a20db96";
+	var serverResponse = $.ajax({
+		type: "GET",
+		url: url,
+		dataType: 'json',
+	});
+
+	var date = "";
+	serverResponse.done(function(data){
+		date = new Date(data["data"]["created_time"] *1000);
+		date = (date.toGMTString()).replace(/.*?, /, "");
+	});
+
+	return date;
+};*/
 
 //This will sort your array
 function SortByDate(a, b){
@@ -34,8 +45,6 @@ var handleData = function(xml, feedName, numEntries) {
 	var re  = null;
 	var img = null;
 	var i;
-//	feeds[numFeeds] = {"name": feedName, "data": xml};
-
 	if (feedName == "flickr") {
 		for (i = 0; i < numEntries; i++) { 
 			// Remove first paragraph of 'abethcrane posted a photo'
@@ -44,7 +53,6 @@ var handleData = function(xml, feedName, numEntries) {
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
 		}
 	} else if (feedName == "twitter") {
-
 		for (i = 0; i < numEntries; i++) {
 			img = xml[i]["content"].match(/pic\.twitter\.com[^<]*/);
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
@@ -59,10 +67,16 @@ var handleData = function(xml, feedName, numEntries) {
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
 		}
 	} else if (feedName == "instagram") {
+	    var id;
 	    for (i = 0; i < numEntries; i++) {
 	        xml[i]["title"] = "Instagram - @abethcrane";
 	        xml[i]["content"] = xml[i]["content"].replace(/<p>.*<\/p>/m, "");
 	        xml[i]["content"] = xml[i]["content"].replace(/<strong>(.|\s)*/m, "");
+		
+/*		id = xml[i]["link"].replace(/.*\//, "");
+		data = getInstagramData(id);
+		xml[i]["publishedDate"] = getInstagramDate(data);
+		xml[i]["link"] = data["data"]["link"];*/
 	    }
 	}
 
