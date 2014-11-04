@@ -13,59 +13,8 @@
     <body>
 	<!-- Background image taken by Robert Newey -->
         <div class="main resize">
-    	<script id="sidebarTemplate" type="text/x-handlebars-template">
-			<div class="sidebar">
-				<center>
-					<div class="about">
-						<a href="/" style="text-decoration: none;"><h1 class="name">Beth Crane</h1></a>
-						<h2 class="titles">Software Engineer & Photographer</h2>
-						<p class="description">
-							Beth, /b&epsilon;&theta;/, (n); Rational thinker, incredulous individual, literature enthusiast.
-						</p>
-					</div>
-					<ul class="nav">
-						<li><div class="circular face"></div></li>
-						{{#each this}}
-						<li><a href="{{url}}">{{text}}</a></li>
-						{{/each}}
-						<li><div class="circular crane"></div></li>
-					</ul>
-                                                        <div class="contact">
-                                                            beth@brolgaswan.com
-                                                        </div>
-				</center>
-			</div>
-		</script>
 
-		<script id="feedTemplate" type="text/x-handlebars-template">
-			<div class="content">
-				<div id="content-inner">
-				<br/>
-				<ul class="feed">
-					<center>
-					{{#each this}}
-					<li class="item {{name}}" id="{{name}}{{@index}}">
-						{{#isFlickr name}}
-							<div class="feedTitle">
-								<img class="feedLogo" src="img/{{../name}}Logo.png"><span>{{../title}}</span>
-							</div>
-							<div class="itemContent"><a href="{{../link}}">{{{../content}}}</a></div>
-						{{else}}
-							<div class="feedTitle">
-								<a href="{{../link}}"><img class="feedLogo" src="img/{{../name}}Logo.png" /></a>
-							</div>
-							<div class="itemContent">{{{../content}}}</div>
-						{{/isFlickr}}
-					</li>
-					<br/>{{/each}}
-					</center>
-				</ul>
-				</div>
-			</div>
-		</script>
-
-
-		</div>
+        </div>
 
         <!-- Jquery -->
         <script src="js/jquery.js"></script>

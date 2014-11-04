@@ -11,64 +11,18 @@
 
     </head>
     <body>
-        <!-- Background image taken by Robert Newey --> 
+        <!-- Background image taken by Robert Newey -->
         <div class="main resize">
-    	<script id="sidebarTemplate" type="text/x-handlebars-template">
-			<div class="sidebar">
-				<center>
-					<div class="about">
-						<a href="/" style="text-decoration: none;"><h1 class="name">Beth Crane</h1></a>
-						<h2 class="titles">Software Engineer & Photographer</h2>
-						<p class="description">
-							Beth, /b&epsilon;&theta;/, (n); Rational thinker, incredulous individual, literature enthusiast.
-						</p>
-					</div>
-					<ul class="nav">
-						<li><div class="circular face"></div></li>
-						{{#each this}}
-						<li><a href="{{url}}">{{text}}</a></li>
-						{{/each}}
-						<li><div class="circular crane"></div></li>
-					</ul>
-					<div class="contact">
-						beth@brolgaswan.com
-					</div>
-				</center>
-			</div>
-		</script>
 
-		<script id="projectsTemplate" type="text/x-handlebars-template">
-			<div class="content">
-				<div id="content-inner">
-				<ul class="projects">
-					<center>
-					{{#each this}}
-					<li class="project" id="{{name}}">
-                        <h2 class="projectTitle"><a href="{{link}}">{{name}}</a></h2>
-                        <div class="projectInfo">
-                            <img class="projectImg" src="../img/{{imgUrl}}" alt="{{name}}" />
-                            <br/>
-                            <p class="oneliner">{{oneliner}}</p>
-                            <span class="date">{{dates}}</span><span class="languages">{{languages}}</span>
-                        </div>
-					</li>
-					{{/each}}
-					</center>
-				</ul>
-				</div>
-			</div>
-		</script>
-		
-		
-		</div>   
+        </div>
 
         <!-- Jquery -->
         <script src="../js/jquery.js"></script>
         <!-- Bootstrap -->
         <script src="../js/bootstrap.min.js"></script>
-		<!-- Nice JS: Templating & Classes-->
-		<script src="../js/handlebar.js"></script>
-		<!-- Settings -->
+        <!-- Nice JS: Templating & Classes-->
+        <script src="../js/handlebar.js"></script>
+        <!-- Settings -->
         <script src="../js/script.js"></script>
         <!-- Feed Settings -->
         <script src="../js/projectsScript.js"></script>
