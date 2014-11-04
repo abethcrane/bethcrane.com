@@ -1,0 +1,24 @@
+<div class="content">
+    <div id="content-inner">
+    <br/>
+        <ul class="feed">
+            <center>
+            {{#each this}}
+            <li class="item {{name}}" id="{{name}}{{@index}}">
+                {{#hasTitle name}}
+                    <div class="feedTitle">
+                        <img class="feedLogo" src="img/{{../name}}Logo.png"><span>{{../title}}</span>
+                    </div>
+                    <div class="itemContent"><a href="{{../link}}">{{{../content}}}</a></div>
+                {{else}}
+                    <div class="feedTitle">
+                        <a href="{{../link}}"><img class="feedLogo" src="img/{{../name}}Logo.png" /></a>
+                    </div>
+                    <div class="itemContent">{{{../content}}}</div>
+                {{/hasTitle}}
+            </li>
+            <br/>{{/each}}
+            </center>
+        </ul>
+    </div>
+</div>
