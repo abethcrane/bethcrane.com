@@ -2,19 +2,19 @@ var nav =            [{"url":"/projects", "text": "Projects"},
 		   {"url": "http://linkedin.com/in/bethanycrane", "text": "LinkedIn"},
 		   {"url": "http://github.com/abethcrane", "text": "Github"}];
 
-var displayTemplate = function(template, data) {
+var displayTemplate = function(template, element, data) {
     //Replace the body section with the new code.
-    $(".main").append(template(data));
+    $(element).append(template(data));
 }
 
-var displayTemplateAndResizeImages = function(template, data) {
-        displayTemplate(template, data);
+var displayTemplateAndResizeImages = function(template, element, data) {
+        displayTemplate(template, element, data);
         $(".flickr img").load(function() {
             $(this).maxSide({maxSide:"300"});
         });
 }
 
-function getTemplateAjax(path, dict, callback) {
+function getTemplateAjax(path, element, dict, callback) {
         var source;
         var template;
 
@@ -27,7 +27,7 @@ function getTemplateAjax(path, dict, callback) {
 
                     //execute the callback if passed
                     if (callback) {
-                        callback(template, dict);
+                        callback(template, element, dict);
                    }
             }
         });
