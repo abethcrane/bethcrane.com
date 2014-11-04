@@ -137,7 +137,7 @@ h2 {
     float: left;
 }
 
-.instagram .feedLogo, .flickr .feedLogo {
+.instagram .feedLogo, .flickr .feedLogo, .medium .feedLogo {
    padding-bottom: 5px; 
 }
 

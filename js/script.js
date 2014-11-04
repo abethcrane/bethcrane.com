@@ -12,7 +12,7 @@ var displayTemplate = function(name, data) {
 
 Handlebars.registerHelper("isFlickr", function(feedName, options) {
     var fnTrue=options.fn, fnFalse=options.inverse;
-    return (feedName == 'flickr' || feedName == 'instagram') ? fnTrue() : fnFalse();
+    return (feedName == 'flickr' || feedName == 'instagram' || feedName == 'medium') ? fnTrue() : fnFalse();
 });
 
 $(document).ready(function() {

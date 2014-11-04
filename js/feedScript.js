@@ -63,6 +63,11 @@ var handleData = function(xml, feedName, numEntries) {
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
 		}
+	} else if (feedName == "medium") {
+		for (i = 0; i < numEntries; i++) {
+			console.log(xml[i]);			
+
+		}
 	}
 
 	endDataHandling(xml, feedName, numEntries);
@@ -105,5 +110,6 @@ $(document).ready(function() {
 	getFeed("flickr", "http://api.flickr.com/services/feeds/photos_public.gne?id=105674507@N06", 10);
 	getFeed("twitter", "https://script.googleusercontent.com/macros/echo?user_content_key=gOvlL1a7DdxWDC311cAcW1EH0OYToLxbKUbpC4CNob_QqVIKCcJ0uv6pxX9_6b7zwzMViBc4waWYH3Cy2-AUoDpq_xIB2AEUm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAgDXbj_tVyWQMr79LWC07Ejb66DUKzGjmLsoERNB3kg0BAiR7PDyyKrbLp64XKMJYdYUgLW9EAN1I3KF5EhPlVgRFelZprtXqd3WMz3xaUx&lib=MJ2RCt7KC2yZa3tT8V4zCPBwaZjxFQg_8", 10);
 	getFeed("github", "https://github.com/abethcrane.atom", 10);
+	getFeed("medium", "https://medium.com/feed/@abethcrane", 10);
 	displayTemplate("#sidebarTemplate", nav);
 });
