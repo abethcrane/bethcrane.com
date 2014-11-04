@@ -68,6 +68,6 @@ var projects = [
 //TODO: Add engcupid
 
 $(document).ready(function() {
-    getTemplateAjax("templates/sidebar.handlebars", nav, displayTemplate);
-    getTemplateAjax("templates/projects.handlebars", projects, displayTemplateAndResizeImages);
+    getTemplateAjax("/templates/sidebar.handlebars", nav, displayTemplate);
+    getTemplateAjax("/templates/projects.handlebars", projects, displayTemplate);
 });
