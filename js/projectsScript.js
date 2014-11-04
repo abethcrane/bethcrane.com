@@ -69,5 +69,5 @@ var projects = [
 
 $(document).ready(function() {
     getTemplateAjax("/templates/sidebar.handlebars", ".sidebar", nav, displayTemplate);
-    getTemplateAjax("/templates/projects.handlebars", ".content", displayTemplate);
+    getTemplateAjax("/templates/projects.handlebars", ".content", projects, displayTemplate);
 });
