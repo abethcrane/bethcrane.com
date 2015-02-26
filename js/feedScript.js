@@ -38,8 +38,9 @@ var handleInstagramData = function(data) {
 var handleData = function(xml, feedName, numEntries) {
 
 	var i;
-	if (feedName == "flickr") {
-		for (i = 0; i < numEntries; i++) {
+
+	for (i = 0; i < numEntries && (typeof xml[i] !== 'undefined'); i++) {
+		if (feedName == "flickr") {
 			// Remove first paragraph of 'abethcrane posted a photo'
 			xml[i]["content"] = xml[i]["content"].replace(/<p>.*?<\/p>/m, "");
 			xml[i]["content"] = xml[i]["content"].replace(/width.*height=".*?" /, "");
@@ -47,26 +48,18 @@ var handleData = function(xml, feedName, numEntries) {
 			xml[i]["content"].replace(/.*><img/, "<img").replace(/<\/a.*/, "");
 			// Clean up published Date
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
-
-		}
-	} else if (feedName == "twitter") {
-		for (i = 0; i < numEntries; i++) {
+		} else if (feedName == "twitter") {
 			img = xml[i]["content"].match(/pic\.twitter\.com[^<]*/);
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
 			xml[i]["content"] = xml[i]["content"].replace(/.*<br>/m, "");
 			xml[i]["content"] = xml[i]["content"].replace(/(abs.twimg.com\/emoji.*?").*?>/mg, "$1 width='20px'>");
-		}
-	} else if (feedName == "github") {
-		for (i = 0; i < numEntries; i++) {
+		} else if (feedName == "github") {
 			xml[i]["content"] = xml[i]["title"];
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
-		}
-	} else if (feedName == "medium") {
-		for (i = 0; i < numEntries; i++) {
+		} else if (feedName == "medium") {
 			console.log(xml[i]);
-
 		}
 	}
 
@@ -75,11 +68,10 @@ var handleData = function(xml, feedName, numEntries) {
 }
 
 var endDataHandling = function (xml, feedName, numEntries) {
-	for (i = 0; i < numEntries; i++) {
+	for (i = 0; i < numEntries && (typeof xml[i] !== 'undefined'); i++) {
 		xml[i]["name"] = feedName;
 		feeds.push(xml[i]);
 	}
-
 
 	numFeeds++;
 	if (numFeeds == totalFeeds) {
