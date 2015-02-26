@@ -63,12 +63,11 @@ var handleData = function(xml, feedName, numEntries) {
 		}
 	}
 
-	endDataHandling(xml, feedName, numEntries);
-
+	endDataHandling(xml, feedName, i);
 }
 
 var endDataHandling = function (xml, feedName, numEntries) {
-	for (i = 0; i < numEntries && (typeof xml[i] !== 'undefined'); i++) {
+	for (i = 0; i < numEntries; i++) {
 		xml[i]["name"] = feedName;
 		feeds.push(xml[i]);
 	}
