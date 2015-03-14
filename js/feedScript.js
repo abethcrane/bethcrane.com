@@ -59,16 +59,16 @@ var handleData = function(xml, feedName, numEntries) {
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
 			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
 		} else if (feedName == "medium") {
-			console.log(xml[i]);
+			// Clean up published Date
+			xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
 		}
 	}
 
-	endDataHandling(xml, feedName, numEntries);
-
+	endDataHandling(xml, feedName, i);
 }
 
 var endDataHandling = function (xml, feedName, numEntries) {
-	for (i = 0; i < numEntries && (typeof xml[i] !== 'undefined'); i++) {
+	for (i = 0; i < numEntries; i++) {
 		xml[i]["name"] = feedName;
 		feeds.push(xml[i]);
 	}
@@ -88,7 +88,7 @@ function SortByDate(a, b){
 }
 
 var numFeeds = 0;
-var totalFeeds = 4;
+var totalFeeds = 5;
 var feeds = [];
 
 $(document).ready(function() {
