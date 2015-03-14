@@ -88,7 +88,7 @@ function SortByDate(a, b){
 }
 
 var numFeeds = 0;
-var totalFeeds = 4;
+var totalFeeds = 5;
 var feeds = [];
 
 $(document).ready(function() {
