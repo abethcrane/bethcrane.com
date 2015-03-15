@@ -98,15 +98,15 @@ h2 {
 }
 
 .circular {
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     background-size: contain;
 }
 
 .sidebar .circular {
-	width: 100px;
-	height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 .sidebar .face {
@@ -132,13 +132,13 @@ h2 {
     margin-left: 11px;
 }
 
-.twitter .feedLogo, .github .feedLogo {
+.twitter .feedLogo, .github .feedLogo, .stackoverflow .feedLogo {
     margin: 0px;
     float: left;
 }
 
 .instagram .feedLogo, .flickr .feedLogo, .medium .feedLogo {
-   padding-bottom: 5px; 
+   padding-bottom: 5px;
 }
 
 /* titles */

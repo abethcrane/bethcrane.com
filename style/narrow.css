@@ -17,8 +17,8 @@
 }
 
 .sidebar .about {
-	max-height: 50px;
-	overflow: scroll;
+    max-height: 50px;
+    overflow: scroll;
 }
 
 .sidebar .circular {
@@ -41,7 +41,7 @@
 }
 
 .nav li {
-	border-left: 1px solid;
+    border-left: 1px solid;
 }
 
 .nav li:nth-child(1) {
