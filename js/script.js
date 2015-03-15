@@ -46,3 +46,12 @@ $(document).ready(function() {
     });
 });
 
+// Ahttp://stackoverflow.com/a/4673436/4629688
+if (!String.prototype.format) {
+    String.prototype.format = function() {
+        var args = arguments;
+            return this.replace(/{(\d+)}/g, function(match, number) {
+            return typeof args[number] != 'undefined' ? args[number] : match;
+        });
+    };
+}
