@@ -42,7 +42,7 @@
 }
 
 #content-inner {
-    max-height: 100%;
+    max-height: 100%;    
 }
 
 .sidebar {
@@ -209,4 +209,10 @@ li.flickr, li.instagram {
 .projectImg {
     max-width: 200px;
     max-height: 300px;
+}
+
+#cv {
+    min-height: 800px;
+    width: 100%;
+    overflow-y: visible;
 }

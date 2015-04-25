@@ -1,6 +1,7 @@
-var nav =            [{"url":"/projects", "text": "Projects"},
+var nav =         [{"url":"/projects", "text": "Projects"},
 		   {"url": "http://linkedin.com/in/bethanycrane", "text": "LinkedIn"},
-		   {"url": "http://github.com/abethcrane", "text": "Github"}];
+		   {"url": "http://github.com/abethcrane", "text": "Github"},
+                   {"url": "/cv", "text": "CV"}];
 
 var displayTemplate = function(template, element, data) {
     //Replace the body section with the new code.
