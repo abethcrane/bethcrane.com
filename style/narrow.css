@@ -47,12 +47,6 @@
 .nav li:nth-child(1) {
     border-left: 0px solid;
 }
-.nav li:nth-child(2) {
-    border-left: 0px solid;
-}
-.nav li:nth-child(4) {
-    border-left: 0px solid;
-}
 
 .feed {
     width: 100%;
