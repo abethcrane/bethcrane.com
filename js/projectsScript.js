@@ -33,7 +33,7 @@ var projects = [
 		    "link": "http://abethcrane.github.io/Simple-Chatbot/",
 		    "oneliner": "Simple Spreadsheet Editing Chatbot",
 		    "imgUrl": "chatbot.png",
-		    "languages": "HTML/CSS/Javascript, Ruby on Rails, Java",
+		    "languages": "Python",
 		    "dates": "May 2013"},
 
 		   {"name": "Book Scanner",
