@@ -16,7 +16,7 @@ var projects = [
 		    "dates": "November '13"},
 
 		   {"name": "CGI World",
-	 	    "link": "http://abethcrane.github.io/CGI-World",
+	 	    "link": "http://abethcrane.github.io/Weatherworld",
 		    "oneliner": "Computer Graphics program that takes in a json map and creates a world you can explore (complete with weather!)",
 		    "imgUrl": "cgiWorld.png",
 		    "languages": "Java",
