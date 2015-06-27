@@ -1,54 +1,6 @@
-.main {
-    background-position: left top;
-}
-
-.sidebar {
-    display: table-row;
-    width: 100%;
-    overflow: hidden;
-    height: 0px;
-}
-
 .content {
     display: table-row;
     width: 100%;
     height: 100%;
     float: left;
 }
-
-.sidebar .about {
-    max-height: 50px;
-    overflow: scroll;
-}
-
-.sidebar .circular {
-    width: 30px;
-    height: 30px;
-}
-
-.nav {
-    height: auto !important;
-    width: 210px;
-    padding: 10px;
-    margin-bottom: 30px;
-}
-
-.nav li {
-    display: inline;
-    padding: 0 5px;
-    line-height: 25px;
-    float: left;
-}
-
-.nav li {
-    border-left: 1px solid;
-}
-
-.nav li:nth-child(1) {
-    border-left: 0px solid;
-}
-
-.feed {
-    width: 100%;
-}
-

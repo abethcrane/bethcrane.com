@@ -80,7 +80,7 @@ var endDataHandling = function (xml, feedName, numEntries) {
     numFeeds++;
     if (numFeeds == totalFeeds) {
         feeds.sort(SortByDate);
-        getTemplateAjax("templates/feeds.handlebars", ".content", feeds, displayTemplateAndResizeImages);
+        getTemplateAjax("templates/feeds.handlebars", "#feeds", feeds, displayTemplateAndResizeImages);
     }
 }
 
@@ -108,6 +108,4 @@ $(document).ready(function() {
     getFeed("github", "https://github.com/abethcrane.atom", 10);
     getFeed("medium", "https://medium.com/feed/@abethcrane", 10);
     getFeed("stackoverflow", "http://stackoverflow.com/feeds/user/4629688", 10);
-
-    getTemplateAjax("templates/sidebar.handlebars", ".sidebar", nav, displayTemplate);
 });

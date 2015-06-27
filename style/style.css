@@ -1,15 +1,14 @@
+@font-face{
+    font-family: 'Happy Fpx';
+    src: url('Thonburi-Bold.ttf'),
+    url('Thonburi-Bold.eot'); /* IE */
+}
+
 @font-face {
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
   src: local('Droid Sans'), local('DroidSans'), url(https://themes.googleusercontent.com/static/fonts/droidsans/v4/s-BiyweUPV0v-yRb-cjciL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'Lobster';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lobster'), url(https://themes.googleusercontent.com/static/fonts/lobster/v6/NIaFDq6p6eLpSvtV2DTNDQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
 }
 
 @font-face {
@@ -26,16 +25,90 @@
   src: local('Josefin Slab SemiBold'), local('JosefinSlab-SemiBold'), url(http://fonts.gstatic.com/s/josefinslab/v5/NbE6ykYuM2IyEwxQxOIi2PBf3Xtc57ojmY2ox2Xv8Go.woff2) format('woff2'), url(http://fonts.gstatic.com/s/josefinslab/v5/NbE6ykYuM2IyEwxQxOIi2NOd4RnLmtUrdSQkDmC5b8k.woff) format('woff');
 }
 
+
+html {
+    font-size: 20%;
+    line-height: 1.2rem;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Happy Fox';
+    padding: none;
+}
+
+h2 {
+    font-family: 'Josefin Slab';
+}
+
 .main {
     display: table;
     width: 100%;
-    background: url(../img/bg-cranes3.jpg);
-    background-size: cover;
     font-family: 'Droid Sans';
     overflow: scroll;
 }
 
-.content {
+.sun {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.nav {
+    margin: 0px;
+    list-style: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+.nav li {
+    display: inline;
+    width: 5rem;
+    height: 5rem;
+    float: left;
+    margin: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav #linkedin {
+    background-image: url("../assets/img/icons/linkedin-icon.png");
+}
+
+.nav #github {
+    background-image: url("../assets/img/icons/github-icon.png");
+}
+
+.nav #twitter {
+    background-image: url("../assets/img/icons/twitter-icon.png");
+}
+
+.nav #instagram {
+    background-image: url("../assets/img/icons/instagram-icon.png");
+}
+
+.nav #flickr {
+    background-image: url("../assets/img/icons/flickr-icon.png");
+}
+
+.page {
+    overflow-y: scroll;
+}
+
+#photo-page {
+    background: url(../assets/img/background-text.jpg);
+    background-position: bottom center;
+    background-size: cover;
+    z-index: 1;
+}
+
+#feeds {
     color: black;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -44,77 +117,9 @@
 #content-inner {
     max-height: 100%;    
 }
-
-.sidebar {
-    background-color: rgba(11, 83, 148, 0.6);
-    color: white;
-    overflow-y: scroll;
-    overflow-x: auto;
-}
-
-.nav {
-    margin: 0px;
-    list-style: none;
-    padding: 0px;
-}
-
-.nav a, .nav a:visited {
-    color: white;
-}
-
-.nav a:hover {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-h1 {
-    font-family: 'Lobster';
-}
-
-h2 {
-    font-family: 'Josefin Slab';
-}
-
-
 .date {
     font-style: italic;
     font-size: 11px;
-}
-
-.about .name {
-    color: rgba(245, 130, 32, 1);
-    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
-    /*-webkit-text-stroke-width: 0.001px;
-    -webkit-text-stroke-color: white;*/
-}
-
-.about .titles {
-    color: rgba(255, 255, 255, 1);
-}
-
-.about .description {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-.circular {
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    background-size: contain;
-}
-
-.sidebar .circular {
-    width: 100px;
-    height: 100px;
-}
-
-.sidebar .face {
-    background-image: url(../img/face.jpg);
-}
-
-.sidebar .crane {
-    background-image: url(../img/crane.jpg);
 }
 
 .feed, .projects {
@@ -171,12 +176,6 @@ li.flickr, li.instagram {
     font-style: italic;
     font-size: 11px;
     margin: 0px;
-}
-
-.flickr .itemContent img {
-/*    width: auto;
-    max-height: 300px;
-    max-width: 300px;*/
 }
 
 .instagram .itemContent img {
