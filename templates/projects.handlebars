@@ -1,17 +1,15 @@
-<div id="content-inner">
-    <ul class="projects">
-        <center>
-        {{#each this}}
-        <li class="project" id="{{name}}">
-            <h2 class="projectTitle"><a href="{{link}}">{{name}}</a></h2>
-            <div class="projectInfo">
-                <img class="projectImg" src="../img/{{imgUrl}}" alt="{{name}}" />
-                <br/>
-                <p class="oneliner">{{oneliner}}</p>
-                <span class="date">{{dates}}</span><span class="languages">{{languages}}</span>
-            </div>
-        </li>
-        {{/each}}
-        </center>
-    </ul>
-</div>
+<ul class="projects">
+    <center>
+    {{#each this}}
+    <li class="project" id="{{name}}">
+        <h2 class="projectTitle"><a href="{{link}}">{{name}}</a></h2>
+        <div class="projectInfo">
+            <img class="projectImg" src="assets/img/projects/{{imgUrl}}" alt="{{name}}" />
+            <br/>
+            <p class="oneliner">{{oneliner}}</p>
+            <span class="date">{{dates}}</span><span class="languages">{{languages}}</span>
+        </div>
+    </li>
+    {{/each}}
+    </center>
+</ul>
