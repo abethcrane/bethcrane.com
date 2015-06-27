@@ -136,7 +136,7 @@ h2 {
 
 /* titles */
 
-.feedTitle, .projects {
+.feedTitle, .projectTitle {
     font-family: 'Josefin Slab Bold';
     font-size: 6.5rem;
     max-width: 65%;
