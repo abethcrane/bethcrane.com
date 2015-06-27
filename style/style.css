@@ -129,14 +129,13 @@ h2 {
     max-height: 25px;
     padding-right: 5px;
     margin-left: 11px;
-    padding-bottom: 5px;
 }
 
 /* titles */
 
 .feedTitle, .projects .oneliner {
     font-family: 'Josefin Slab Bold';
-    font-size: 17px;
+    font-size: 6.5rem;
 }
 
 /* main page lists */

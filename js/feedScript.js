@@ -54,12 +54,12 @@ var handleData = function(xml, feedName, numEntries) {
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
             xml[i]["content"] = xml[i]["content"].replace(/.*<br>/m, "");
             xml[i]["content"] = xml[i]["content"].replace(/(abs.twimg.com\/emoji.*?").*?>/mg, "$1 width='20px'>");
-            xml[i]["title"] = "Twitter - @abethcrane</a>";
+            xml[i]["title"] = "Twitter - @abethcrane";
         } else if (feedName == "github") {
             xml[i]["content"] = xml[i]["title"];
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
-            xml[i]["title"] = "Github - @abethcrane;
+            xml[i]["title"] = "Github - @abethcrane";
         } else if (feedName == "medium") {
             // Clean up published Date
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
