@@ -66,7 +66,7 @@ var handleData = function(xml, feedName, numEntries) {
         } else if (feedName == "stackoverflow"){
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
             xml[i]["title"] = xml[i]["title"].replace(/.*?for /, "");
-            xml[i]["content"] = "<b>{0}</b><br/>{1}".format(xml[i]["title"], xml[i]["contentSnippet"]);
+            xml[i]["content"] = xml[i]["contentSnippet"];
         }
     }
 
