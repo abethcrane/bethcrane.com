@@ -3,9 +3,9 @@
     {{#each this}}
     <li class="item {{name}}" id="{{name}}{{@index}}">
         <div class="feedTitle">
-            <img class="feedLogo" src="assets/img/feed-icons/{{../name}}Logo.png"><span>{{../title}}</span>
+            <img class="feedLogo" src="assets/img/feed-icons/{{name}}Logo.png"><span>{{title}}</span>
         </div>
-        <div class="itemContent"><a href="{{../link}}">{{{../content}}}</a></div>
+        <div class="itemContent"><a href="{{link}}">{{{content}}}</a></div>
     </li>
     <br/>{{/each}}
     </center>
