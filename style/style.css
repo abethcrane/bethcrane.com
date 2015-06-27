@@ -114,9 +114,6 @@ h2 {
     overflow-x: hidden;
 }
 
-#content-inner {
-    max-height: 100%;    
-}
 .date {
     font-style: italic;
     font-size: 11px;
