@@ -41,7 +41,7 @@ $(document).ready(function() {
         $('.content').css('height', "100%");
     });
     
-    $('.pages').fullpage({
+    $('.main').fullpage({
 		//Navigation
 		navigationPosition: 'right',
 		showActiveTooltip: false,
