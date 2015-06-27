@@ -49,7 +49,6 @@ $(document).ready(function() {
 		slidesNavPosition: 'bottom',
 
 		//Scrolling
-		
 		autoScrolling: false,
 		fitToSection: true,
 		scrollBar: false,
@@ -60,7 +59,7 @@ $(document).ready(function() {
 
 		//Design
 		controlArrows: true,
-		verticalCentered: true,
+		verticalCentered: false,
 
 		//Custom selectors
 		sectionSelector: '.section',
