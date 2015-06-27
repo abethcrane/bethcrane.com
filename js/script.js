@@ -45,8 +45,7 @@ $(document).ready(function() {
 		//Navigation
 		navigationPosition: 'right',
 		showActiveTooltip: false,
-		slidesNavigation: true,
-		slidesNavPosition: 'bottom',
+		slidesNavigation: false,
 
 		//Scrolling
 		autoScrolling: false,
