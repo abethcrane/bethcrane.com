@@ -2,17 +2,10 @@
     <center>
     {{#each this}}
     <li class="item {{name}}" id="{{name}}{{@index}}">
-        {{#hasTitle name}}
-            <div class="feedTitle">
-                <img class="feedLogo" src="assets/img/feed-icons/{{../name}}Logo.png"><span>{{../title}}</span>
-            </div>
-            <div class="itemContent"><a href="{{../link}}">{{{../content}}}</a></div>
-        {{else}}
-            <div class="feedTitle">
-                <a href="{{../link}}"><img class="feedLogo" src="assets/img/feed-icons/{{../name}}Logo.png" /></a>
-            </div>
-            <div class="itemContent">{{{../content}}}</div>
-        {{/hasTitle}}
+        <div class="feedTitle">
+            <img class="feedLogo" src="assets/img/feed-icons/{{../name}}Logo.png"><span>{{../title}}</span>
+        </div>
+        <div class="itemContent"><a href="{{../link}}">{{{../content}}}</a></div>
     </li>
     <br/>{{/each}}
     </center>
