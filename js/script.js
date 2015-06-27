@@ -43,34 +43,20 @@ $(document).ready(function() {
     
     $('.pages').fullpage({
 		//Navigation
-		menu: false,
-		lockAnchors: false,
-		navigation: false,
 		navigationPosition: 'right',
 		showActiveTooltip: false,
 		slidesNavigation: true,
 		slidesNavPosition: 'bottom',
 
 		//Scrolling
-		css3: true,
-		scrollingSpeed: 700,
+		
 		autoScrolling: true,
 		fitToSection: true,
 		scrollBar: false,
-		easing: 'easeInOutCubic',
-		easingcss3: 'ease',
-		loopBottom: false,
-		loopTop: false,
-		loopHorizontal: false,
-		continuousVertical: false,
 		scrollOverflow: true,
-		touchSensitivity: 15,
-		normalScrollElementTouchThreshold: 5,
 
 		//Accessibility
 		keyboardScrolling: false,
-		animateAnchor: true,
-		recordHistory: true,
 
 		//Design
 		controlArrows: true,
