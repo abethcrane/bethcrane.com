@@ -1,3 +1,7 @@
+.main {
+    background-position: right top;
+}
+
 .content {
     display: block;
     margin-left: 240px;
@@ -8,3 +12,18 @@
 #content-inner {
     width: 70%;
 }
+
+.sidebar {
+    display: block;
+    float: left;
+    width: 210px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sidebar li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 30px;
+}
+
