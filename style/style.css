@@ -121,7 +121,7 @@ h2 {
     list-style: none;
     float: left;
     margin: 0px auto !important;
-    width: 70%;
+    width: 80%;
 }
 
 /* feed logo */
@@ -138,6 +138,7 @@ h2 {
 .feedTitle, .projects .oneliner {
     font-family: 'Josefin Slab Bold';
     font-size: 6.5rem;
+    max-width: 65%;
 }
 
 .content li {
@@ -151,11 +152,12 @@ h2 {
 .itemContent {
     font-size: 4.5rem;
     margin: 0px;
+    max-width: 50%;
 }
 
 .itemContent a {
     text-decoration: none;
-    color: black
+    color: #CCCCCC;
 }
 
 .instagram .itemContent img {
