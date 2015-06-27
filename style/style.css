@@ -135,7 +135,7 @@ h2 {
 
 /* titles */
 
-.feedTitle, .projects .oneliner {
+.feedTitle, .projects {
     font-family: 'Josefin Slab Bold';
     font-size: 6.5rem;
     max-width: 65%;
@@ -157,7 +157,7 @@ h2 {
 
 .itemContent a {
     text-decoration: none;
-    color: #CCCCCC;
+    color: #666666;
 }
 
 .instagram .itemContent img {
@@ -166,6 +166,13 @@ h2 {
 }
 
 /* project page stuff */
+
+.oneliner {
+    font-family: 'Josefin Slab Bold';
+    font-size: 6.5rem;
+    max-width: 65%;
+    color: #666666;
+}
 
 .projects li {
     display: block;
