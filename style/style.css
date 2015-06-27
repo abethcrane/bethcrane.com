@@ -134,7 +134,7 @@ h2 {
 
 /* titles */
 
-.instagram .feedTitle, .flickr .feedTitle, .projects .oneliner {
+.feedTitle, .projects .oneliner {
     font-family: 'Josefin Slab Bold';
     font-size: 17px;
 }
