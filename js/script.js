@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 		//Scrolling
 		
-		autoScrolling: true,
+		autoScrolling: false,
 		fitToSection: true,
 		scrollBar: false,
 		scrollOverflow: true,

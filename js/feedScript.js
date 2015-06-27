@@ -80,7 +80,7 @@ var endDataHandling = function (xml, feedName, numEntries) {
     numFeeds++;
     if (numFeeds == totalFeeds) {
         feeds.sort(SortByDate);
-        getTemplateAjax("templates/feeds.handlebars", "#feeds .fp-scrollable", feeds, displayTemplateAndResizeImages);
+        getTemplateAjax("templates/feeds.handlebars", "#feeds .fp-tableCell", feeds, displayTemplateAndResizeImages);
     }
 }
 
