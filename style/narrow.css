@@ -13,3 +13,8 @@
  .itemContent {
      max-width: 100%;
  }
+ 
+ .nav {
+   left: 50%;
+   margin-left: -18.75rem;
+}
