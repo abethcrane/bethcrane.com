@@ -4,3 +4,12 @@
     height: 100%;
     float: left;
 }
+
+.feed, .projects {
+    width: 100%;
+    margin: 0px !important;
+ }
+ 
+ .itemContent {
+     max-width: 100%;
+ }

@@ -111,7 +111,11 @@ h2 {
 
 /* Feeds style */
 
-#feeds {
+.page {
+    overflow: scroll;
+}
+
+#feeds, #projects {
     color: black;
     overflow-y: scroll;
     overflow-x: hidden;
