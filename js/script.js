@@ -55,6 +55,7 @@ $(document).ready(function() {
 
 		//Accessibility
 		keyboardScrolling: false,
+        recordHistory: true,
 
 		//Design
 		controlArrows: true,
