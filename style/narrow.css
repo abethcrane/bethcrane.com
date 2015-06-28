@@ -13,8 +13,14 @@
  .itemContent {
      max-width: 100%;
  }
- 
+
  .nav {
    left: 50%;
-   margin-left: -18.75rem;
+   bottom: 10px;
+   width: 45rem;
+   transform: translate(-50%, 0);
+}
+
+.sun img {
+    height: 20rem;
 }
