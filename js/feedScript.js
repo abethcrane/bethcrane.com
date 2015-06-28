@@ -29,7 +29,7 @@ var handleInstagramData = function(data) {
         xml[i]["publishedDate"]  = (date.toGMTString()).replace(/.*?, /, " ");
         xml[i]["link"] = data[i]["link"];
         xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "' alt = '" + data[i]["caption"]["text"].substring(0,50) + "...'>";
-        xml[i]["title"] = "Instagram - @abethcrane";
+        xml[i]["title"] =  "";
     }
 
     endDataHandling(xml, "instagram", numEntries);
@@ -54,12 +54,12 @@ var handleData = function(xml, feedName, numEntries) {
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
             xml[i]["content"] = xml[i]["content"].replace(/.*<br>/m, "");
             xml[i]["content"] = xml[i]["content"].replace(/(abs.twimg.com\/emoji.*?").*?>/mg, "$1 width='20px'>");
-            xml[i]["title"] = "Twitter - @abethcrane";
+            xml[i]["title"] = "";
         } else if (feedName == "github") {
             xml[i]["content"] = xml[i]["title"];
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
-            xml[i]["title"] = "Github - @abethcrane";
+            xml[i]["title"] =  "";
         } else if (feedName == "medium") {
             // Clean up published Date
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
