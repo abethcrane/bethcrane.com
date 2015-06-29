@@ -25,10 +25,9 @@
   src: local('Josefin Slab SemiBold'), local('JosefinSlab-SemiBold'), url(http://fonts.gstatic.com/s/josefinslab/v5/NbE6ykYuM2IyEwxQxOIi2PBf3Xtc57ojmY2ox2Xv8Go.woff2) format('woff2'), url(http://fonts.gstatic.com/s/josefinslab/v5/NbE6ykYuM2IyEwxQxOIi2NOd4RnLmtUrdSQkDmC5b8k.woff) format('woff');
 }
 
-
 html {
     font-size: 20%;
-    line-height: 1.2rem;
+    line-height: normal;
 }
 
 body {
@@ -146,12 +145,8 @@ h2 {
     max-width: 65%;
 }
 
-.content li {
-    background-color: rgba(255,255,255,0.85);
-    padding: 5px 5px 5px 5px;
-    text-align: center;
-    display: inline-block;
-    margin: 10px auto;
+li.item {
+    padding: 10px;
 }
 
 .itemContent {
