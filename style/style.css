@@ -102,10 +102,15 @@ h2 {
 /* Main page background */
 
 #photo-page {
-    background: url(../assets/img/background-text.jpg);
-    background-position: bottom center;
-    background-size: cover;
-    z-index: 1;
+    position: relative;
+}
+
+#photo-page img {
+    min-height: 100%; 
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0
 }
 
 /* Feeds style */
