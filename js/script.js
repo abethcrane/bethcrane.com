@@ -51,11 +51,11 @@ $(document).ready(function() {
 		autoScrolling: false,
 		fitToSection: true,
 		scrollBar: false,
-		scrollOverflow: true,
+		scrollOverflow: false,
 
 		//Accessibility
 		keyboardScrolling: false,
-        recordHistory: true,
+                recordHistory: true,
 
 		//Design
 		controlArrows: true,
