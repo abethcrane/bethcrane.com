@@ -71,7 +71,7 @@ var handleData = function(xml, feedName, numEntries) {
         } else if (feedName == "fibseq"){
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
             xml[i]["content"] = xml[i]["content"].replace(/^(.|\s)*?<img/m, "<img");
-            xml[i]["content"] = xml[i]["content"].replace(/>.*/m, ">");
+            xml[i]["content"] = xml[i]["content"].replace(/\>(.|\s)*/m, ">");
         }
     }
 

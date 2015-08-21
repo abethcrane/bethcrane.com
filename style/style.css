@@ -170,7 +170,7 @@ li.item {
     height: 300px;
 }
 
-.medium .itemContent img {
+.medium .itemContent img, .fibseq .itemContent img {
     width: 100%;
     height: 100%;
 }
