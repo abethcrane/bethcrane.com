@@ -68,6 +68,10 @@ var handleData = function(xml, feedName, numEntries) {
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
             xml[i]["title"] = xml[i]["title"].replace(/.*?for /, "");
             xml[i]["content"] = xml[i]["contentSnippet"];
+        } else if (feedName == "fibseq"){
+            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
+            xml[i]["content"] = xml[i]["content"].replace(/^(.|\s)*?<img/m, "<img");
+            xml[i]["content"] = xml[i]["content"].replace(/>.*/m, ">");
         }
     }
 
@@ -111,4 +115,5 @@ $(document).ready(function() {
     getFeed("github", "https://github.com/abethcrane.atom", 10);
     getFeed("medium", "https://medium.com/feed/@abethcrane", 10);
     getFeed("stackoverflow", "http://stackoverflow.com/feeds/user/4629688", 10);
+    getFeed("fibseq", "http://www.fibonaccisequinsblog.com/feed/", 10);
 });
