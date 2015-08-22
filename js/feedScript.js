@@ -99,7 +99,7 @@ function SortByDate(a, b){
 }
 
 var numFeeds = 0;
-var totalFeeds = 6;
+var totalFeeds = 7;
 var feeds = [];
 
 $(document).ready(function() {
