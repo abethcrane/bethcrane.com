@@ -99,6 +99,10 @@ h2 {
     background-image: url("../assets/img/icons/flickr-icon.png");
 }
 
+.nav #fibseq {
+    background-image: url("../assets/img/icons/fibseq-icon.png");
+}
+
 /* Main page background */
 
 #photo-page {
@@ -165,13 +169,15 @@ li.item {
     color: #666666;
 }
 
-.instagram .itemContent img {
+.instagram .itemContent img,
+.fibseq .itemContent img
+ {
     width: 300px;
-    height: 300px;
 }
 
-.medium .itemContent img, .fibseq .itemContent img {
-    width: 100%;
+.medium .itemContent img
+ {
+    width: 300px;
     height: 100%;
 }
 
