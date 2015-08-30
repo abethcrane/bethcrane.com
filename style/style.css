@@ -169,13 +169,13 @@ li.item {
     color: #666666;
 }
 
-.instagram .itemContent img
+.instagram .itemContent img,
+.fibseq .itemContent img
  {
     width: 300px;
 }
 
-.medium .itemContent img,
-.fibseq .itemContent img
+.medium .itemContent img
  {
     width: 300px;
     height: 100%;
