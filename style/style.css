@@ -99,6 +99,10 @@ h2 {
     background-image: url("../assets/img/icons/flickr-icon.png");
 }
 
+.nav #fibseq {
+    background-image: url("../assets/img/icons/fibseq-icon.png");
+}
+
 /* Main page background */
 
 #photo-page {
