@@ -170,6 +170,10 @@ li.item {
 }
 
 .instagram .itemContent img,
+ {
+    width: 300px;
+}
+
 .medium .itemContent img,
 .fibseq .itemContent img
  {
