@@ -28,7 +28,8 @@ var handleInstagramData = function(data) {
         date = new Date(data[i]["created_time"] *1000);
         xml[i]["publishedDate"]  = (date.toGMTString()).replace(/.*?, /, " ");
         xml[i]["link"] = data[i]["link"];
-        xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "' alt = '" + data[i]["caption"]["text"].substring(0,50) + "...'>";
+        data[i]["caption"]["text"] = data[i]["caption"]["text"].replace(/#.*/, "");
+        xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "''><p class='caption'>" + data[i]["caption"]["text"] + "</p>";
         xml[i]["title"] =  "";
     }
 
@@ -40,21 +41,23 @@ var handleData = function(xml, feedName, numEntries) {
     var i;
 
     for (i = 0; i < numEntries && (typeof xml[i] !== 'undefined'); i++) {
-        if (feedName == "flickr") {
+        if (feedName == "fibseq"){
+            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
+            xml[i]["content"] = xml[i]["content"].replace(/^(.|\s)*?<img/m, "<img");
+            xml[i]["content"] = xml[i]["content"].replace(/\>(.|\s)*/m, ">");
+            xml[i]["content"] = xml[i]["content"] + "<p>" + xml[i]["title"] + "</p>";
+            xml[i]["title"] = "";
+        } else if (feedName == "flickr") {
             // Remove first paragraph of 'abethcrane posted a photo'
             xml[i]["content"] = xml[i]["content"].replace(/<p>.*?<\/p>/m, "");
             xml[i]["content"] = xml[i]["content"].replace(/width.*height=".*?" /, "");
             // Remove paragraph and link from content (we add them in explicitly in the html)
             xml[i]["content"].replace(/.*><img/, "<img").replace(/<\/a.*/, "");
+            // Swap title into being a caption
+            xml[i]["content"] = xml[i]["content"] + "<p>" + xml[i]["title"] + "</p>";
+            xml[i]["title"] = "";
             // Clean up published Date
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
-        } else if (feedName == "twitter") {
-            img = xml[i]["content"].match(/pic\.twitter\.com[^<]*/);
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
-            xml[i]["content"] = xml[i]["content"].replace(/.*<br>/m, "");
-            xml[i]["content"] = xml[i]["content"].replace(/(abs.twimg.com\/emoji.*?").*?>/mg, "$1 width='20px'>");
-            xml[i]["title"] = "";
         } else if (feedName == "github") {
             xml[i]["content"] = xml[i]["title"];
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
@@ -68,10 +71,13 @@ var handleData = function(xml, feedName, numEntries) {
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
             xml[i]["title"] = xml[i]["title"].replace(/.*?for /, "");
             xml[i]["content"] = xml[i]["contentSnippet"];
-        } else if (feedName == "fibseq"){
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
-            xml[i]["content"] = xml[i]["content"].replace(/^(.|\s)*?<img/m, "<img");
-            xml[i]["content"] = xml[i]["content"].replace(/\>(.|\s)*/m, ">");
+        } else if (feedName == "twitter") {
+            img = xml[i]["content"].match(/pic\.twitter\.com[^<]*/);
+            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
+            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
+            xml[i]["content"] = xml[i]["content"].replace(/.*<br>/m, "");
+            xml[i]["content"] = xml[i]["content"].replace(/(abs.twimg.com\/emoji.*?").*?>/mg, "$1 width='20px'>");
+            xml[i]["title"] = "";
         }
     }
 
