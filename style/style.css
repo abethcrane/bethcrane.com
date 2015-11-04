@@ -186,14 +186,14 @@ li.item {
 
 .fibseq .itemContent a, .fibseq .itemContent {
     font-family: 'Josefin Slab Bold';
-    font-size: 1.1em;
+    font-size: 5.5rem;
 }
 
 .flickr .itemContent a, .flickr .itemContent {
     color: #ff0084;
     margin-top: 0px;
     font-family: 'Josefin Slab Bold';
-    font-size: 1.1em;
+    font-size: 5.5rem;
 }
 
 .github .itemContent a, .github .itemContent {
