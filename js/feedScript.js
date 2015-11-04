@@ -29,7 +29,7 @@ var handleInstagramData = function(data) {
         xml[i]["publishedDate"]  = (date.toGMTString()).replace(/.*?, /, " ");
         xml[i]["link"] = data[i]["link"];
         data[i]["caption"]["text"] = data[i]["caption"]["text"].replace(/#.*/, "");
-        xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "''><br/><p class='caption'>" + data[i]["caption"]["text"] + "</p>";
+        xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "''><p class='caption'>" + data[i]["caption"]["text"] + "</p>";
         xml[i]["title"] =  "";
     }
 
@@ -47,6 +47,9 @@ var handleData = function(xml, feedName, numEntries) {
             xml[i]["content"] = xml[i]["content"].replace(/width.*height=".*?" /, "");
             // Remove paragraph and link from content (we add them in explicitly in the html)
             xml[i]["content"].replace(/.*><img/, "<img").replace(/<\/a.*/, "");
+            // Swap title into being a caption
+            xml[i]["content"] = xml[i]["content"] + "<br/><p>" + xml[i]["title"] + "</p>";
+            xml[i]["title"] = "";
             // Clean up published Date
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
         } else if (feedName == "twitter") {
