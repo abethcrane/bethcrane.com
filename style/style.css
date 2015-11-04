@@ -180,11 +180,11 @@ li.item {
     height: 100%;
 }
 
-.twitter .itemContent {
+.twitter .itemContent* {
     color: #55acee;
 }
 
-.stackoverflow .itemContent {
+.stackoverflow .itemContent* {
     color: #FF9900;
 }
 

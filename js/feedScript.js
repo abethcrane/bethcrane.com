@@ -29,7 +29,7 @@ var handleInstagramData = function(data) {
         xml[i]["publishedDate"]  = (date.toGMTString()).replace(/.*?, /, " ");
         xml[i]["link"] = data[i]["link"];
         data[i]["caption"]["text"] = data[i]["caption"]["text"].replace(/#.*/, "");
-        xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "><p class='caption'>" + data[i]["caption"]["text"] + "</p>";
+        xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "''><br/><p class='caption'>" + data[i]["caption"]["text"] + "</p>";
         xml[i]["title"] =  "";
     }
 
