@@ -180,8 +180,15 @@ li.item {
     height: 100%;
 }
 
+.fibseq .itemContent a, .fibseq .itemContent p {
+    margin-top: 0px;
+    font-family: 'Josefin Slab Bold';
+}
+
 .flickr .itemContent a, .flickr .itemContent p {
-    color: #bd2c00;
+    color: #ff0084;
+    margin-top: 0px;
+    font-family: 'Josefin Slab Bold';
 }
 
 .github .itemContent a, .github .itemContent p {
