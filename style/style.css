@@ -184,30 +184,30 @@ li.item {
     height: 100%;
 }
 
-.fibseq .itemContent a, .fibseq .itemContent p {
+.fibseq .itemContent a, .fibseq .itemContent {
     font-family: 'Josefin Slab Bold';
 }
 
-.flickr .itemContent a, .flickr .itemContent p {
+.flickr .itemContent a, .flickr .itemContent {
     color: #ff0084;
     margin-top: 0px;
     font-family: 'Josefin Slab Bold';
 }
 
-.github .itemContent a, .github .itemContent p {
+.github .itemContent a, .github .itemContent {
     color: #6cc644;
 }
 
-.instagram .itemContent, .instagram .itemContent a{
+.instagram .itemContent a, .instagram .itemContent {
     color: #3f729b;
     margin-top: 0px;
 }
 
-.stackoverflow .itemContent, .stackoverflow .itemContent a{
+.stackoverflow .itemContent a, .stackoverflow .itemContent {
     color: #FF9900;
 }
 
-.twitter .itemContent a, .twitter .itemContent p {
+.twitter .itemContent a, .twitter .itemContent {
     color: #55acee;
 }
 
