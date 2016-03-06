@@ -12,7 +12,9 @@ var getFeed = function(feedName, feedUrl, numEntries) {
         alert('Unable to load feed, Incorrect path or invalid feed');
     });
     serverResponse.done(function(data){
-        handleData(data.responseData.feed.entries, feedName, numEntries);
+        if (data !== undefined && data.responseData !== undefined && data.responseData.feed !== undefined) {
+            handleData(data.responseData.feed.entries, feedName, numEntries);
+	}
     });
 };
 
@@ -22,7 +24,7 @@ var handleInstagramData = function(data) {
     var xml = [];
     var i;
     var date;
-    var numEntries = 10;
+    var numEntries = Math.min(10, data.length);
     for (i = 0; i < numEntries; i++) {
         xml[i] = {};
         date = new Date(data[i]["created_time"] *1000);
@@ -38,8 +40,9 @@ var handleInstagramData = function(data) {
 
 var handleData = function(xml, feedName, numEntries) {
 
-    var i;
+    numEntries = Math.min(numEntries, xml.length);
 
+    var i;
     for (i = 0; i < numEntries && (typeof xml[i] !== 'undefined'); i++) {
         if (feedName == "fibseq"){
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
