@@ -105,11 +105,11 @@ h2 {
 
 /* Main page background */
 
-#photo-page {
+#landing-page {
     position: relative;
 }
 
-#photo-page img {
+#landing-page img {
     min-height: 100%;
     width: 100%;
     object-fit: cover;
@@ -119,7 +119,7 @@ h2 {
 
 /* Feeds style */
 
-.page {
+.horizontal-section, .vertical-section {
     overflow: scroll;
 }
 

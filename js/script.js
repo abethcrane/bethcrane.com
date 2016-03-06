@@ -40,9 +40,10 @@ $(document).ready(function() {
         $('.resize').css('height', window.innerHeight);
         $('.content').css('height', "100%");
     });
-    
+
     $('.main').fullpage({
 		//Navigation
+        anchors: ['landing-page', 'photos', 'projects', 'feeds'],
 		navigationPosition: 'right',
 		showActiveTooltip: false,
 		slidesNavigation: false,
@@ -55,15 +56,15 @@ $(document).ready(function() {
 
 		//Accessibility
 		keyboardScrolling: false,
-                recordHistory: true,
+        recordHistory: true,
 
 		//Design
 		controlArrows: true,
 		verticalCentered: false,
 
 		//Custom selectors
-		sectionSelector: '.section',
-		slideSelector: '.page',
+		sectionSelector: '.vertical-section',
+		slideSelector: '.horizontal-section',
 	});
 });
 
