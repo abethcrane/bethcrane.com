@@ -9,18 +9,18 @@
     width: 100%;
     margin: 0px !important;
  }
- 
+
  .itemContent {
      max-width: 100%;
  }
 
- .nav {
+#nav {
    left: 50%;
    bottom: 10px;
    width: 45rem;
    transform: translate(-50%, 0);
 }
 
-.sun img {
+#sun img {
     height: 20rem;
 }
