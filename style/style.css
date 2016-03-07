@@ -107,17 +107,22 @@ h2 {
 
 #landing-page {
     position: relative;
+    overflow: scroll;
 }
 
 #landing-page img {
     min-height: 100%;
     width: 100%;
     object-fit: cover;
-    position: absolute;
+    float: left;
     bottom: 0
 }
 
 /* Feeds style */
+
+#feeds {
+    float: left;
+}
 
 .section {
     overflow: scroll;
