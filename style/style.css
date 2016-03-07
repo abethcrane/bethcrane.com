@@ -114,8 +114,8 @@ h2 {
     min-height: 100%;
     width: 100%;
     object-fit: cover;
-    float: left;
-    bottom: 0
+    position: absolute;
+    bottom: 0;
 }
 
 /* Feeds style */
@@ -124,11 +124,15 @@ h2 {
     overflow: scroll;
 }
 
+#feeds {
+    position: absolute;
+    top: 100%;
+}
+
 #feeds, #projects {
     color: black;
     overflow-y: scroll;
     overflow-x: hidden;
-    float: left;
     display: inline-block;
     text-align: center;
     width: 100%;
