@@ -67,6 +67,11 @@ $(document).ready(function() {
 		sectionSelector: '.section',
 		slideSelector: '.slide',
 	});
+
+    // Load in the images
+    for (var i = 0; i < 42; i++) {
+        $('#photos').append('<img src="assets/photos/' + i + '.jpg">');
+    }
 });
 
 // Ahttp://stackoverflow.com/a/4673436/4629688
