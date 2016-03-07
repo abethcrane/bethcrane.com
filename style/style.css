@@ -120,10 +120,6 @@ h2 {
 
 /* Feeds style */
 
-#feeds {
-    float: left;
-}
-
 .section {
     overflow: scroll;
 }
@@ -141,7 +137,7 @@ h2 {
     list-style: none;
     padding: 0px;
     width: 80%;
-    margin-left: 10%;
+    margin-left: auto;
 }
 
 /* feed logo */
