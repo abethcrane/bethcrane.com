@@ -12,29 +12,29 @@
     </head>
     <body>
         <div class="main resize">
-            <div class="sun">
+            <div id="sun">
                 <img src="assets/img/sun.png"></img>
             </div>
-            <div class="nav">
-                <ul>
-                    <a href="http://linkedin.com/in/abethcrane"><li id="linkedin"></li></a>
-                    <a href="http://github.com/abethcrane"><li id="github"></li></a>
-                    <a href="http://twitter.com/abethcrane"><li id="twitter"></li></a>
-                    <a href="http://instagram.com/abethcrane"><li id="instagram""></li></a>
-                    <a href="http://flickr.com/photos/105674507@N06"><li id="flickr"></li></a>
-                    <a href="http://fibonaccisequinsblog.com"><li id="fibseq"></li></a>
-                </ul>
-            </div>
-            <section class="vertical-sections">
-                <div class="vertical-section horizontal-sections" id="professional-section">
-                    <div class="horizontal-section" id="photos" data-anchor="photos"></div>
-                    <div class="horizontal-section" id="landing-page" data-anchor="landing-page">
-                        <img src="assets/img/background-text.jpg">
-                    </div>
-                    <div class="horizontal-section" id="projects" data-anchor="projects"></div>
+            <div class="section" data-anchor="work">
+                <div id="nav">
+                    <ul>
+                        <a href="http://linkedin.com/in/abethcrane"><li id="linkedin"></li></a>
+                        <a href="http://github.com/abethcrane"><li id="github"></li></a>
+                        <a href="http://twitter.com/abethcrane"><li id="twitter"></li></a>
+                        <a href="http://instagram.com/abethcrane"><li id="instagram"></li></a>
+                        <a href="http://flickr.com/photos/105674507@N06"><li id="flickr"></li></a>
+                        <a href="http://fibonaccisequinsblog.com"><li id="fibseq"></li></a>
+                    </ul>
                 </div>
-                <div class="vertical-section" id="feeds" data-anchor="feeds">
-            </section>
+                <div class="slide" id="photos"></div>
+                <div class="slide active" id="landing-page">
+                    <img src="assets/img/background-text.jpg">
+                </div>
+                <div class="slide" id="projects"></div>
+            </div>
+            <div class="section" data-anchor="play">
+                <div class="slide" id="feeds"></div>
+            </div>
         </div>
 
         <!-- Jquery -->

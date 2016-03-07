@@ -43,7 +43,7 @@ $(document).ready(function() {
 
     $('.main').fullpage({
 		//Navigation
-        anchors: ['landing-page', 'photos', 'projects', 'feeds'],
+        anchors: ['work', 'play'],
 		navigationPosition: 'right',
 		showActiveTooltip: false,
 		slidesNavigation: false,
@@ -53,6 +53,8 @@ $(document).ready(function() {
 		fitToSection: true,
 		scrollBar: false,
 		scrollOverflow: false,
+        loopHorizontal: false,
+        normalScrollElements: '#landing-page',
 
 		//Accessibility
 		keyboardScrolling: false,
@@ -61,10 +63,11 @@ $(document).ready(function() {
 		//Design
 		controlArrows: true,
 		verticalCentered: false,
+        fixedElements: '#sun, #nav',
 
 		//Custom selectors
-		sectionSelector: '.vertical-section',
-		slideSelector: '.horizontal-section',
+		sectionSelector: '.section',
+		slideSelector: '.slide',
 	});
 });
 
