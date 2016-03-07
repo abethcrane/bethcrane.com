@@ -43,7 +43,6 @@ $(document).ready(function() {
 
     $('.main').fullpage({
 		//Navigation
-        anchors: ['work', 'play'],
 		navigationPosition: 'right',
 		showActiveTooltip: false,
 		slidesNavigation: false,
