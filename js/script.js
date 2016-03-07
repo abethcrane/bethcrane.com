@@ -70,7 +70,7 @@ $(document).ready(function() {
 
     // Load in the images
     for (var i = 0; i < 42; i++) {
-        $('#photos').append('<img src="assets/photos/' + i + '.jpg">');
+        $('#photos-grid').append('<img src="assets/photos/' + i + '.jpg">');
     }
 });
 
