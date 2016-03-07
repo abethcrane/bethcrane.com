@@ -62,7 +62,6 @@ $(document).ready(function() {
 		//Design
 		controlArrows: true,
 		verticalCentered: false,
-        fixedElements: '#sun, #nav',
 
 		//Custom selectors
 		sectionSelector: '.section',
