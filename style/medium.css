@@ -1,3 +1,7 @@
 #sun img {
     width: 30rem;
 }
+
+#photos {
+    overflow-y: hidden;
+}

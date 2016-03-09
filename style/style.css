@@ -266,6 +266,10 @@ li.item {
     overflow-y: visible;
 }
 
+#photos {
+   overflow-x: hidden;
+}
+
 #photos-grid {
    /* Prevent vertical gaps */
    line-height: 0;
