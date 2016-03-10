@@ -9,18 +9,33 @@
     width: 100%;
     margin: 0px !important;
  }
- 
+
  .itemContent {
      max-width: 100%;
  }
 
- .nav {
-   left: 50%;
+.nav {
    bottom: 10px;
-   width: 45rem;
+   width: 220px;
+   left: 50%;
    transform: translate(-50%, 0);
 }
 
-.sun img {
+.nav li {
+   width: 30px;
+   height: 30px;
+   margin: 3px;
+}
+
+#nav-photos, #nav-software {
+   float: left;
+   padding: 0px;   
+}
+
+#sun img {
     height: 20rem;
+}
+
+#photos {
+    overflow-y: visible;
 }

@@ -40,7 +40,7 @@ $(document).ready(function() {
         $('.resize').css('height', window.innerHeight);
         $('.content').css('height', "100%");
     });
-    
+
     $('.main').fullpage({
 		//Navigation
 		navigationPosition: 'right',
@@ -52,10 +52,12 @@ $(document).ready(function() {
 		fitToSection: true,
 		scrollBar: false,
 		scrollOverflow: false,
+        loopHorizontal: false,
+        normalScrollElements: '#landing-page',
 
 		//Accessibility
 		keyboardScrolling: false,
-                recordHistory: true,
+        recordHistory: true,
 
 		//Design
 		controlArrows: true,
@@ -63,8 +65,13 @@ $(document).ready(function() {
 
 		//Custom selectors
 		sectionSelector: '.section',
-		slideSelector: '.page',
+		slideSelector: '.slide',
 	});
+
+    // Load in the images
+    for (var i = 0; i < 42; i++) {
+        $('#photos-grid').append('<img src="assets/photos/' + i + '.jpg">');
+    }
 });
 
 // Ahttp://stackoverflow.com/a/4673436/4629688

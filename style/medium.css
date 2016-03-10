@@ -1,3 +1,13 @@
-.sun img {
+.nav li {
+    width: 45px;
+    height: 45px;
+    margin: 4.5px;
+}
+
+#sun img {
     width: 30rem;
+}
+
+#photos {
+    overflow-y: hidden;
 }
