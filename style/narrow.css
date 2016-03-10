@@ -35,3 +35,7 @@
 #sun img {
     height: 20rem;
 }
+
+#photos {
+    overflow-y: visible;
+}
