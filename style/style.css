@@ -59,47 +59,58 @@ h2 {
 
 /* Bottom right social media links */
 
-#nav {
+.nav {
     margin: 0px;
     list-style: none;
     position: fixed;
     bottom: 20px;
-    right: 20px;
     z-index: 2;
+    width: 100%;
 }
 
-#nav li {
-    display: inline;
-    width: 5rem;
-    height: 5rem;
+#nav-photos {
+    padding-left: 20px;
     float: left;
-    margin: 1rem;
+}
+
+#nav-software {
+    padding-right: 20px;
+    float: right;
+}
+
+.nav ul {
+    padding: 0px;
+}
+
+.nav li {
+    display: inline;
+    float: left;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-#nav #linkedin {
+.nav #linkedin {
     background-image: url("../assets/img/icons/linkedin-icon.png");
 }
 
-#nav #github {
+.nav #github {
     background-image: url("../assets/img/icons/github-icon.png");
 }
 
-#nav #twitter {
+.nav #twitter {
     background-image: url("../assets/img/icons/twitter-icon.png");
 }
 
-#nav #instagram {
+.nav #instagram {
     background-image: url("../assets/img/icons/instagram-icon.png");
 }
 
-#nav #flickr {
+.nav #flickr {
     background-image: url("../assets/img/icons/flickr-icon.png");
 }
 
-#nav #fibseq {
+.nav #fibseq {
     background-image: url("../assets/img/icons/fibseq-icon.png");
 }
 
