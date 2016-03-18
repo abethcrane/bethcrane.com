@@ -271,10 +271,11 @@ li.item {
     font-size: 11px;
 }
 
-#cv {
-    min-height: 800px;
+#resume {
+    height: 100%;
     width: 100%;
     overflow-y: visible;
+    border: 0px;
 }
 
 #photos {
