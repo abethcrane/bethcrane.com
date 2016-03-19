@@ -282,6 +282,7 @@ li.item {
    overflow-x: hidden;
 }
 
+/* Thanks to https://css-tricks.com/seamless-responsive-photo-grid/ */
 #photos-grid {
    /* Prevent vertical gaps */
    line-height: 0;
