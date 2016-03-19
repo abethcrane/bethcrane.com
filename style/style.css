@@ -278,6 +278,14 @@ li.item {
     border: 0px;
 }
 
+/* For bethcrane.com/cv */
+#cv {
+    min-height: 800px;
+    width: 100%;
+    overflow-y: visible;
+    border: 0px;
+  }
+
 #photos {
    overflow-x: hidden;
 }
