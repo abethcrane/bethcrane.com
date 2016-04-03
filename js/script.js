@@ -72,9 +72,12 @@ $(document).ready(function() {
     for (var i = 0; i < 42; i++) {
         $('#photos-grid').append('<img src="assets/photos/' + i + '.jpg">');
     }
+
+    // Update medium images - they need to be set after load
+    $(".medium .itemContent img").css("height", "100%");
 });
 
-// Ahttp://stackoverflow.com/a/4673436/4629688
+// http://stackoverflow.com/a/4673436/4629688
 if (!String.prototype.format) {
     String.prototype.format = function() {
         var args = arguments;

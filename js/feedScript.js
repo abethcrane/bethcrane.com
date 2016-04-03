@@ -73,9 +73,11 @@ var handleData = function(xml, feedName, numEntries) {
             // Replace needles p and div tags
             xml[i]["content"] = xml[i]["content"].replace(/<div>/, "");
             xml[i]["content"] = xml[i]["content"].replace(/<.div>/, "");
+            xml[i]["content"] = xml[i]["content"].replace(/<p>/, "");
             xml[i]["content"] = xml[i]["content"].replace(/<.p>/, "");
-            xml[i]["content"] = xml[i]["content"].replace(/<.p>/, "");
-            xml[i]["content"] = xml[i]["content"].replace(/width=.*?/, ">");
+            xml[i]["content"] = xml[i]["content"].replace(/width=.*?>/, ">");
+            xml[i]["content"] = xml[i]["content"].replace(/<a.*?>/, "");
+            xml[i]["content"] = xml[i]["content"].replace(/<.a.*?>/, "");
         } else if (feedName == "stackoverflow"){
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
             xml[i]["title"] = xml[i]["title"].replace(/.*?for /, "");
