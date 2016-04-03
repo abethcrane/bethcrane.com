@@ -1,5 +1,4 @@
 var getFeed = function(feedName, feedUrl, numEntries) {
-    //var url = document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load'
     var url = 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num='+numEntries+'&callback=?&q=' + encodeURIComponent(feedUrl);
 
     var serverResponse = $.ajax({
@@ -54,10 +53,11 @@ var handleData = function(xml, feedName, numEntries) {
             // Remove first paragraph of 'abethcrane posted a photo'
             xml[i]["content"] = xml[i]["content"].replace(/<p>.*?<\/p>/m, "");
             xml[i]["content"] = xml[i]["content"].replace(/width.*height=".*?" /, "");
-            // Remove paragraph and link from content (we add them in explicitly in the html)
-            xml[i]["content"].replace(/.*><img/, "<img").replace(/<\/a.*/, "");
+            // Remove paragraph and close link from content (we add them in explicitly in the html)
+            xml[i]["content"] = xml[i]["content"].replace(/<.?p>/, "");
+            xml[i]["content"] = xml[i]["content"].replace(/<\/a>/, "");
             // Swap title into being a caption
-            xml[i]["content"] = xml[i]["content"] + "<p>" + xml[i]["title"] + "</p>";
+            xml[i]["content"] = xml[i]["content"] + "<p class='caption'>" + xml[i]["title"] + "</p></a>";
             xml[i]["title"] = "";
             // Clean up published Date
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
