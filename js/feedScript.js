@@ -70,6 +70,12 @@ var handleData = function(xml, feedName, numEntries) {
             // Clean up published Date
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
             xml[i]["content"] = xml[i]["content"].replace(/<\/p><p><a href="https:\/\/medium.com.*/, "</p></div>");
+            // Replace needles p and div tags
+            xml[i]["content"] = xml[i]["content"].replace(/<div>/, "");
+            xml[i]["content"] = xml[i]["content"].replace(/<.div>/, "");
+            xml[i]["content"] = xml[i]["content"].replace(/<.p>/, "");
+            xml[i]["content"] = xml[i]["content"].replace(/<.p>/, "");
+            xml[i]["content"] = xml[i]["content"].replace(/width=.*?/, ">");
         } else if (feedName == "stackoverflow"){
             xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
             xml[i]["title"] = xml[i]["title"].replace(/.*?for /, "");
