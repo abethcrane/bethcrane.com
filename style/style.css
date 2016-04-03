@@ -196,6 +196,11 @@ li.item {
 .flickr .itemContent img {
     width: 300px;
     border: 1px solid black;
+}
+
+.medium .itemContent img
+ {
+    width: 300px;
     height: 100%;
 }
 
