@@ -32,6 +32,7 @@ html {
 
 body {
     margin: 0;
+    color: white;
 }
 
 h1 {
@@ -156,7 +157,7 @@ h2 {
 }
 
 #feeds, #projects {
-    color: black;
+    color: white;
     overflow-y: scroll;
     overflow-x: hidden;
     display: inline-block;
