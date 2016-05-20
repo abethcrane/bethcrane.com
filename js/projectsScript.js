@@ -1,6 +1,13 @@
 //name link oneliner imgUrl languages dates
 
 var projects = [
+			{"name": "MS Band + SmartThings Tile",
+		    "link": "http://abethcrane.github.io/ms-band-smartthings-tile",
+		    "oneliner": "Android/Windows (in dev) tile that allows you to select a set of SmartThings switches to display and turn on/off from your Microsoft Band.",
+		    "imgUrl": "band.jpg",
+		    "languages": "Android SDK, Java, Band SDK, C#, Groovy, SmartThings SDK",
+		    "dates": "December '15 - May '16"},
+
 		   {"name": "Homely",
 		    "link": "https://github.com/abradner/homely/wiki",
 		    "oneliner": "Simple home automation system - uses a phone app to control lights via connecting to a server and an arduino.",
