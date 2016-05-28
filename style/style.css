@@ -264,7 +264,7 @@ li.item {
     font-size: 13px;
 }
 
-..projects h2 , .projects a, .projects a:visited {
+.projects h2, .projects a, .projects a:visited {
     text-decoration: none;
     color: #D4AF37;
 }
