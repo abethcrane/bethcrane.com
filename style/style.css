@@ -207,10 +207,16 @@ li.item {
   margin: 0px;
 }
 
+.instagram .itemContent,
+.fibseq .itemContent,
+.flickr .itemContent {
+  width: 300px;
+}
+
 .instagram .itemContent img,
 .fibseq .itemContent img,
 .flickr .itemContent img {
-    width: 300px;
+    width: 100%;
     border: 1px solid black;
 }
 
@@ -219,16 +225,9 @@ li.item {
     width: 300px;
 }
 
-.fibseq .itemContent a, .fibseq .itemContent {
-    font-family: 'Josefin Slab Bold';
-    font-size: 5.5rem;
-}
-
 .flickr .itemContent a, .flickr .itemContent {
     color: lightgray;
     margin-top: 0px;
-    font-family: 'Josefin Slab Bold';
-    font-size: 5.5rem;
 }
 
 .github .itemContent a, .github .itemContent {
