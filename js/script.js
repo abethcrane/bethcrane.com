@@ -39,6 +39,8 @@ $(document).ready(function() {
     $(window).resize(function() {
         $('.resize').css('height', window.innerHeight);
         $('.content').css('height', "100%");
+        $('body').css('height', "100%");
+        $('body').css('background', "adial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)");
     });
 
     $('.main').fullpage({
