@@ -270,7 +270,6 @@ li.item {
 
 .projects a, .projects a:visited {
     text-decoration: none;
-    color: rgba(11, 83, 148, 1);
 }
 
 .projects .languages {
