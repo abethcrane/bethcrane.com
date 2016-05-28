@@ -209,7 +209,8 @@ li.item {
 
 .instagram .itemContent,
 .fibseq .itemContent,
-.flickr .itemContent {
+.flickr .itemContent,
+.medium .itemContent {
   width: 300px;
 }
 
@@ -236,7 +237,6 @@ li.item {
 
 .instagram .itemContent a, .instagram .itemContent {
     color: #DD99EE;
-    font-size: smaller;
     margin-top: 0px;
 }
 
@@ -265,7 +265,7 @@ li.item {
 }
 
 .projects h2 {
-    color: rgba(255, 255, 255, 1);
+    color: #D4AF37;
 }
 
 .projects a, .projects a:visited {
@@ -301,8 +301,11 @@ li.item {
     width: 100%;
     overflow-y: visible;
     border: 0px;
-    background: white;
   }
+
+#cv-slide {
+    background: white;
+}
 
 #photos {
    overflow-x: hidden;
