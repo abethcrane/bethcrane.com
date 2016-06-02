@@ -19,6 +19,7 @@ var getFeed = function(feedName, feedUrl, numEntries) {
 
 var handleInstagramData = function(data) {
     if (data === undefined || data["data"] === undefined) {
+    	numFeeds++;
     	return;
     }
     data = data["data"];
@@ -41,6 +42,7 @@ var handleInstagramData = function(data) {
 
 var handleData = function(xml, feedName, numEntries) {
     if (xml == null) {
+    	numFeeds++;
     	return;
     }
     numEntries = Math.min(numEntries, xml.length);
