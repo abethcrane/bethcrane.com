@@ -18,7 +18,7 @@ var getFeed = function(feedName, feedUrl, numEntries) {
 };
 
 var handleInstagramData = function(data) {
-    if (data == null) {
+    if (data === undefined || data["data"] === undefined) {
     	return;
     }
     data = data["data"];
