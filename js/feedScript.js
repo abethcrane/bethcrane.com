@@ -18,7 +18,9 @@ var getFeed = function(feedName, feedUrl, numEntries) {
 };
 
 var handleInstagramData = function(data) {
-
+    if (data == null) {
+    	return;
+    }
     data = data["data"];
     var xml = [];
     var i;
@@ -38,7 +40,9 @@ var handleInstagramData = function(data) {
 }
 
 var handleData = function(xml, feedName, numEntries) {
-
+    if (xml == null) {
+    	return;
+    }
     numEntries = Math.min(numEntries, xml.length);
 
     var i;
