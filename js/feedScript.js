@@ -126,10 +126,15 @@ var totalFeeds = 7;
 var feeds = [];
 
 $(document).ready(function() {
-    // Instagram is special because their api doesn't give us an rss feed, we just have to
-    var insta = document.createElement("script");
-    insta.src = "https://api.instagram.com/v1/users/34563658/media/recent/?client_id=021ea53429ed426c8b5b4a492a20db96&callback=handleInstagramData";
-    document.body.appendChild(insta);
+    // Instagram is special because their api doesn't give us an rss feed, we just have to work around it
+    var insta = new Instafeed({
+        get: 'user',
+        userId: '34563658',
+        accessToken: '34563658.021ea53.d92cf1dfe8c640b5a1b5f69b4783af6d',
+        mock: true,
+        success: function(data) {handleInstagramData(data);}
+    });
+    insta.run();
 
     getFeed("flickr", "http://api.flickr.com/services/feeds/photos_public.gne?id=105674507@N06", 10);
     getFeed("twitter", "https://twitrss.me/twitter_user_to_rss/?user=abethcrane", 10);
