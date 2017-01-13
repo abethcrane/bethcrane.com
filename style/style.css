@@ -139,10 +139,10 @@ h2 {
 }
 
 #landing-photo {
-    height: 90%;
+    width: 50%;
     position: absolute;
     bottom: 0;
-    transform: translate(-40%);
+    left: 25%;
 }
 
 /* Feeds style */
