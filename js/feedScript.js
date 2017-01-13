@@ -1,5 +1,6 @@
 var getFeed = function(feedName, feedUrl, numEntries) {
-    var url = 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num='+numEntries+'&callback=?&q=' + encodeURIComponent(feedUrl);
+    var url =  'https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(feedUrl);
+   // var url = 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num='+numEntries+'&callback=?&q=' + encodeURIComponent(feedUrl);
 
     var serverResponse = $.ajax({
         type: "GET",
@@ -11,18 +12,21 @@ var getFeed = function(feedName, feedUrl, numEntries) {
         alert('Unable to load feed, Incorrect path or invalid feed');
     });
     serverResponse.done(function(data){
-        if (data !== undefined && data.responseData !== undefined && data.responseData.feed !== undefined) {
-            handleData(data.responseData.feed.entries, feedName, numEntries);
-	}
+        if (data != undefined && data.items != undefined && data.items.length > 0) {
+            handleData(data.items, feedName, numEntries);
+	} else {
+	    console.log(feedName + " is undefined cause it's the worst");
+           
+        }
     });
 };
 
 var handleInstagramData = function(data) {
-    if (data === undefined || data["data"] === undefined) {
+    if (data == undefined) {
     	numFeeds++;
     	return;
     }
-    data = data["data"];
+   // data = data["data"];
     var xml = [];
     var i;
     var date;
@@ -30,7 +34,7 @@ var handleInstagramData = function(data) {
     for (i = 0; i < numEntries; i++) {
         xml[i] = {};
         date = new Date(data[i]["created_time"] *1000);
-        xml[i]["publishedDate"]  = (date.toGMTString()).replace(/.*?, /, " ");
+        xml[i]["pubDate"]  = (date.toGMTString()).replace(/.*?, /, " ");
         xml[i]["link"] = data[i]["link"];
         data[i]["caption"]["text"] = data[i]["caption"]["text"].replace(/#.*/, "");
         xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "''><p class='caption'>" + data[i]["caption"]["text"] + "</p>";
@@ -45,12 +49,12 @@ var handleData = function(xml, feedName, numEntries) {
     	numFeeds++;
     	return;
     }
-    numEntries = Math.min(numEntries, xml.length);
-
+    numEntries = Math.min(numEntries, xml.length); 
+    console.log(xml);
     var i;
-    for (i = 0; i < numEntries && (typeof xml[i] !== 'undefined'); i++) {
+    for (i = 0; i < numEntries && (typeof xml[i] != undefined); i++) {
         if (feedName == "fibseq"){
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
+            xml[i]["pubDate"] = xml[i]["pubDate"].replace(/^[^0-9]*/, "");
             xml[i]["content"] = xml[i]["content"].replace(/^(.|\s)*?<img/m, "<img");
             xml[i]["content"] = xml[i]["content"].replace(/\>(.|\s)*/m, ">");
             xml[i]["content"] = xml[i]["content"] + "<p>" + xml[i]["title"] + "</p>";
@@ -66,15 +70,15 @@ var handleData = function(xml, feedName, numEntries) {
             xml[i]["content"] = xml[i]["content"] + "<p class='caption'>" + xml[i]["title"] + "</p></a>";
             xml[i]["title"] = "";
             // Clean up published Date
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
+            xml[i]["pubDate"] = xml[i]["pubDate"].replace(/.*?,/, "");
         } else if (feedName == "github") {
             xml[i]["content"] = xml[i]["title"];
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
+            xml[i]["pubDate"] = xml[i]["pubDate"].replace(/.*,/m, "");
+            xml[i]["pubDate"] = xml[i]["pubDate"].replace(/(:[0-9]{2}):.*/m, "$1");
             xml[i]["title"] =  "";
         } else if (feedName == "medium") {
             // Clean up published Date
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*?,/, "");
+            xml[i]["pubDate"] = xml[i]["pubDate"].replace(/.*?,/, "");
             xml[i]["content"] = xml[i]["content"].replace(/<\/p><p><a href="https:\/\/medium.com.*/, "</p></div>");
             // Replace needles p and div tags
             xml[i]["content"] = xml[i]["content"].replace(/<div>/, "");
@@ -85,13 +89,13 @@ var handleData = function(xml, feedName, numEntries) {
             xml[i]["content"] = xml[i]["content"].replace(/<a.*?>/, "");
             xml[i]["content"] = xml[i]["content"].replace(/<.a.*?>/, "");
         } else if (feedName == "stackoverflow"){
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/^[^0-9]*/, "");
+            xml[i]["pubDate"] = xml[i]["pubDate"].replace(/^[^0-9]*/, "");
             xml[i]["title"] = xml[i]["title"].replace(/.*?for /, "");
             xml[i]["content"] = xml[i]["contentSnippet"];
         } else if (feedName == "twitter") {
             img = xml[i]["content"].match(/pic\.twitter\.com[^<]*/);
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/.*,/m, "");
-            xml[i]["publishedDate"] = xml[i]["publishedDate"].replace(/(:[0-9]{2}):.*/m, "$1");
+            xml[i]["pubDate"] = xml[i]["pubDate"].replace(/.*,/m, "");
+            xml[i]["pubDate"] = xml[i]["pubDate"].replace(/(:[0-9]{2}):.*/m, "$1");
             xml[i]["content"] = xml[i]["content"].replace(/.*<br>/m, "");
             xml[i]["content"] = xml[i]["content"].replace(/(abs.twimg.com\/emoji.*?").*?>/mg, "$1 width='20px'>");
             xml[i]["title"] = "";
@@ -116,8 +120,8 @@ var endDataHandling = function (xml, feedName, numEntries) {
 
 //This will sort your array
 function SortByDate(a, b){
-    var aDate = new Date(a.publishedDate);
-    var bDate = new Date(b.publishedDate);
+    var aDate = new Date(a.pubDate);
+    var bDate = new Date(b.pubDate);
     return ((aDate > bDate) ? -1 : ((aDate <= bDate) ? 1 : 0));
 }
 
