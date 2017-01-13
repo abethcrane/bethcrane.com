@@ -218,7 +218,7 @@ li.item {
 .instagram .itemContent img,
 .fibseq .itemContent img,
 .flickr .itemContent img {
-    width: 100%;
+    max-width: 100%;
     border: 1px solid black;
 }
 
