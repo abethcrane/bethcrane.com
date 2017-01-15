@@ -1,6 +1,5 @@
 var getFeed = function(feedName, feedUrl, numEntries) {
     var url =  'https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(feedUrl);
-   // var url = 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num='+numEntries+'&callback=?&q=' + encodeURIComponent(feedUrl);
 
     var serverResponse = $.ajax({
         type: "GET",
@@ -26,7 +25,7 @@ var handleInstagramData = function(data) {
     	numFeeds++;
     	return;
     }
-   // data = data["data"];
+    data = data["data"];
     var xml = [];
     var i;
     var date;
