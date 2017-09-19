@@ -11,16 +11,17 @@ var getFeed = function(feedName, feedUrl, numEntries)
 
     serverResponse.fail(function()
     {
-        console.log("Unable to load" + feedName + ", Incorrect path or invalid feed");
+        console.log("Unable to load " + feedName + ", Incorrect path or invalid feed");
     });
 
     serverResponse.done(function(data){
-        if (data != undefined && data.items != undefined && data.items.length > 0) {
+        if (data != undefined && data.items != undefined && data.items.length > 0)
+        {
             handleData(data.items, feedName, numEntries);
     	}
         else
         {
-	       console.log(feedName + " is undefined cause it's the worst");
+	       console.log(feedName + " is undefined because it's the worst");
            numFeeds++
         }
     });
@@ -164,7 +165,6 @@ $(document).ready(function() {
     feedsToGet.push(new feed("flickr", "http://api.flickr.com/services/retrievedFeeds/photos_public.gne?id=105674507@N06", 10));
     feedsToGet.push(new feed("twitter", "https://twitrss.me/twitter_user_to_rss/?user=abethcrane", 10));
     feedsToGet.push(new feed("github", "https://github.com/abethcrane.atom", 10));
-    feedsToGet.push(new feed("medium", "https://medium.com/feed/@abethcrane", 10));
     feedsToGet.push(new feed("stackoverflow", "http://stackoverflow.com/retrievedFeeds/user/4629688", 10));
     feedsToGet.push(new feed("fibseq", "http://www.fibonaccisequinsblog.com/feed/", 10));
 
