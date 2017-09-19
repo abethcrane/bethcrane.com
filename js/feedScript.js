@@ -126,7 +126,7 @@ var endDataHandling = function (xml, feedName, numEntries)
     }
 
     numFeeds++;
-    if (numFeeds == feedsToGet.length)
+    if (numFeeds == totalFeeds)
     {
         retrievedFeeds.sort(SortByDate);
         getTemplateAjax("templates/feeds.handlebars", "#feeds", retrievedFeeds, displayTemplateAndResizeImages);
@@ -151,6 +151,7 @@ function feed(feedName, url, count)
 var numFeeds = 0;
 var retrievedFeeds = [];
 var feedsToGet = [];
+var totalFeeds = 0;
 
 $(document).ready(function() {
     // Instagram is special because their api doesn't give us an rss feed, we just have to work around it
@@ -162,11 +163,16 @@ $(document).ready(function() {
         success: function(data) {handleInstagramData(data);}
     });
     insta.run();
+
+    totalFeeds += 1;
+
     feedsToGet.push(new feed("flickr", "http://api.flickr.com/services/retrievedFeeds/photos_public.gne?id=105674507@N06", 10));
     feedsToGet.push(new feed("twitter", "https://twitrss.me/twitter_user_to_rss/?user=abethcrane", 10));
     feedsToGet.push(new feed("github", "https://github.com/abethcrane.atom", 10));
     feedsToGet.push(new feed("stackoverflow", "http://stackoverflow.com/retrievedFeeds/user/4629688", 10));
     feedsToGet.push(new feed("fibseq", "http://www.fibonaccisequinsblog.com/feed/", 10));
+
+    totalFeeds += feedsToGet.length;
 
     for (var i = 0, length = feedsToGet.length; i < length; i++)
     {
