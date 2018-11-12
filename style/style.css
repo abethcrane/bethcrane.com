@@ -240,10 +240,6 @@ li.item {
     margin-top: 0px;
 }
 
-.stackoverflow .itemContent a, .stackoverflow .itemContent {
-    color: #FF9900;
-}
-
 .twitter .itemContent a, .twitter .itemContent {
     color: #55acee;
 }
