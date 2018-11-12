@@ -44,12 +44,22 @@ var handleInstagramData = function(data)
     for (i = 0; i < numEntries; i++)
     {
         xml[i] = {};
-        date = new Date(data[i]["created_time"] *1000);
-        xml[i]["pubDate"]  = (date.toGMTString()).replace(/.*?, /, " ");
-        xml[i]["link"] = data[i]["link"];
-        data[i]["caption"]["text"] = data[i]["caption"]["text"].replace(/#.*/, "");
-        xml[i]["content"]  = "<img src = '" + data[i]["images"]["standard_resolution"]["url"] + "''><p class='caption'>" + data[i]["caption"]["text"] + "</p>";
-        xml[i]["title"] =  "";
+        date = new Date(data[i].created_time *1000);
+        xml[i].pubDate  = (date.toGMTString()).replace(/.*?, /, " ");
+        xml[i].link = data[i].link;
+        
+	    // Caption handling
+	    if (data[i].caption !== null)
+	    {
+            data[i].caption.text = data[i].caption.text.replace(/#.*/, "");
+	    }
+	    else
+    	{
+	        data[i].caption = {text: ""};
+    	}
+        
+        xml[i].content  = "<img src = '" + data[i].images.standard_resolution.url + "''><p class='caption'>" + data[i].caption.text + "</p>";
+        xml[i].title =  "";
     }
 
     endDataHandling(xml, "instagram", numEntries);
