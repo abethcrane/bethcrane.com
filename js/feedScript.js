@@ -108,12 +108,6 @@ var handleData = function(xml, feedName, numEntries)
             xml[i]["pubDate"] = xml[i]["pubDate"].replace(/(:[0-9]{2}):.*/m, "$1");
             xml[i]["title"] =  "";
         }
-        else if (feedName == "stackoverflow")
-        {
-            xml[i]["pubDate"] = xml[i]["pubDate"].replace(/^[^0-9]*/, "");
-            xml[i]["title"] = xml[i]["title"].replace(/.*?for /, "");
-            xml[i]["content"] = xml[i]["contentSnippet"];
-        }
         else if (feedName == "twitter")
         {
             img = xml[i]["content"].match(/pic\.twitter\.com[^<]*/);
@@ -176,10 +170,9 @@ $(document).ready(function() {
 
     totalFeeds += 1;
 
-    feedsToGet.push(new feed("flickr", "http://api.flickr.com/services/retrievedFeeds/photos_public.gne?id=105674507@N06", 10));
+    feedsToGet.push(new feed("flickr", "https://api.flickr.com/services/feeds/photos_public.gne?id=105674507@N06", 10));
     feedsToGet.push(new feed("twitter", "https://twitrss.me/twitter_user_to_rss/?user=abethcrane", 10));
     feedsToGet.push(new feed("github", "https://github.com/abethcrane.atom", 10));
-    feedsToGet.push(new feed("stackoverflow", "http://stackoverflow.com/retrievedFeeds/user/4629688", 10));
     feedsToGet.push(new feed("fibseq", "http://www.fibonaccisequinsblog.com/feed/", 10));
 
     totalFeeds += feedsToGet.length;

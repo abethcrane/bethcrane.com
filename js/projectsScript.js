@@ -1,6 +1,13 @@
 //name link oneliner imgUrl languages dates
 
 var projects = [
+            {"name": "Foodbank Translator App",
+            "link": "https://abethcrane.github.io/food-bank-translator/",
+            "oneliner": "An app developed to assist foodbank employees/volunteers wth creating translated printouts for foodbank customers.",
+            "imgUrl": "apples.png",
+            "languages": "Python, Microsoft Cognitive Services",
+            "dates": "October '18 - November '18"},
+
 			{"name": "MS Band + SmartThings Tile",
 		    "link": "http://abethcrane.github.io/ms-band-smartthings-tile",
 		    "oneliner": "Android/Windows (in dev) tile that allows you to select a set of SmartThings switches to display and turn on/off from your Microsoft Band.",
