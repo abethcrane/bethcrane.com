@@ -1,0 +1,22 @@
+{% if include.caption %}
+<table class="image" style="{{ include.style }}">
+<caption align="bottom"><i>{{ include.caption }}</i></caption>
+<tr><td>
+{% else %}
+<div class="image">
+{% endif %}
+    <center>
+    {% if include.options %}
+    <video src="{{ include.url | prepend: site.baseurl | downcase }}" {{ include.options }} >
+    {% else %}
+    <video autoplay controls muted loop width="100%" src="{{ include.url | prepend: site.baseurl | downcase }}">
+    {% endif %}
+    </video>
+    </center>
+{% if include.caption %}
+</td></tr>
+</table>
+{% else %}
+</div>
+{% endif %}
+<br/>

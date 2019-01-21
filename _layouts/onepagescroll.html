@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body id="onepagescroll">
+
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+
+  </body>
+
+  <script src="{{ "/assets/scripts/jquery.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/scripts/onepagescroll.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/scripts/script.js" | prepend: site.baseurl }}"></script>
+</html>

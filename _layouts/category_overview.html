@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="home">
+
+  <center>
+    <div class="category" style="
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background-image: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url('{{ page.category | prepend: '/assets/images/' | prepend: site.baseurl | downcase }}.jpg');">
+      <h2>{{ page.category}}</h2>
+      <h3>{% for category in site.category_blurbs %}{% if category[0] == page.category %}{{ category[1] }}{% endif %}{% endfor %}</h3>
+    </div>
+  </center>
+  <br/>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% if post.categories contains page.category %}
+        {% include post-preview.html %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

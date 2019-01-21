@@ -1,0 +1,17 @@
+{% if include.caption %}
+<table class="image">
+<caption align="bottom"><i>{{ include.caption }}</i></caption>
+<tr><td>
+{% else %}
+<div class="image">
+{% endif %}
+<center>
+<a href="{{ include.url | prepend: site.baseurl | downcase }}"><img src="{{ include.url | prepend: site.baseurl | downcase }}" alt="{{ include.alt }}" {% if include.title %}title="{{ include.title }}"{% endif %}/></a>
+</center>
+{% if include.caption %}
+</td></tr>
+</table>
+{% else %}
+</div>
+{% endif %}
+<br/>
