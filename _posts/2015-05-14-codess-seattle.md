@@ -2,8 +2,8 @@
 layout: post
 title:  "Codess Seattle"
 date:   2015-05-14
-categories: [WorkLyfe]
-tags: [Networking]
+categories: [Software]
+tags: [Conference]
 summary: CodessSEA was a 2-day conference for women in tech, and I actually got a lot out of it. 
 ---
 I love that being a minority gives me free opportunities to network. [Codess][Codess] is "a community for female coders initiated by Microsoft", which meant they held their Seattle conference in the building right next to mine. 
