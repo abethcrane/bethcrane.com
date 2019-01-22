@@ -30,6 +30,7 @@ category_blurbs:
   Projects: "So what do you do in your free time? 🤔"
   The Meta Level: "3rd Thoughts are thoughts that watch the world and think all by themselves."
   Private: "None of your business, actually 😉, but I happen to think rose-tinted glasses look good on me 🕶️"
+highlighter: rouge
 # Build settings
 markdown: kramdown
 exclude: [vendor]
