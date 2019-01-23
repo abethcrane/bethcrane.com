@@ -16,6 +16,7 @@ So this post is for future!Beth, the next time she's dealing with updating softw
 - Copy all the files over (easy + obvious, a winning combo)
 - Update the 'web directory' to append "/_site" so that it loads the site and not the code (easy, but non-obvious)
 - Update my webhooks script to not just ```git pull```, but also run ```jekyll build``` (easy + obvious)
+- Add/modify a .htaccess to do ErrorDocument routing for 404s and to Rewrite HTTP -> HTTPS (easy, but non-obvious)
 
 And this is where it gets complicated. Theoretically that's all I had to do!
 
