@@ -2,7 +2,6 @@
 layout: default
 ---
 <div class="home">
-
   <center>
     <div class="category" style="
       position: relative;
@@ -18,6 +17,7 @@ layout: default
       <h3>{% for category in site.category_blurbs %}{% if category[0] == page.category %}{{ category[1] }}{% endif %}{% endfor %}</h3>
     </div>
   </center>
+  
   <br/>
 
   <ul class="post-list">
