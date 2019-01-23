@@ -3,7 +3,7 @@ layout: post
 title:  "Migrating this blog"
 date:   2019-01-22
 categories: [Software]
-tags: [Projects]
+tags: [Web]
 summary: Migrating my blog to a new domain was pretty easy, until I had to update jekyll
 ---
 I spent the long weekend migrating this blog over from one domain to another. It's been 4 years since I first set it up, so needless to say both me and the software it's running on were a little rusty.
