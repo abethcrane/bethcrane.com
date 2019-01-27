@@ -1,66 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Beth Crane</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap -->
-        <link href="style/jquery.fullPage.css" rel="stylesheet" media="screen" />
-        <link href="style/style.css" rel="stylesheet" media="screen" />
-        <link href="style/narrow.css" rel='stylesheet' media='screen and (max-width: 750px)' />
-        <link href="style/medium.css" rel='stylesheet' media='screen and (min-width: 751px)' />
-    </head>
-    <body>
-        <div class="main resize">
-            <div id="sun">
-                <img src="assets/img/sun.png"></img>
-            </div>
-            <div class="nav">
-    		    <div id="nav-photos">
-        			<ul>
-        			    <a href="http://instagram.com/abethcrane"><li id="instagram" class="white"></li></a>
-        			    <a href="http://flickr.com/photos/105674507@N06"><li id="flickr" class="white"></li></a>
-        		        <a href="http://fibonaccisequinsblog.com"><li id="fibseq" class="white"></li></a>
-        			</ul>
-    		    </div>
-    		    <div id="nav-software">
-        			<ul>
-        			    <a href="http://linkedin.com/in/abethcrane"><li id="linkedin"></li></a>
-        			    <a href="http://github.com/abethcrane"><li id="github" class="white"></li></a>
-        			    <a href="http://twitter.com/abethcrane"><li id="twitter"></li></a>
-        			</ul>
-    		    </div>
-            </div>
-            <div class="section" data-anchor="x">
-                <div class="slide" id="photos" data-anchor="photography">
-                    <div id="photos-grid"></div>
-                </div>
-                <div class="slide active" id="landing-page" data-anchor="play">
-                    <div id='stars'></div>
-                    <div id='stars2'></div>
-                    <div id='stars3'></div>
-                    <img src="assets/img/background-white.png" id="landing-photo">
-                    <div id="feeds"></div>
-                </div>
-                <div class="slide" id="projects" data-anchor="software"></div>
-                <div class="slide" id="cv-slide" data-anchor="cv">
-                    <iframe id="resume" src="https://drive.google.com/file/d/1PfPvJWL52vGyHpGReiXCkYyMpDaHXTSi/preview">
-                   </iframe>
-                </div>
-            </div>
-        </div>
-        <!-- Jquery -->
-        <script src="js/jquery.js"></script>
-	    <script src="js/jquery.maxside.js"></script>
-        <!-- Full Page Scroll -->
-        <script src="js/jquery.fullPage.js"></script>
-        <!-- Nice JS: Templating & Classes-->
-        <script src="js/handlebar.js"></script>
-        <!-- General settings -->
-        <script src="js/script.js"></script>
-        <!-- Feed settings -->
-        <script src="js/feedScript.js"></script>
-        <!-- Projects list -->
-        <script src="js/projectsScript.js"></script>
-	    <script src="js/instafeed.min.js"></script>
-    </body
-</html>
+---
+layout: onepagescroll
+---
+<div class="categories">
+{% for category in site.category_tags %}
+  {% unless category[0] contains "Private" %}
+  <a class="category" style="background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('{{ category[0] | prepend: '/assets/images/' | prepend: site.baseurl | downcase }}.jpg');"
+    href="/{{ category[0] | prepend: site.baseurl | downcase }}">
+      <h2>{{ category[0] }}</h2>
+  </a>
+  {% endunless %}
+{% endfor %}
+</div>

@@ -1,0 +1,15 @@
+{% if include.caption %}
+<table class="image">
+<caption align="bottom"><i>{{ include.caption }}</i></caption>
+<tr><td>
+{% endif %}
+<div style="float: left; padding-bottom: 10px; text-align: center">
+{% for url in include.urls %}
+<a href="{{ url | prepend: site.baseurl | downcase }}"><img src="{{ url | prepend: site.baseurl | downcase }}" {% if include.title %}title="{{ include.title }}"{% endif %} class="image-grid-{{ include.urls | size }}{% if forloop.index0 == 0 %} image-grid-first{% endif %}"/></a>
+{% endfor %}
+</div>
+{% if include.caption %}
+</td></tr>
+</table>
+<br/>
+{% endif %}

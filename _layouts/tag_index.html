@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="home">
+  <h1 class="page-heading">
+    {% if page.category %}
+    <a href="{{ page.category | prepend: '/' | prepend: site.baseurl | downcase }}">{{ page.category }}</a> > 
+    {% endif %}
+    {{ page.tag }}
+  </h1>
+  
+  <ul class="post-list">
+    {% for post in site.posts %}
+    {% if post.tags contains page.tag %}
+    {% include post-preview.html %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
