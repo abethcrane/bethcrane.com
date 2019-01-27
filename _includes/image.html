@@ -1,9 +1,9 @@
 {% if include.caption %}
-<table class="image">
+<table class="image" {% if include.width %}style="width: {{ include.width }};"{% endif %}>
 <caption align="bottom"><i>{{ include.caption }}</i></caption>
 <tr><td>
 {% else %}
-<div class="image">
+<div class="image" {% if include.width %}style="width: {{ include.width }};"{% endif %}>
 {% endif %}
 <center>
 <a href="{{ include.url | prepend: site.baseurl | downcase }}"><img src="{{ include.url | prepend: site.baseurl | downcase }}" alt="{{ include.alt }}" {% if include.title %}title="{{ include.title }}"{% endif %}/></a>

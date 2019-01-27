@@ -92,7 +92,7 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
+    color: $quote-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
@@ -101,6 +101,10 @@ blockquote {
     > :last-child {
         margin-bottom: 0;
     }
+}
+
+cite {
+    color: $grey-color;
 }
 
 /**
