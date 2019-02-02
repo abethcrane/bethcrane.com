@@ -273,10 +273,8 @@ h2.post-preview {
     $my_padding: 10% / $i / 2;
     $my_width_offset: $my_padding - ($my_padding / $i);
     .image-grid-#{$i} {
-          float: left;
           width: calc(#{$my_width} - #{$my_width_offset});
           width: -webkit-calc(#{$my_width} - #{$my_width_offset});
-          padding-left: $my_padding;
     }
 }
 
@@ -288,8 +286,7 @@ h2.post-preview {
     .image-grid-#{$i} {
           width: calc(#{$my_width} - #{$my_width_offset});
           width: -webkit-calc(#{$my_width} - #{$my_width_offset});
-          padding-left: $my_padding;
-          padding-bottom: $my_padding;
+          padding-bottom: $my_padding / 2;
     }
 }
 
@@ -301,11 +298,6 @@ h2.post-preview {
     .image-grid-#{$i} {
           width: calc(#{$my_width} - #{$my_width_offset});
           width: -webkit-calc(#{$my_width} - #{$my_width_offset});
-          padding-left: $my_padding;
           padding-bottom: $my_padding;
     }
-}
-
-.image-grid-first {
-    padding-left: 0px;
 }
