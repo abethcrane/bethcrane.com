@@ -49,7 +49,7 @@ I guess the lesson from those two is nothing revolutionary, just good reminders 
 - e.g. a bully, lazy, bad at time management, 'the good girl'
 
 I find this important both with myself and others. I just recently put a bunch of sticky notes on my work monitor breaking some roles I've been settling into.
-{% include image.html url="/assets/images/2015-10-23/roles.jpg" title="Breaking out of roles" caption="I've done affirmations forever, but I recently realized I was conflating negative traits with identities (I'm a stressed person), and so I'm stepping my game up" %}
+{% include image.html url="/assets/media/2015-10-23/roles.jpg" title="Breaking out of roles" caption="I've done affirmations forever, but I recently realized I was conflating negative traits with identities (I'm a stressed person), and so I'm stepping my game up" %}
 
 With others I try to remember that my notions of them do not (and can not) reflect some objective truth of them that I need to uncover or interact with. The goal isn't fake interactions, but to hone in on the way that people bring out different aspects of others, and try to bring out the person they want to be.
 
@@ -64,7 +64,7 @@ With others I try to remember that my notions of them do not (and can not) refle
 
 This is something that I've had difficult applying with my peers - I find it difficult to do without being condescending. I imagine this will improve with practice, and in the meantime it's been interesting to observe just how often I am passing judgement. What's trickier is that people often *want* that - I know I personally do. I haven't concluded whether indulging it is necessarily problematic, but I do identify with the cartoon below, where it's hard to trust that someone else is being authentic when all they do is say "that's great!".
 
-{% include image.html url="/assets/images/2015-10-23/praise.jpg" title="Describe with appreciation" %}
+{% include image.html url="/assets/media/2015-10-23/praise.jpg" title="Describe with appreciation" %}
 
 > One temptation that parents have to watch out for is the urge to praise by comparison. The danger here is that this kind of praise puts relationships on thin ice. Might the big brother feel threatened when his little brother learns to tie his shoes? Will his accomplishment be diminished? And how will big sister feel when the "baby" starts learning to read? And will the brothers be likely to work together and help each other out whith cleanups when one's achievement depends on the other's failure?
 
@@ -88,7 +88,7 @@ I find that once I can empathize and accept myself, I'm able to turn this outwar
 4. **Talk about your feelings**
 5. **Write a note**
 
-{% include image.html url="/assets/images/2015-10-23/describe.jpg" title="Describe" caption="It’s hard to do what needs to be done when people are telling you what’s wrong with you - it's easier to concentrate on the problem when someone just describes it to you" %}
+{% include image.html url="/assets/media/2015-10-23/describe.jpg" title="Describe" caption="It’s hard to do what needs to be done when people are telling you what’s wrong with you - it's easier to concentrate on the problem when someone just describes it to you" %}
 
 I haven't had a lot of opportunity to try this out or apply this to my life - I can easily imagine my parents trying it, getting frustrated that it doesn't work, and stopping. I think the important lessons that I took from here are actually that
 

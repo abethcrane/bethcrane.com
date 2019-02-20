@@ -8,19 +8,19 @@ summary: I have this badass photobooth that I'm going to start putting to more f
 ---
 Zoe and I spent yesterday scheming about blanket fort and ice creaming, but what really saved the week for us both was pulling out the camera and my [ridiculously oversized flash umbrella][umbrella].
 
-![Curious]({{ "/assets/images/2015-05-23/shoot1.jpg" | prepend: site.baseurl | downcase }})
+![Curious]({{ "/assets/media/2015-05-23/shoot1.jpg" | prepend: site.baseurl | downcase }})
 
 This is the first real photoshoot I've done - which sounds ridiculous! I've tended to take photos of the things I'm doing, rather than set out to deliberately create art. That's something I'd like to move more into, and modelling/portrait photography is one way I'd like to do that.
 
-![Smirk]({{ "/assets/images/2015-05-23/shoot2.jpg" | prepend: site.baseurl | downcase }})
+![Smirk]({{ "/assets/media/2015-05-23/shoot2.jpg" | prepend: site.baseurl | downcase }})
 
 Zoe did a bunch of modelling early last year, so she provided most of the direction. I'd had no real concept of how hard it is to figure out an ideal pose, communicate that, and then actually pose for it! Every step is insane.
 
-![Smile]({{ "/assets/images/2015-05-23/shoot3.jpg" | prepend: site.baseurl | downcase }})
+![Smile]({{ "/assets/media/2015-05-23/shoot3.jpg" | prepend: site.baseurl | downcase }})
 
 I found this shirt in Vegas and I probably should have bought 7 so it could become my new uniform. Zoe pointing out that the look I was channeling was 100% Taylor in 22 (#LifeGoals) made it clear what kind of shots we were after.
 
-![Attitude]({{ "/assets/images/2015-05-23/shoot4.jpg" | prepend: site.baseurl | downcase }})
+![Attitude]({{ "/assets/media/2015-05-23/shoot4.jpg" | prepend: site.baseurl | downcase }})
 
 # Lessons Learned #
 - **The importance of creating atmosphere:** [Playing 22][22] in the background whilst shooting made it easy to feel the vibe we were going for.

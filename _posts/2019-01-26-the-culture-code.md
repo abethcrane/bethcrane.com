@@ -59,7 +59,7 @@ Google has a neat internal tool that shows employees how far away their desk is 
 
 This has stuck with me for years (so far, 6 of them). So reading about the [Allen Curve][allenwiki] made complete sense to me. I've heard people joke about how people in different buildings might as well be in different countries, but the Allen curve takes it a step further and says they don't even have to be in different buildings, just different floors.
 
-{% include image.html url="/assets/images/2019-01-26/allencurve.jpg" caption="'What mattered most in creating a successful team had less to do with intelligence and experience and more to do with where the desks happened to be located'" %}
+{% include image.html url="/assets/media/2019-01-26/allencurve.jpg" caption="'What mattered most in creating a successful team had less to do with intelligence and experience and more to do with where the desks happened to be located'" %}
 
 # Points of contention #
 I didn't disagree with any fundamental points, mostly just individual applications. It helped me to approach the book with a bit more skepticism than I might otherwise have done, given how strongly it supported some of my existing beliefs.
@@ -204,7 +204,7 @@ The book has 'Action Items' chapters at the end of each of the 3 key skills - bu
 >3. Future orientation: They signal the relationship will continue
 >
 > -- <cite>Chapter 1, The Culture Code</cite>
-{% include image.html url="/assets/images/2019-01-26/belonging.jpg" caption="A physical Belonging Cue, given to Blake from Emily" width="40%" %}
+{% include image.html url="/assets/media/2019-01-26/belonging.jpg" caption="A physical Belonging Cue, given to Blake from Emily" width="40%" %}
 
 ## Notifications ##
 
