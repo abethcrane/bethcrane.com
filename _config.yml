@@ -22,7 +22,7 @@ category_tags:
   Adventures: [Seattle, Travel]
   Projects: [FibSeq, Photography, Art, Plants]
   The Meta Level: [Introspection, Communication]
-  Private: [Gratitude]
+  Private: [Gratitude, Diary]
 category_blurbs:
   Software: "If this is the closest to 'be a wizard' I'm going to get, I suppose I should post some code snippets and project updates 👩‍💻"
   Thoughts on Books: "It turns out I don't only read fiction 📚"
@@ -33,4 +33,6 @@ category_blurbs:
 highlighter: rouge
 # Build settings
 markdown: kramdown
-exclude: [vendor]
+# Exclude the following from the Jekyll build process.
+# Note: "vendor" is for Travis CI.
+exclude: [vendor, "_assets", "Gemfile", "Gemfile.lock", "gulpfile.js", "paths.js", "node_modules", "package.json"]

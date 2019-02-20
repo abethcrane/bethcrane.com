@@ -1,6 +1,8 @@
 _site/
 .sass-cache/
 _drafts/
-assets/draft_assets/*
+_assets/draft_assets/*
+assets/*
 Gemfile.lock
 *.DS_Store
+node_modules/*
