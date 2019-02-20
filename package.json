@@ -20,9 +20,13 @@
   },
   "homepage": "https://github.com/abethcrane/bethcrane.com#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
     "gulp": "^4.0.0",
+    "gulp-cache": "^1.1.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-run": "^1.7.1",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "imagemin-jpeg-recompress": "^6.0.0"
   }
 }
