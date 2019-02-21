@@ -14,7 +14,7 @@ Having said that, having a strong sense of who you are seems to be a pretty impo
 
 A large part of the value of this blog is as a mechanism for accepting both of the above and wrangling them to work together; to be deliberate and highly selective about what I choose to identify as, and then fully embracing and improving at those things.
 
-{% assign image-list = "/assets/images/2015-07-09/tree1.jpg|/assets/images/2015-07-09/tree2.jpg|/assets/images/2015-07-09/tree3.jpg" | split: "|" %} 
+{% assign image-list = "/assets/media/2015-07-09/tree1.jpg|/assets/media/2015-07-09/tree2.jpg|/assets/media/2015-07-09/tree3.jpg" | split: "|" %} 
 
 {% include image-grid.html urls=image-list %}
 
@@ -22,7 +22,7 @@ Photography is a thing that's wormed its way inside of me and become an integral
 
 So with 'deliberateness' checked off, that leaves 'embracing/improving'. [I mentioned back in May]({% post_url 2015-05-23-with-great-photobooth-comes-great-responsibility %}) that most of my photos are me documentating whatever I'm up to at the time, rather than deliberately setting out to [make good art][gaiman], so I'm making an effort to create time to organise/do photoshoots.
 
-{% include image.html url="/assets/images/2015-07-09/flowers.jpg" alt="Hannah as bae" title="Bae" %}
+{% include image.html url="/assets/media/2015-07-09/flowers.jpg" alt="Hannah as bae" title="Bae" %}
 
 My current focus with photography is on people, for the following reasons:
 
@@ -31,7 +31,7 @@ My current focus with photography is on people, for the following reasons:
 - Portraits seem like a good way to try and improve my intuition around lighting
 - Taking photos of/for people seems like one of the easiest ways to go about doing actual work as a photographer
 
-{% assign image-list = "/assets/images/2015-07-09/stairs1.jpg|/assets/images/2015-07-09/stairs2.jpg|/assets/images/2015-07-09/stairs3.jpg" | split: "|" %} 
+{% assign image-list = "/assets/media/2015-07-09/stairs1.jpg|/assets/media/2015-07-09/stairs2.jpg|/assets/media/2015-07-09/stairs3.jpg" | split: "|" %} 
 
 {% include image-grid.html urls=image-list %}
 
