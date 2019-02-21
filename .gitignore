@@ -1,8 +1,8 @@
 _site/
 .sass-cache/
 _drafts/
-_assets/draft_assets/*
-assets/*
+assets/draft_assets/*
 Gemfile.lock
 *.DS_Store
 node_modules/*
+package-lock.json
