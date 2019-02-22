@@ -5,7 +5,7 @@
     {% else %}autoplay controls muted loop{% endif %}
     width="{% if include.width %}{{ include.width }}{% else %}100%{% endif %}"
     class="image-grid-{{ include.urls | size }}">
-        <source src="{{ url | prepend: site.baseurl | downcase }}" type="video/mp4" />
+        <source src="{{ site.baseurl | downcase | append: url }}" type="video/mp4" />
     </video>
     {% endfor %}
     {% if include.caption %}
