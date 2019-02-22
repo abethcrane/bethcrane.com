@@ -4,7 +4,7 @@
     {% if include.options %}{{ include.options }}
     {% else %}autoplay controls muted loop{% endif %}
     width="{% if include.width %}{{ include.width }}{% else %}100%{% endif %}"
-    src="{{ include.url | prepend: site.baseurl | downcase }}"
+    src="{{ site.baseurl | downcase | append: include.url }}"
     type="video/mp4">
     </video>
     {% if include.caption %}
