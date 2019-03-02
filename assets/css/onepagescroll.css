@@ -85,4 +85,5 @@ body, .onepage-wrapper, html {
 
 body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   position: inherit;
+  overflow: scroll;
 }
