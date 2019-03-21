@@ -1,10 +1,9 @@
 <center>
     <figure>
-        <a href="{{ site.baseurl | downcase | append: include.url }}">
-            <img src="{{ site.baseurl | downcase | append: include.url }}" alt="{{ include.alt }}"
-            {% if include.title %}title="{{ include.title }}"{% endif %}
-            {% if include.width %}style="width: {{ include.width }};"{% endif %}/>
-        </a>
+        <img src="{{ site.baseurl | downcase | append: include.url }}" alt="{{ include.alt }}"
+        {% if include.title %}title="{{ include.title }}"{% endif %}
+        {% if include.width %}style="width: {{ include.width }};"{% endif %}
+        data-jslghtbx/>
         {% if include.caption %}
         <figcaption>{{ include.caption }}</figcaption>
         {% endif %}
