@@ -35,4 +35,4 @@ highlighter: rouge
 markdown: kramdown
 # Exclude the following from the Jekyll build process.
 # Note: "vendor" is for Travis CI.
-exclude: [vendor, "_assets", "Gemfile", "Gemfile.lock", "gulpfile.js", "paths.js", "node_modules", "package.json"]
+exclude: [vendor, "Gemfile", "Gemfile.lock"]

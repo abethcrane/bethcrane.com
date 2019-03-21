@@ -15,6 +15,13 @@
 
     {% include footer.html %}
 
+
+    <script src="{{ "/assets/js/lightbox.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+    
   </body>
 
 </html>
