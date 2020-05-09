@@ -270,6 +270,16 @@ h2.post-preview {
     }
 }
 
+.media-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.media-grid-element {
+    flex-basis: 0;
+    padding: 0 2px 0 2px;
+}
+
 @for $i from 1 to 4 {
     $my_width: 1/$i * 100%;
     $my_padding: 10% / $i / 2;

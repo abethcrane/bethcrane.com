@@ -1,27 +1,29 @@
 <center>
-    <figure class="image"
-        style="width: {% if include.width %}{{ include.width }}{% else %}100%{% endif %};">
+    <figure style="width: {% if include.width %}{{ include.width }}{% else %}100%{% endif %};">
+        <div class="media-grid-container">
         {% for url in include.urls %}
+            <div class="media-grid-element" style="flex-grow:{% aspectratio url %};">
             {% assign filetype = url | split: '.' | last | downcase | remove: '.'  %}
             {% if filetype == 'mp4' or filetype == 'mov' %}
-                {% if filetype == "mov" %}{% assign filetype = "quicktime" %}{% endif %}
+            {% if filetype == "mov" %}{% assign filetype = "quicktime" %}{% endif %}
                 <video 
                     {% if include.options %}{{ include.options }}
-                    {% else %}autoplay controls muted loop{% endif %}
-                    class="image-grid-{{ include.urls | size }}">
-                    <source src="{{ site.baseurl | downcase | append: url }}" type="video/{{ filetype }}">
+                    {% else %}autoplay controls muted loop{% endif %}>
+                    <source src="{{ site.baseurl | downcase | append: url }}" type="video/{{ filetype }}"
+                    data-jslghtbx data-jslghtbx-group="post">
                 </video>
             {% else %}
                 <img
                     src="{{ site.baseurl | downcase | append: url  }}"
                     {% if include.title %}title="{{ include.title }}"{% endif %}
-                    class="image-grid-{{ include.urls | size }}"
                     data-jslghtbx data-jslghtbx-group="post"
                 />
             {% endif %}
+            </div>
         {% endfor %}
+        </div>
         {% if include.caption %}
         <figcaption>{{ include.caption }}</figcaption>
         {% endif %}
     </figure>
-    </center>
+</center>
