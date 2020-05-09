@@ -1,0 +1,26 @@
+<center>
+    <figure class="image"
+        style="width: {% if include.width %}{{ include.width }}{% else %}100%{% endif %};">
+            {% assign filetype = include.url | split: '.' | last | downcase | remove: '.'  %}
+            {% if filetype == 'mp4' or filetype == 'mov' %}
+                {% if filetype == "mov" %}{% assign filetype = "quicktime" %}{% endif %}
+                <video 
+                    {% if include.options %}{{ include.options }}
+                    {% else %}autoplay controls muted loop{% endif %}
+                    width="{% if include.width %}{{ include.width }}{% else %}100%{% endif %}"
+                    src="{{ site.baseurl | downcase | append: url }}"
+                    type="video/{{ filetype }}">
+                </video>
+            {% else %}
+                <img
+                    src="{{ site.baseurl | downcase | append: url  }}" alt="{{ include.alt }}"
+                    {% if include.title %}title="{{ include.title }}"{% endif %}
+                    {% if include.width %}style="width: {{ include.width }};"{% endif %}
+                    data-jslghtbx data-jslghtbx-group="post"
+                />
+            {% endif %}
+        {% if include.caption %}
+        <figcaption>{{ include.caption }}</figcaption>
+        {% endif %}
+    </figure>
+    </center>

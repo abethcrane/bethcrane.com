@@ -1,10 +1,11 @@
 <center>
     <figure>
-        <img src="{{ site.baseurl | downcase | append: include.url }}" alt="{{ include.alt }}"
+        <img
+        src="{{ site.baseurl | downcase | append: include.url }}" alt="{{ include.alt }}"
         {% if include.title %}title="{{ include.title }}"{% endif %}
         {% if include.width %}style="width: {{ include.width }};"{% endif %}
-        data-jslghtbx
-        {% if include.groupid %}data-jslghtbx-group="{{include.groupid}}"{% endif %}/>
+        data-jslghtbx data-jslghtbx-group="post"
+        />
         {% if include.caption %}
         <figcaption>{{ include.caption }}</figcaption>
         {% endif %}
