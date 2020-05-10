@@ -36,3 +36,5 @@ markdown: kramdown
 # Exclude the following from the Jekyll build process.
 # Note: "vendor" is for Travis CI.
 exclude: [vendor, "Gemfile", "Gemfile.lock"]
+plugins: 
+  - jekyll-aspect-ratio

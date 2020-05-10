@@ -280,7 +280,7 @@ h2.post-preview {
 
 .media-grid-element {
     flex-basis: 0;
-    min-width: 25%; // Don't let any of them get too small
+    min-width: max(25%, 150px); // Don't let any of them get too small
     max-height: 600px; // Let's not go wild
 }
 
