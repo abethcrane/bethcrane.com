@@ -273,11 +273,15 @@ h2.post-preview {
 .media-grid-container {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: space-evenly;
 }
 
 .media-grid-element {
     flex-basis: 0;
-    padding: 0 2px 0 2px;
+    min-width: 25%; // Don't let any of them get too small
+    max-height: 600px; // Let's not go wild
 }
 
 @for $i from 1 to 4 {
