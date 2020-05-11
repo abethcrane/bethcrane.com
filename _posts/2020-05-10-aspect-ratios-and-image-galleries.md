@@ -11,9 +11,9 @@ I honestly adore having totally free weekends that enable me to spontaneously re
 
 ## The Process ##
 
-I have some files in the repo for this blog to display [photos]() and [videos]() in grids - e.g. as displayed [in this post about the eclipse]({% post_url 2017-08-22-you-have-to-howl-at-the-moon %}).
+I have some files in the repo for this blog to display photos and videos in grids - e.g. as displayed [in this post about the eclipse]({% post_url 2017-08-22-you-have-to-howl-at-the-moon %}).
 
-It occurred to me yesterday that it wouldn't be particularly hard to make a combined grid - of both images and videos. So I made a [new include file](media_grid.html) that detects the filetype and renders it appropriately. (Now that I'm detecting the filetype, I can also accurately specify the media type as quicktime for .mov files, instead of setting all videos to "video/mp4"!).
+It occurred to me yesterday that it wouldn't be particularly hard to make a combined grid - of both images and videos. So I made a [new include file](https://github.com/abethcrane/bethcrane.com/tree/master/_includes) that detects the filetype and renders it appropriately. (Now that I'm detecting the filetype, I can also accurately specify the media type as quicktime for .mov files, instead of setting all videos to "video/mp4"!).
 
 So I did this, and it worked totally fine! But it brought me face-to-face with the way that my existing grids handle files with different aspect ratios (it's especially dramatic when comparing a 4x3 video to a 2x3 or 3x2 photo).
 
