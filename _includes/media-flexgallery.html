@@ -6,7 +6,7 @@
                 <div class="constrainsHeightWithoutStretch">
                 {% assign filetype = url | split: '.' | last | downcase | remove: '.'  %}
                 {% if filetype == "mp4" or filetype == "mov" %}
-                {% if filetype == "mov" %}{% assign filetype = "quicktime" %}{% endif %}
+                    {% if filetype == "mov" %}{% assign filetype = "quicktime" %}{% endif %}
                     <video 
                         {% if include.options %}{{ include.options }}
                         {% else %}autoplay controls muted loop{% endif %}>
