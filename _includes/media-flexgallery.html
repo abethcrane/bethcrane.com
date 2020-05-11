@@ -1,0 +1,31 @@
+<center>
+    <figure {% if include.width %}style="width: {{ include.width }};"{% endif %}>
+        <div class="media-grid-container" {% if include.minWidth %}style="min-width: {{ include.minWidth }};"{% endif %}>
+        {% for url in include.urls %}
+            <div class="media-grid-element {{ include.classes }}" style="flex-grow:{% aspectratio url %};">
+                <div class="constrainsHeightWithoutStretch">
+                {% assign filetype = url | split: '.' | last | downcase | remove: '.'  %}
+                {% if filetype == "mp4" or filetype == "mov" %}
+                {% if filetype == "mov" %}{% assign filetype = "quicktime" %}{% endif %}
+                    <video 
+                        {% if include.options %}{{ include.options }}
+                        {% else %}autoplay controls muted loop{% endif %}>
+                        <source src="{{ site.baseurl | downcase | append: url }}" type="video/{{ filetype }}"
+                        data-jslghtbx data-jslghtbx-group="post">
+                    </video>
+                {% else %}
+                    <img
+                        src="{{ site.baseurl | downcase | append: url  }}"
+                        {% if include.title %}title="{{ include.title }}"{% endif %}
+                        data-jslghtbx data-jslghtbx-group="post"
+                    />
+                {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        {% if include.caption %}
+        <figcaption>{{ include.caption }}</figcaption>
+        {% endif %}
+    </figure>
+</center>

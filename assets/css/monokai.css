@@ -2,6 +2,7 @@ pre, code {
     background-color: transparent;
 }
 
+.highlight {color: #aaaaaa;}
 .highlight pre { background-color: #272822; }
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #75715e } /* Comment */

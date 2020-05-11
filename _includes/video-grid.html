@@ -1,7 +1,6 @@
 <center>
-    <figure class="image" 
-        style="width: {% if include.width %}{{ include.width }}{% else %}100%{% endif %};">
-        {% for url in include.urls %}
+    <figure {% if include.classes %} class="{{ include.classes }}"{% endif %} {% if include.width %}style="width: {{ include.width }};"{% endif %}>
+    {% for url in include.urls %}
         {% assign filetype = url | split: '.' | last | downcase| remove: '.'  %}
         {% if filetype == "mov" %}{% assign filetype = "quicktime" %}{% endif %}
         <video 
@@ -10,9 +9,9 @@
             class="image-grid-{{ include.urls | size }}"
             src="{{ site.baseurl | downcase | append: url }}" type="video/{{ filetype }}">
         </video>
-        {% endfor %}
-        {% if include.caption %}
+    {% endfor %}
+    {% if include.caption %}
         <figcaption>{{ include.caption }}</figcaption>
-        {% endif %}
+    {% endif %}
     </figure>
     </center>

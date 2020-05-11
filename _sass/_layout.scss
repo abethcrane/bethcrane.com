@@ -241,9 +241,10 @@ h2.post-preview {
     margin-bottom: 0px;
 }
 
-.image {
+figure {
     width: 100%;
     margin: auto;
+    margin-bottom: 15px; /* paragraphs have this, so it's nice to match */
 }
 
 .category {
@@ -280,10 +281,21 @@ h2.post-preview {
 
 .media-grid-element {
     flex-basis: 0;
-    min-width: max(25%, 150px); // Don't let any of them get too small
+    min-width: 150px; // Don't let any of them get too small
     max-height: 600px; // Let's not go wild
 }
 
+// For the flexgallery
+.constrainsHeightWithoutStretch {
+    width: 100%;
+    height: 100%;    
+    // Align media to the bottom of the row
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* These are for image and video grids  */
 @for $i from 1 to 4 {
     $my_width: 1/$i * 100%;
     $my_padding: 10% / $i / 2;

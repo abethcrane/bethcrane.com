@@ -1,13 +1,12 @@
 <center>
-<figure class="image"
-    style="width: {% if include.width %}{{ include.width }}{% else %}100%{% endif %};">
+    <figure {% if include.classes %} class="{{ include.classes }}"{% endif %} {% if include.width %}style="width: {{ include.width }};"{% endif %}>
     {% for url in include.urls %}
-    <img
-        src="{{ site.baseurl | downcase | append: url  }}"
-        {% if include.title %}title="{{ include.title }}"{% endif %}
-        class="image-grid-{{ include.urls | size }}"
-        data-jslghtbx data-jslghtbx-group="post"
-    />
+        <img
+            src="{{ site.baseurl | downcase | append: url  }}"
+            {% if include.title %}title="{{ include.title }}"{% endif %}
+            class="image-grid-{{ include.urls | size }}"
+            data-jslghtbx data-jslghtbx-group="post"
+        />
     {% endfor %}
     {% if include.caption %}
     <figcaption>{{ include.caption }}</figcaption>
