@@ -1,8 +1,8 @@
 <center>
     <figure {% if include.width %}style="width: {{ include.width }};"{% endif %}>
-        <div class="media-grid-container" {% if include.minWidth %}style="min-width: {{ include.minWidth }};"{% endif %}>
+        <div class="media-grid-container">
         {% for url in include.urls %}
-            <div class="media-grid-element {{ include.classes }}" style="flex-grow:{% aspectratio url %};">
+            <div class="media-grid-element {{ include.classes }}" style="flex-grow:{% aspectratio url %}; {% if include.minWidth %}min-width: {{ include.minWidth }};{% endif %}" >
                 <div class="constrainsHeightWithoutStretch">
                 {% assign filetype = url | split: '.' | last | downcase | remove: '.'  %}
                 {% if filetype == "mp4" or filetype == "mov" %}
