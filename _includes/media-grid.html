@@ -1,0 +1,36 @@
+<center>
+    <figure {% if include.classes %} class="{{ include.classes }}"{% endif %} {% if include.width %}style="width: {{ include.width }};"{% endif %}>
+    {% if include.numCols %}
+        {% assign numCols = include.numCols %}
+    {% else %}
+        {% assign numCols = 3 %}
+        {% assign remainderFromThree = include.urls | size | modulo: 3 %}
+        {% assign remainderFromTwo = include.urls | size | modulo: 2 == 0 %}
+        {% if remainderFromThree != 0 && remainderFromTwo == 0 %}       
+            {% assign numCols = 2 %}
+        {% endif %}
+    {% endif %}
+    {% for url in include.urls %}
+        {% assign filetype = url | split: '.' | last | downcase | remove: '.'  %}
+        {% if filetype == "mp4" or filetype == "mov" %}
+        {% if filetype == "mov" %}{% assign filetype = "quicktime" %}{% endif %}
+        <video 
+            {% if include.options %}{{ include.options }}
+            {% else %}autoplay controls muted loop{% endif %}
+            class="image-grid-{{ numCols }}"
+            src="{{ site.baseurl | downcase | append: url }}" type="video/{{ filetype }}">
+        </video>
+        {% else %}
+        <img
+            src="{{ site.baseurl | downcase | append: url  }}"
+            {% if include.title %}title="{{ include.title }}"{% endif %}
+            class="image-grid-{{ numCols }}"
+            data-jslghtbx data-jslghtbx-group="post"
+        />
+        {% endif %}
+    {% endfor %}
+    {% if include.caption %}
+        <figcaption>{{ include.caption }}</figcaption>
+    {% endif %}
+    </figure>
+</center>

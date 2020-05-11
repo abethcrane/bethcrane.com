@@ -1,11 +1,13 @@
 <center>
 <figure class="image">
+    {% assign filetype = include.url | split: '.' | last | downcase | remove: '.'  %}
+    {% if filetype == "mov" %}{% assign filetype = "quicktime" %}{% endif %}
     <video
-    {% if include.options %}{{ include.options }}
-    {% else %}autoplay controls muted loop{% endif %}
-    width="{% if include.width %}{{ include.width }}{% else %}100%{% endif %}"
-    src="{{ site.baseurl | downcase | append: include.url }}"
-    type="video/mp4">
+        {% if include.options %}{{ include.options }}
+        {% else %}autoplay controls muted loop{% endif %}
+        width="{% if include.width %}{{ include.width }}{% else %}100%{% endif %}"
+        src="{{ site.baseurl | downcase | append: include.url }}"
+        type="video/{{ filetype }}">
     </video>
     {% if include.caption %}
     <figcaption>{{ include.caption }}</figcaption>
