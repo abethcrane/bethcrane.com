@@ -296,6 +296,13 @@ figure {
     justify-content: flex-end;
 }
 
+.constrainsHeightWithoutStretch > img, .constrainsHeightWithoutStretch > video {
+    /* Chrome doesn't make these auto fill to 100% (unlike firefox) so, specifying that.
+    Chrome also doesn't currently support col-gap and row-gap, so this is how I'm putting in some padding*/
+    min-width: 97%;
+    min-height: 97%;
+}
+
 .image-grid-1 {
     width: 100%;
     padding-bottom: 5px;
