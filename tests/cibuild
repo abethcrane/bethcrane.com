@@ -2,4 +2,4 @@
 set -e # halt script on error
 
 bundle exec jekyll build
-bundle exec htmlproofer ./_site --empty-alt-ignore --alt-ignore /.*/ --only-4xx --url-swap ".*bethcrane.com/:/" _site/ --url-ignore "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4380267/"
+bundle exec htmlproofer ./_site --empty-alt-ignore --alt-ignore /.*/ --only-4xx --url-swap ".*//bethcrane.com/:/" _site/ --url-ignore "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4380267/,http://www.adminarsenal.com/admin-arsenal-blog/powershell-sending-email-with-gmail-example"
