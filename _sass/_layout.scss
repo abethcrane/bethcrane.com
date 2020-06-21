@@ -158,6 +158,8 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    width: 90%;
+    margin: auto;
 }
 
 .page-heading {
@@ -347,4 +349,18 @@ figure {
 .image-grid-9 {
     width: calc((100% - 10px) / 3);
     padding-bottom: 5px; 
+}
+
+/* Responsive - 3 on wide screens, 2 on narrow screens */
+.image-grid-2or3 {
+    padding-bottom: 5px;
+    width: calc((100% - 5px) / 2);
+
+    @include media-query($on-palm) {
+        width: calc((100% - 5px) / 2);
+    }
+
+    @include media-query($on-laptop) {
+        width: calc((100% - 10px) / 3);
+    }
 }

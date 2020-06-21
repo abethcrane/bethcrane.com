@@ -6,8 +6,12 @@
         {% assign numCols = 3 %}
         {% assign remainderFromThree = include.urls | size | modulo: 3 %}
         {% assign remainderFromTwo = include.urls | size | modulo: 2 == 0 %}
-        {% if remainderFromThree != 0 && remainderFromTwo == 0 %}       
-            {% assign numCols = 2 %}
+        {% if remainderFromTwo == 0 %}    
+            {% if remainderFromThree == 0 %}
+                {% assign numCols = "2or3" %}
+            {% else %}
+                {% assign numCols = 2 %}
+            {% endif %}
         {% endif %}
     {% endif %}
     {% for url in include.urls %}
