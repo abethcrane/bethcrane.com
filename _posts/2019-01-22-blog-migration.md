@@ -51,4 +51,4 @@ bundle install
 
 Having finally managed to update my jekyll version, I ran ```jekyll build``` and was immediately rewarded with working category pages. So there's that. You could have worse results for 2-3 hours of headbashing I suppose.
 
-[sorrell]: http://sorrell.github.io/2013/10/11/Dreamhost-With-Jekyll-%28and-moodle%29.html
+[sorrell]: https://sorrell.github.io/2013/10/11/Dreamhost-With-Jekyll-%28and-moodle%29.html

@@ -30,7 +30,7 @@ Most phone providers have a system for converting emails sent to $phone-number@d
 
  
 [insider]: https://insider.windows.com/
-[SO]: http://stackoverflow.com/a/18747578/4629688
+[SO]: https://stackoverflow.com/questions/101647/how-to-schedule-a-task-to-run-when-shutting-down-windows/18747578#18747578
 [Tasks]: https://www.howto-connect.com/windows-10-task-scheduler-access-functions/
-[first guide]: http://exchangeserverpro.com/powershell-how-to-send-email/
-[SendMail]: http://www.adminarsenal.com/admin-arsenal-blog/powershell-sending-email-with-gmail-example
+[first guide]: https://exchangeserverpro.com/powershell-how-to-send-email/
+[SendMail]: https://www.pdq.com/blog/powershell-send-mailmessage-gmail/

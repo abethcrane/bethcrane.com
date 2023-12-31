@@ -217,7 +217,7 @@ The book has 'Action Items' chapters at the end of each of the 3 key skills - bu
 > -- <cite>Chapter 7, The Culture Code</cite>
 
 
-[danielcoylesite]: http://danielcoyle.com/the-culture-code/
+[danielcoylesite]: https://danielcoyle.com/the-culture-code/
 [podcast]: https://bregmanpartners.com/podcast/dan-coyle-the-culture-code/
 [meyerwiki]: https://en.wikipedia.org/wiki/Danny_Meyer
 [allenwiki]: https://en.wikipedia.org/wiki/Allen_curve
