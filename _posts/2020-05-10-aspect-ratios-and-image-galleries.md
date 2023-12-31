@@ -149,7 +149,7 @@ The additional CSS to do this is very straightforward, and there's no additional
 }
 {% endhighlight %}
 
-*NB: There is actually some additional HTML iny my version, which is restricting the bottom image to not be 100% of the width - it's capping the height at 600px. This requires nesting the image/video inside another div if you don't want the image to stretch. Because of course it does 🙃*
+*NB: There is actually some additional HTML in my version, which is restricting the bottom image to not be 100% of the width - it's capping the height at 600px. This requires nesting the image/video inside another div if you don't want the image to stretch. Because of course it does 🙃*
 
 Find me on twitter if you have any questions. Happy hacking!
 

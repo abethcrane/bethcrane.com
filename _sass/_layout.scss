@@ -100,7 +100,7 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit / 2 0;
+    padding: calc($spacing-unit / 2) 0;
 }
 
 #onepagescroll .site-footer {
@@ -113,7 +113,7 @@
 
 .footer-heading {
     font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: calc($spacing-unit / 2);
 }
 
 .contact-list,
