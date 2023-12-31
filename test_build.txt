@@ -1,0 +1,7 @@
+Configuration file: /Users/beth/Library/CloudStorage/Dropbox/projects/bethcrane.com/_config.yml
+            Source: /Users/beth/Library/CloudStorage/Dropbox/projects/bethcrane.com
+       Destination: /Users/beth/Library/CloudStorage/Dropbox/projects/bethcrane.com/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 5.274 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
