@@ -1,18 +1,11 @@
 <header class="site-header">
-
-  <div class="wrapper">
-
+  <div class="header-wrapper">
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     <nav class="site-nav">
-      <div class="menu-icon">Menu</div>
-      <div class="trigger">
-        {% for page in site.nav_pages %}
-          <a class="page-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
-        {% endfor %}
-      </div>
+      {% for page in site.nav_pages %}
+        <a class="page-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
+      {% endfor %}
     </nav>
-
-  </div>
-
+</div>
 </header>
