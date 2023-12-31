@@ -5,30 +5,27 @@ email: hello@bethcrane.com
 description: Software Engineer. Photographer. Human. Excavating future!Beth, in real time.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bethcrane.com" # the base hostname & protocol for your site
-twitter_username: abethcrane
 github_username:  abethcrane
 permalink: /:year/:month/:day/:title/
 timezone: America/Los_Angeles
 future: true
 nav_pages:
   About: /about
-  Becoming: /becoming
   Photography: /photos
   Resume: /resume
   Posts: /posts
+home_images: [becool, garden, miffy, tree, whitesands, bike]
 category_tags:
   Software: [Algorithms, FoodBank, Unity, Work, Graphics, Conference, Web]
   Thoughts on Books: [Communication]
   Adventures: [Seattle, Travel]
   Projects: [FibSeq, Photography, Art, Plants]
-  The Meta Level: [Introspection, Communication]
   Private: [Gratitude, Diary]
 category_blurbs:
   Software: "If this is the closest to 'be a wizard' I'm going to get, I suppose I should post some code snippets and project updates 👩‍💻"
-  Thoughts on Books: "It turns out I don't only read fiction 📚"
+  Thoughts on Books: "A few words about the many words that I've read 📚"
   Adventures: "Thoughts, stories, and photos from trips big and small 🎒✈️" 
   Projects: "So what do you do in your free time? 🤔"
-  The Meta Level: "3rd Thoughts are thoughts that watch the world and think all by themselves."
   Private: "None of your business, actually 😉, but I happen to think rose-tinted glasses look good on me 🕶️"
 highlighter: rouge
 # Build settings

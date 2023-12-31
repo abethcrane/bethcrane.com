@@ -138,5 +138,5 @@ I thought this was a nice way of putting it - focussing on the fact that it's le
 
 She did point out that this shouldn't conflict with expressing yourself/being true to who you are, so this wasn't about changing yourself to fit in. I just thought it was an interesting point.
 
-[Codess]: http://www.codess.net/
-[Dona]: http://www.donasarkar.com
+[Codess]: https://careers.microsoft.com/v2/global/en/codess.html
+[Dona]: https://donasarkar.com

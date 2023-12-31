@@ -29,7 +29,7 @@ My first step was to immediately fix the vertical-align so that they'd all have 
 
 At this point I started wondering what an actual solution might look like - both in the UI sense (what did I want?) and a technical sense (how could I build it?). 
 
-Inspired by [this post](https://www.aravindiyer.com/tech/equal-height-image-gallery/), I figured Flex and aspect ratios might be the way to go. When I first saw this I thought it was some black-magic, but it turns out the flex-grow property works as a proportion. Flex works out how many items can fit on a row  and then adds up the flex-grow values for the row and distributes the elements proportionally. The flex-basis and width are used to calculate how many items can fit on a row: a flex-bases of 0 and a a min-width of 0 means all items will go onto the same row.
+Inspired by [this post](https://www.aravindiyer.com/posts/equal-height-image-gallery), I figured Flex and aspect ratios might be the way to go. When I first saw this I thought it was some black-magic, but it turns out the flex-grow property works as a proportion. Flex works out how many items can fit on a row  and then adds up the flex-grow values for the row and distributes the elements proportionally. The flex-basis and width are used to calculate how many items can fit on a row: a flex-bases of 0 and a a min-width of 0 means all items will go onto the same row.
 
 So if you have 3 items on a row:
 - flex-grow: 1
@@ -149,7 +149,7 @@ The additional CSS to do this is very straightforward, and there's no additional
 }
 {% endhighlight %}
 
-*NB: There is actually some additional HTML iny my version, which is restricting the bottom image to not be 100% of the width - it's capping the height at 600px. This requires nesting the image/video inside another div if you don't want the image to stretch. Because of course it does 🙃*
+*NB: There is actually some additional HTML in my version, which is restricting the bottom image to not be 100% of the width - it's capping the height at 600px. This requires nesting the image/video inside another div if you don't want the image to stretch. Because of course it does 🙃*
 
 Find me on twitter if you have any questions. Happy hacking!
 

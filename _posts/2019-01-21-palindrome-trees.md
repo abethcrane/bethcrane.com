@@ -187,6 +187,6 @@ print (longest_palindrome)
 [gist]: https://gist.github.com/abethcrane/d8dc5f0664d44a2c9e69854d5c1a7080
 [blog1]: https://www.geeksforgeeks.org/palindromic-tree-introduction-implementation/amp/
 [blog2]: https://medium.com/@alessiopiergiacomi/eertree-or-palindromic-tree-82453e75025b
-[blog3]: http://www.adilet.org/blog/palindromic-tree/
+[blog3]: https://web.archive.org/web/20220905053728/http://www.adilet.org/blog/palindromic-tree/
 [paper]: https://arxiv.org/pdf/1506.04862.pdf
 [manacher]: https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm

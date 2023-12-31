@@ -1,18 +1,18 @@
 ---
-layout: onepagescroll
+layout: index
 ---
-<div class="categories">
-{% for category in site.category_tags %}
-  {% unless category[0] contains "Private" %}
-  <a class="category" style="background-image: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('{{ category[0] | prepend: '/assets/media/' | prepend: site.baseurl | downcase }}.jpg');"
-    href="/{{ category[0] | prepend: site.baseurl | downcase }}">
-      <h2>{{ category[0] }}</h2>
-  </a>
-  {% endunless %}
-{% endfor %}
-</div>
+{% assign image = site.home_images | sample %}
+
+<style>
+  body {
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('{{ image | prepend: '/assets/media/index/' | prepend: site.baseurl | downcase }}.jpg');
+    background-size: cover;
+  }
+</style>

@@ -2,4 +2,4 @@
 set -e # halt script on error
 
 bundle exec jekyll build
-bundle exec htmlproofer ./_site --empty-alt-ignore --alt-ignore /.*/ --only-4xx --url-swap ".*bethcrane.com/:/" _site/ --url-ignore "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4380267/"
+bundle exec htmlproofer ./_site --ignore-empty-alt --ignore-missing-alt /.*/ --only-4xx --swap_urls ".*//bethcrane.com/:/" _site/ --ignore-urls "http://bethcrane.photos,/instagram.com/,https://therabill.zendesk.com/hc/en-us/articles/360006846471-How-to-Read-an-EDI-837-File-Overview,https://www.rei.com/product/850919/cotton-buds-tissue-to-go-toilet-paper"

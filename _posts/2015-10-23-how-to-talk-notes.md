@@ -140,8 +140,8 @@ This is something I've been working on applying - instead of asking people quest
 I discovered Eric's article 2 days after posting this, and it's a fun comparison.
 
 
-[aceso]: http://acesounderglass.com/2015/06/09/interpretive-labor/
-[book]: http://www.amazon.com/How-Talk-Kids-Will-Listen/dp/1451663889
+[aceso]: https://acesounderglass.com/2015/06/09/interpretive-labor/
+[book]: https://www.amazon.com/How-Talk-Kids-Will-Listen/dp/1451663889
 [toread]: https://www.goodreads.com/review/list/43189300-beth-crane?shelf=to-read
-[nate]: http://mindingourway.com/
-[fbi]: http://www.bakadesuyo.com/2015/10/out-of-control-kids
+[nate]: https://mindingourway.com/
+[fbi]: https://bakadesuyo.com/2015/10/out-of-control-kids/

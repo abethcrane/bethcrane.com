@@ -19,4 +19,4 @@ It was relaxing and magical and real. Go watch an eclipse you guys. Argentina 20
 
 {% assign image-list = "/assets/media/2017-08-22/beeclipse.jpg|/assets/media/2017-08-22/eclipsefam.jpg|/assets/media/2017-08-22/glasses.jpg" | split: "|" %}
 
-{% include image-grid.html urls=image-list caption="Eclipse fam" %}
+{% include image-grid.html alt="A photo of an eclipse" urls=image-list caption="Eclipse fam" %}

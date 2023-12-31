@@ -19,7 +19,7 @@ It can be tricky to find the right opportunity to provide value that actually us
 When I got home, I got to work! It took me ~5 hours to create a set of functioning command line scripts to output the images we were asked to create, with the food item named in 4 languges + an image. It was super exciting to see that I could very quickly create something useful, and Jill's feedback was positive.
 
 {% assign image-list = "/assets/media/2019-02-21/console.png|/assets/media/2019-02-21/chickenbroth.png|/assets/media/2019-02-21/redpepperflakes.png" | split: "|" %}
-{% include image-grid.html urls=image-list caption="First console version" %}
+{% include image-grid.html urls=image-list caption="First console version" alt="A screenshot of a translation application"  %}
 
 # November #
 
@@ -28,13 +28,13 @@ I figured it was probably important to have an application with a GUI, for this 
 I'm not sure how anybody learns how to use a UI layout tool without reading the source code! For both UnityUI and Kivy that's been the thing that's really cracked it open for me - documentation really only goes so far. For Kivy I struggled a lot with figuring out how to position and size objects correctly...I still only have a gut feel instinct for it, and can't concisely explain it! But I wound up creating a spreadsheet-style UI after sending a couple of possibilities over to Jill.
 
 {% assign image-list = "/assets/media/2019-02-21/ui1.png|/assets/media/2019-02-21/ui2.png" | split: "|" %}
-{% include image-grid.html urls=image-list caption="UI alternatives" %}
+{% include image-grid.html alt="A screenshot of a UI for entering terms to translate" urls=image-list caption="UI alternatives" %}
 
 # December #
 By December it was looking pretty good, and we set a time in mid January (after the holiday madness subsided) for me to visit the foodbank and demonstrate it. In the mean time I wrote some tests using [pytest] and set up TravisCI so that they could run automatically upon pushing to the master branch.
 
 {% assign image-list = "/assets/media/2019-02-21/test1.png|/assets/media/2019-02-21/test2.png" | split: "|" %}
-{% include image-grid.html urls=image-list caption="TravisCI running unit tests on multiple platforms" %}
+{% include image-grid.html alt="A screenshot of Travis CI tests" urls=image-list caption="TravisCI running unit tests on multiple platforms" %}
 
 # January #
 
@@ -68,8 +68,8 @@ Right now this doesn't require any kind of ongoing action, but I'd be interested
 
 [github]: https://github.com/abethcrane/food-bank-translator
 [csr]: https://www.microsoft.com/en-us/corporate-responsibility
-[pyforms]: https://pyforms.readthedocs.io/en/stable/
+[pyforms]: https://pyforms.readthedocs.io/
 [kivy]: https://kivy.org/doc/stable/
 [wifi]: https://github.com/abethcrane/food-bank-translator/commit/3fe56ff173c1eb31f3bbe5601dbdc5aa7c7efbf9
-[foodbank]: http://www.pmfb.org/
+[foodbank]: https://www.pmsc-fb.org/
 [pytest]: https://duckduckgo.com/?q=pytest&t=ffab&ia=web

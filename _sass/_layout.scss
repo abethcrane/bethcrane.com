@@ -100,7 +100,7 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit / 2 0;
+    padding: calc($spacing-unit / 2) 0;
 }
 
 #onepagescroll .site-footer {
@@ -113,7 +113,7 @@
 
 .footer-heading {
     font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: calc($spacing-unit / 2);
 }
 
 .contact-list,
@@ -158,6 +158,8 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    width: 90%;
+    margin: auto;
 }
 
 .page-heading {
@@ -299,8 +301,9 @@ figure {
 .constrainsHeightWithoutStretch > img, .constrainsHeightWithoutStretch > video {
     /* Chrome doesn't make these auto fill to 100% (unlike firefox) so, specifying that.
     Chrome also doesn't currently support col-gap and row-gap, so this is how I'm putting in some padding*/
-    min-width: 97%;
-    min-height: 97%;
+    max-width: 97%;
+    max-height: 97%;
+    align-self: center; /* This is so important!! Makes things not stretch to fill the width */
 }
 
 .image-grid-1 {
@@ -346,4 +349,18 @@ figure {
 .image-grid-9 {
     width: calc((100% - 10px) / 3);
     padding-bottom: 5px; 
+}
+
+/* Responsive - 3 on wide screens, 2 on narrow screens */
+.image-grid-2or3 {
+    padding-bottom: 5px;
+    width: calc((100% - 5px) / 2);
+
+    @include media-query($on-palm) {
+        width: calc((100% - 5px) / 2);
+    }
+
+    @include media-query($on-laptop) {
+        width: calc((100% - 10px) / 3);
+    }
 }
