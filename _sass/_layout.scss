@@ -48,7 +48,6 @@
     line-height: 56px;
     gap: 20px;
 
-
     .page-link {
         color: $text-color;
         line-height: $base-line-height;
@@ -65,14 +64,6 @@
     padding: calc(#{$spacing-unit} / 2) 0;
 }
 
-#onepagescroll .site-footer {
-    bottom: 0px;
-    position: fixed;
-    z-index: 1;
-    background-color: $background-color;
-    width: 100%;
-}
-
 .footer-heading {
     font-size: 18px;
     margin-bottom: calc(#{$spacing-unit} / 2);
@@ -85,33 +76,14 @@
 }
 
 .footer-wrapper {
+    max-width: $wrapper;
     font-size: 15px;
     color: $grey-color;
-    @extend %clearfix;
-}
-
-.footer-col-1 {
-    @include col(75%);
-}
-
-.footer-col-2 {
-     @include col(25%);
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        @include col(50%);
-    }
-}
-
-@include media-query($on-palm) {
-    @for $i from 1 through 2 {
-        .footer-col-#{$i} {
-            float: none;
-            @include col(100%);
-        }
-    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 
