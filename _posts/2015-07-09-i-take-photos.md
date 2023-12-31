@@ -22,7 +22,7 @@ Photography is a thing that's wormed its way inside of me and become an integral
 
 So with 'deliberateness' checked off, that leaves 'embracing/improving'. Most of my photos are me documentating whatever I'm up to at the time, rather than deliberately setting out to [make good art][gaiman], so I'm making an effort to create time to organise/do photoshoots.
 
-{% include image.html url="/assets/media/2015-07-09/flowers.jpg" alt="Hannah with flowers" title="BaeFlowers" %}
+{% include image.html url="/assets/media/2015-07-09/flowers.jpg" alt="Hannah with flowers" title="Flowers" %}
 
 My current focus with photography is on people, for the following reasons:
 
