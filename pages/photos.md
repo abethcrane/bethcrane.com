@@ -4,12 +4,17 @@ title: Photography
 permalink: /photos/
 ---
 
-I bought my first DSLR at the start of 2012, and never looked back. You can find my favorite work on [flickr][flickr]. I run a fashion/interview blog called [Fibonacci Sequins][fibseq], which is what most of my portrait photography goes towards. Please reach out if you know someone who'd be fun to profile 😄
+I bought my first DSLR at the start of 2012, and never looked back. You can find my favorite work on [flickr][flickr], or very occasional updates on [instagram][instagram].
 
-I found my first retro polaroid (an Image 1200) at a GoodWill in 2017 and after it was stolen I upgraded to a restored slr-680. I adore the way my polaroid makes me think twice before shooting, and how it feels like the best souvenir of a trip. You might find some of the snaps over in the Projects category.
+{% include image.html url="/assets/media/pages/flowers.jpg" title="Drowning in humidity to photograph these flowers at the Atlanta Botanical Garden" %}
 
-My [instagram][insta] is mostly day-to-day, sometimes from a DSLR, mostly from my phone (perhaps with a Moment lens or from my Snapchat Spectacles).
+## What I'm shooting these days ##
+- I occasionally post new interviews with interesting folks in STEM fields to [Fibonacci Sequins][fibseq] - please reach out if you know someone who'd be fun to profile 😄
+- As I meet more and more musicians, I've started bringing my camera along to shows and spending hours in lightroom honing my color correction
+- My oldest and truest love - travel photography
+- Less polaroids these days, and more 35mm film
+- Plants, always and forever, especially when they're drenched in sun
 
-[insta]: https://www.instagram.com/abethcrane/
+[instagram]: https://www.instagram.com/abethcrane/
 [flickr]: http://bethcrane.photos
 [fibseq]: http://www.fibonaccisequinsblog.com

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html style="overflow: hidden;">
+
+  {% include head.html %}
+
+  <body>
+    <div style="background-color: white;">
+        {% include header.html %}
+    </div>
+    {{ content }}
+    <div style="position: absolute; bottom: 0; width: 100%; background-color: white;"">
+        {% include footer.html %}
+    </div>
+  </body>
+
+  <script src="{{ "/assets/scripts/jquery.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/assets/scripts/script.js" | prepend: site.baseurl }}"></script>
+</html>

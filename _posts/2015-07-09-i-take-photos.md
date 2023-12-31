@@ -20,9 +20,9 @@ A large part of the value of this blog is as a mechanism for accepting both of t
 
 Photography is a thing that's wormed its way inside of me and become an integral part of how I see myself, and I'm totally willing to work with that! I have a lot of respect/admiration for people who use photography to create beauty or capture important moments, and it's something I aspire to do myself.
 
-So with 'deliberateness' checked off, that leaves 'embracing/improving'. [I mentioned back in May]({% post_url 2015-05-23-with-great-photobooth-comes-great-responsibility %}) that most of my photos are me documentating whatever I'm up to at the time, rather than deliberately setting out to [make good art][gaiman], so I'm making an effort to create time to organise/do photoshoots.
+So with 'deliberateness' checked off, that leaves 'embracing/improving'. Most of my photos are me documentating whatever I'm up to at the time, rather than deliberately setting out to [make good art][gaiman], so I'm making an effort to create time to organise/do photoshoots.
 
-{% include image.html url="/assets/media/2015-07-09/flowers.jpg" alt="Hannah as bae" title="Bae" %}
+{% include image.html url="/assets/media/2015-07-09/flowers.jpg" alt="Hannah with flowers" title="BaeFlowers" %}
 
 My current focus with photography is on people, for the following reasons:
 

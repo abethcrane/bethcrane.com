@@ -4,7 +4,7 @@ title:  "Skies and Trees"
 date:   2015-06-29
 categories: [Projects]
 tags: [Art]
-summary: If I was a rapper my tagline would be "skies and trees".
+summary: If my art needed a tagline it would just be "skies and trees".
 ---
 {% include image.html url="/assets/media/2015-06-29/sunset.jpg" alt="Seattle has gorgeous sunsets" %}
 
@@ -13,7 +13,7 @@ It's been so ridiculously gorgeous of late that I'm actually protesting the suns
 This sunset has been the real mvp, keeping me company after my wisdom-teeth removal. 
 {% include image.html url="/assets/media/2015-06-29/progress.png" alt="Painting the sunset" caption="Venturing outside to replenish my pink/white paint supplies this afternoon was a good call" %}
 
-I mentioned [in my driving post]({% post_url 2015-06-21-driving-you-crazy %}) that I'm trying to stop saying "I wish I was good at x" - instead I'm trying to just invest time into things I like and accept that I'll get good at them as a byproduct.
+I'm trying to stop saying "I wish I was good at x" - instead I'm trying to just invest time into things I like and accept that I'll get good at them as a byproduct.
 
 Painting is a good candidate for this. Mostly I paint because it's fun (and I *love* wandering around covered in paint splatters). It gives me nice productivity!feels, and after a day staring at my computer screen it can be really nice to interact with the real, tactile world.
 
