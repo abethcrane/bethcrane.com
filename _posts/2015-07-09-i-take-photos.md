@@ -16,7 +16,7 @@ A large part of the value of this blog is as a mechanism for accepting both of t
 
 {% assign image-list = "/assets/media/2015-07-09/tree1.jpg|/assets/media/2015-07-09/tree2.jpg|/assets/media/2015-07-09/tree3.jpg" | split: "|" %} 
 
-{% include image-grid.html urls=image-list %}
+{% include image-grid.html urls=image-list alt="A photo of Hannah in a tree" %}
 
 Photography is a thing that's wormed its way inside of me and become an integral part of how I see myself, and I'm totally willing to work with that! I have a lot of respect/admiration for people who use photography to create beauty or capture important moments, and it's something I aspire to do myself.
 
@@ -33,11 +33,11 @@ My current focus with photography is on people, for the following reasons:
 
 {% assign image-list = "/assets/media/2015-07-09/stairs1.jpg|/assets/media/2015-07-09/stairs2.jpg|/assets/media/2015-07-09/stairs3.jpg" | split: "|" %} 
 
-{% include image-grid.html urls=image-list %}
+{% include image-grid.html urls=image-list alt="A photo of Hannah on the stairs" %}
 
 Shooting with Hannah was ridiculously fun. We played with Volunteer Park on Sunday, which made for some great woodland nymph-esque photos. The park was so easy that it was a challenge to come up with somewhere new for Monday (we ended up exploring Cap Hill and stopping whenever we felt inspired, which seemed to work out okay).
 
 As much as I had a blast, and I think we got some good photos, I was actually a little disappointed by how much better we worked together when Hannah was behind the camera. I'd love to learn to model, but the priority for me is definitely taking the photos. I think my lowest hanging fruit for improvement is giving directions; I have more ideas when posing myself, so I need to figure out how to channel that into ideas for whoever I'm shooting.
 
-[auditors]: http://discworld.wikia.com/wiki/Auditors_of_Reality
+[auditors]: https://discworld.fandom.com/wiki/Auditors_of_Reality
 [gaiman]: https://www.youtube.com/watch?v=ikAb-NYkseI

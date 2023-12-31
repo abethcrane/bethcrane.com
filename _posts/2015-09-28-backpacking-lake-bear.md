@@ -24,7 +24,7 @@ The hike around the lakes was really well paced, with good variation in inclines
 
 {% assign image-list = "/assets/media/2015-09-28/redmushroom.jpg|/assets/media/2015-09-28/orangemushrooms.jpg|/assets/media/2015-09-28/purplemushroom.jpg" | split: "|" %}
 
-{% include image-grid.html urls=image-list caption="Speaking of mushrooms, there were a ridiculous quantity! The walk itself was a perfect woodland adventure, but the mushrooms are really what brought it into fairytale territory." %}
+{% include image-grid.html urls=image-list alt="A photo of a mushroom in the woods" caption="Speaking of mushrooms, there were a ridiculous quantity! The walk itself was a perfect woodland adventure, but the mushrooms are really what brought it into fairytale territory." %}
 
 The lighting on the first day was quite overcast, which made for beautifully lit/even photos. The sun really came out on day 2, so the walk back was like a completely different hike seeing how the light fell - we walked through one section covered in yellow leaves, and I almost tripped over just staring at how we were suddenly bathed in color.
 
@@ -46,7 +46,7 @@ Mid-afternoon we left our campsite to find the 3rd lake of the trip: Deer Lake. 
 
 {% assign image-list = "/assets/media/2015-09-28/nofire.jpg|/assets/media/2015-09-28/fire.jpg" | split: "|" %}
 
-{% include image-grid.html urls=image-list caption="I think technically it was no campfires allowed, but our camping ground had a firebed and it was so damp out that we deemed the odds of anything catching accidentally acceptably small." %}
+{% include image-grid.html alt="A firepit while camping" urls=image-list caption="I think technically it was no campfires allowed, but our camping ground had a firebed and it was so damp out that we deemed the odds of anything catching accidentally acceptably small." %}
 
 It was a super fun exercise figuring out how to light a fire with only wet materials - we ended up using a firstarter and some dry leaves/super small twigs to get started, followed by constructing a teepee with gradually increasing thicknesses, so that the inner layer would dry out the next one, and when it finally caught, that would dry out the next one, and so on.
 
@@ -84,6 +84,6 @@ As this is my second proper hiking trip, I thought I'd build on my [previous cam
 - I'll need my own tent+stove at somepoint.
 - Firestarters are small and a game-changer
 
-[gogirl]: http://go-girl.com
-[tp]: http://www.rei.com/product/850919/cotton-buds-tissue-to-go-toilet-paper
-[wetones]: http://www.amazon.com/Wet-Ones-Antibacterial-Singles-24-Count/dp/B0043D68YW/ref=sr_1_3
+[gogirl]: https://go-girl.com/
+[tp]: https://www.rei.com/product/850919/cotton-buds-tissue-to-go-toilet-paper
+[wetones]: https://www.amazon.com/Wet-Ones-Antibacterial-Singles-24-Count/dp/B0043D68YW/ref=sr_1_3
