@@ -2,4 +2,4 @@
 set -e # halt script on error
 
 bundle exec jekyll build
-#bundle exec htmlproofer ./_site --ignore-empty-alt --ignore-missing-alt /.*/ --only-4xx --swap_urls ".*//bethcrane.com/:/" _site/ --ignore-urls "http://bethcrane.photos,*instagram.com*"
+bundle exec htmlproofer ./_site --ignore-empty-alt --ignore-missing-alt /.*/ --only-4xx --swap_urls ".*//bethcrane.com/:/" _site/ --ignore-urls "http://bethcrane.photos,*instagram.com*"
