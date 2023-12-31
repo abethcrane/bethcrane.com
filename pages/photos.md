@@ -4,7 +4,7 @@ title: Photography
 permalink: /photos/
 ---
 
-I bought my first DSLR at the start of 2012, and never looked back. You can find my favorite work on [flickr][flickr], or very occasional updates on [instagram][instagram].
+I bought my first DSLR at the start of 2012, and never looked back. You can find my favorite work on [flickr][flickr], and very occasional updates on [instagram][instagram].
 
 {% include image.html url="/assets/media/pages/flowers.jpg" title="Drowning in humidity to photograph these flowers at the Atlanta Botanical Garden" %}
 
