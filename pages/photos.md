@@ -17,4 +17,4 @@ I bought my first DSLR at the start of 2012, and never looked back. You can find
 
 [instagram]: https://www.instagram.com/abethcrane/
 [flickr]: http://bethcrane.photos
-[fibseq]: http://www.fibonaccisequinsblog.com
+[fibseq]: https://fibonaccisequinsblog.com
