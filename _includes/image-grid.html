@@ -3,7 +3,7 @@
     {% for url in include.urls %}
         <img
             src="{{ site.baseurl | downcase | append: url  }}"
-            alt="{{ include.alt | default: include.title }}"
+            alt="{{ include.alt | default: include.title | default: include.caption }}"
             {% if include.title %}title="{{ include.title }}"{% endif %}
             class="image-grid-{{ include.urls | size }}"
             data-jslghtbx data-jslghtbx-group="post"

@@ -27,6 +27,11 @@
         {% else %}
         <img
             src="{{ site.baseurl | downcase | append: url  }}"
+            {% if include.alts and include.alts.size > forloop.index0 %}
+            alt="{{ include.alts[forloop.index0] }}"
+            {% else %}
+            alt="{{ include.alt | default: include.title }}"
+            {% endif %}
             {% if include.title %}title="{{ include.title }}"{% endif %}
             class="image-grid-{{ numCols }}"
             data-jslghtbx data-jslghtbx-group="post"
