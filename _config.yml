@@ -2,9 +2,10 @@
 title: Beth Crane
 name: Beth Crane
 email: hello@bethcrane.com
-description: Software Engineer. Photographer. Human. Excavating future!Beth, in real time.
+description: Software engineer, photographer, absentee blogger. Here to dance at shows and bask in sunlight and try to make sense of it all.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bethcrane.com" # the base hostname & protocol for your site
+image: "headshot"
 github_username:  abethcrane
 permalink: /:year/:month/:day/:title/
 timezone: America/Los_Angeles

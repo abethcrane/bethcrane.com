@@ -1,6 +1,8 @@
-/**
- * Site header
- */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 .site-header {
     width: 100%;
     background-color: white;
@@ -19,14 +21,6 @@
     padding-left: $spacing-unit;
     max-width: $wrapper;
     margin: auto;
-}
-
-#onepagescroll .site-header {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    z-index: 1;
-    background-color: $background-color;
 }
 
 .site-title {

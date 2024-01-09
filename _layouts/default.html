@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
+  <head>
+    {% include head.html %}
+  </head>
 
   <body>
-
     {% include header.html %}
-
     <div class="page-content">
       <div class="wrapper">
         {{ content }}
@@ -15,13 +14,10 @@
 
     {% include footer.html %}
 
-
     <script src="{{ "/assets/js/lightbox.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
     <script>
-    var lightbox = new Lightbox();
-    lightbox.load();
+      var lightbox = new Lightbox();
+      lightbox.load();
     </script>
-    
   </body>
-
 </html>
