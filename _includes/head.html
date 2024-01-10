@@ -3,7 +3,8 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{{ page.title | default: site.title }}</title>
+    <meta property="og:site_name" content="{{ site.title }}" />
     <meta name="description" content="{{ site.description }}">
     <meta name="og:image" content="{{ page.image | default: site.image | prepend: '/assets/media/'  | prepend: site.baseurl | prepend: site.url | downcase }}.jpg">
 

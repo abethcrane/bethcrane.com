@@ -25,4 +25,3 @@ I get excited about opportunities that:
 - enable me to explore the world and live in different places (e.g. having international offices, enabling remote work for a few months each year)
 - take advantage of my interest in communication/organizational psychology
 - use new technology to solve problems in previously-impossible ways
-- feature cross-disciplinary collaboration
